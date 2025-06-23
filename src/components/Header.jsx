@@ -1,7 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { Television } from "../../utils/Icons";
-import { MARQUE_DATA } from "../../utils/helper";
+import { Television } from "../utils/Icons";
+import { MARQUE_DATA } from "../utils/helper";
 
 const Header = () => {
   return (
