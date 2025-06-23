@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import Heading from "./common/Heading";
 import Buttons from "./common/Buttons";
 import "swiper/css";
+import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
+
 const Bestseller = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
     <>
       <div className="min-h-screen py-[132px] relative">
-        <div className="max-w-[1380px] mx-auto px-3">
-            <Heading headText="Bestsellers" />
-          <div className="flex justify-between">
-            <div className="w-[38px] h-[38px] absolute top-[50%] left-[6%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300">
+        <div className="max-w-[1272px] mx-auto px-3">
+          <Heading headText="Bestsellers" />
+            <div
+              ref={prevRef}
+              className="w-[38px] h-[38px] absolute top-[50%] left-[6%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            >
               <svg
                 width="8"
                 height="14"
@@ -28,7 +36,10 @@ const Bestseller = () => {
                 />
               </svg>
             </div>
-            <div className="w-[38px] h-[38px] absolute top-[50%] right-[6%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300">
+            <div
+              ref={nextRef}
+              className="w-[38px] h-[38px] absolute top-[50%] right-[6%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            >
               <svg
                 width="8"
                 height="14"
@@ -45,45 +56,76 @@ const Bestseller = () => {
                 />
               </svg>
             </div>
-          </div>
           <Swiper
+            modules={[Navigation]}
             slidesPerView={3}
+            spaceBetween={0}
+            loop={true}
+            centeredSlides={true}
+            slidesOffsetBefore={24}
+            slidesOffsetAfter={24}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 1.5,
+                spaceBetween: 15,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+              },
+            }}
           >
-            <div className="">
-              {BESTSELLER_DATA.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
-                    <div className="">
-                      <div className=" w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative">
-                        <img src={item.img} className="mb-[90px]" alt="img" />
-                        <div className="absolute top-[10px] right-[10px] cursor-pointer">
-                          <item.Heart />
-                        </div>
+            {BESTSELLER_DATA.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
+                  <div className="">
+                    <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative">
+                      <img src={item.img} className="mb-[90px]" alt="img" />
+                      <div className="absolute top-[10px] right-[10px] cursor-pointer">
+                        <item.Heart />
                       </div>
-                      <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">
-                        {item.title}
-                      </p>
-                      <p className="leading-[150%] text-[#41576D] max-w-[332px] pt-2">
-                        {item.description}
-                      </p>
                     </div>
-                    <div>
-                      <div className="flex justify-between items-center">
-                        <p className="font-semibold text-2xl ">{item.price}</p>
-                        <item.svg />
-                      </div>
-                      <div className="pt-[25px] flex justify-between items-center">
-                        <Buttons
-                          btnText="Shop Now"
-                          btnClass="bg-white !text-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
-                        />
-                        <item.shop />
-                      </div>
+                    <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">
+                      {item.title}
+                    </p>
+                    <p className="leading-[150%] text-[#41576D] max-w-[332px] pt-2">
+                      {item.description}
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-center">
+                      <p className="font-semibold text-2xl ">{item.price}</p>
+                      <item.svg />
+                    </div>
+                    <div className="pt-[25px] flex justify-between items-center">
+                      <Buttons
+                        btnText="Shop Now"
+                        btnClass="bg-white !text-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
+                      />
+                      <item.shop />
                     </div>
                   </div>
-                </SwiperSlide>
-              ))}
-            </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       <div className="py-[27px]">
-        <Marquee>
+        <Marquee className="max-w-[1440px] mx-auto">
           {MARQUE_DATA.map((item, index) => (
             <div
               key={index}
@@ -31,28 +31,6 @@ const Hero = () => {
             infiniteLoop
             interval={3000}
           >
-            <div className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[650px] rounded-[8px]">
-              <Heading
-                headClass="!pt-[237px] max-w-[761px] !text-[60px]"
-                headText="Where Tinkerers Bring Ideas Alive"
-              />
-              <Para
-                paraClass="max-w-[460px] text-center mx-auto pt-3"
-                paraText={
-                  "Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
-                }
-              />
-              <div className="flex mx-auto gap-5 justify-center mt-[34px]">
-                <Buttons
-                  btnClass="!py-[17px] !px-[19.4px]"
-                  btnText="Browse Products"
-                />
-                <Buttons
-                  btnClass="bg-transparent !text-[#112D49] !py-[17px] !px-[19.5px] hover:!bg-[#112D49] hover:!text-white"
-                  btnText="Starter Kits"
-                />
-              </div>
-            </div>
             <div className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[650px] rounded-[8px]">
               <Heading
                 headClass="!pt-[237px] max-w-[761px] !text-[60px]"
