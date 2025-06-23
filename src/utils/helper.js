@@ -1,4 +1,4 @@
-import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg } from "./Icons";
+import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg } from "./Icons";
 import pcImg from "../assets/images/png/pc-img.png"
 import routerImg from "../assets/images/png/router-Img.png"
 import chairImg from "../assets/images/png/chair-img.png"
@@ -115,21 +115,33 @@ export const BESTSELLER_DATA = [
         price: "$249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
+        shop: ShopSvg,
     },
     {
         img: routerImg,
-        title: "Vortex Gaming PC",
+        title: "D-Link ADSL Wireless Router DSL2790U",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
+        shop: ShopSvg,
     },
     {
         img: chairImg,
-        title: "Vortex Gaming PC",
+        title: "Gaming Chair",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
-    }
+        shop: ShopSvg,
+    },
+    {
+        img: routerImg,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
 ]
