@@ -11,15 +11,15 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="min-h-screen bg-[#112D49] pt-[75px]">
-        <div className="max-w-[1440px mx-auto px-3 ">
+      <div className="bg-[#112D49] pt-[75px]">
+        <div className="max-w-[1440px] mx-auto px-3">
           <div className="">
             <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />
             <Para
-              paraClass="max-w-[338px] !text-[#CFD5DB] text-center mx-auto pt-4 !leading-[150%] "
+              paraClass="max-w-[338px] !text-[#CFD5DB] text-center mx-auto pt-4 !leading-[150%]"
               paraText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida."
             />
-            <ul className="flex gap-2.5 justify-center pt-[27px]">
+            <ul className="flex flex-wrap gap-2.5 justify-center pt-[27px]">
               <li>
                 <a className="text-white" href="#">
                   Shipping
@@ -46,7 +46,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            <div className="flex gap-[10px] justify-center pt-[27px]">
+            <div className="flex flex-wrap gap-[10px] justify-center pt-[27px]">
               <a
                 className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
                 href="https://www.facebook.com/"
@@ -77,9 +77,13 @@ const Footer = () => {
               </a>
             </div>
             <div className="w-full bg-white h-1 mt-[82px]"></div>
-            <div className="flex justify-between max-w-[1440px] mx-auto py-[30px]">
-              <p className="text-sm text-white">term of service | Privacy Policy</p>
-              <p className="text-sm text-white">© 2025 Skaroob. All Rights Reserved.</p>
+            <div className="flex flex-wrap justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 sm:gap-0 sm:flex-nowrap sm:justify-between">
+              <p className="text-sm text-white text-center sm:text-left w-full sm:w-auto">
+                term of service | Privacy Policy
+              </p>
+              <p className="text-sm text-white text-center sm:text-right w-full sm:w-auto">
+                © {new Date().getFullYear()} Skaroob. All Rights Reserved.
+              </p>
             </div>
           </div>
         </div>
