@@ -1,7 +1,7 @@
 import "./App.css";
 import Bestseller from "./components/Bestseller";
 import Hero from "./components/Hero";
-import Products from "./components/Products";
+import ProductDetail from "./components/ProductDetail";
 import Services from "./components/Services";
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
     <>
       <Hero />
       <Services />
-      <Products />
       <Bestseller />
+      <ProductDetail />
     </>
   );
 }
