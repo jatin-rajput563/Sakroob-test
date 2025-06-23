@@ -11,7 +11,7 @@ const Header = () => {
           {MARQUE_DATA.map((item, index) => (
             <div
               key={index}
-            className="flex gap-3.5 items-center w-[207px] h-[91px] border border-[#E7EAED] p-4 rounded-lg mx-1.5 hover:shadow-2xl transition-all duration-300 ease-in-linear cursor-pointer"
+            className="flex gap-3.5 items-center text-[#112D49] w-[207px] h-[91px] border border-[#E7EAED] p-4 rounded-lg mx-1.5 hover:shadow-2xl transition-all duration-300 ease-in-linear cursor-pointer"
             >
               <item.icon />
               <p className="text-black font-bold leading-[120%]">{item.name}</p>

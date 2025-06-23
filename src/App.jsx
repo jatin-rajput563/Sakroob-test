@@ -1,12 +1,12 @@
 import "./App.css";
 import Header from "./components/Header";
-import Prodects from "./components/Prodects";
+import Products from "./components/Products";
 
 function App() {
   return (
     <>
       <Header />
-      <Prodects />
+      <Products />
     </>
   );
 }
