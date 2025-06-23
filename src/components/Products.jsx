@@ -5,7 +5,7 @@ import React from "react";
 const Products = () => {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="">
         <div className="max-w-[1380px] px-3 mx-auto">
           {/* <Para paraText={"Featured Categories"}
           paraClass={"text-center text-[20px] italic"} />

@@ -3,3 +3,17 @@
 body {
     font-family: "Montserrat", sans-serif;
 }
+
+.carousel .control-dots .dot.selected {
+    background: #112D49 !important;
+    width: 51px !important;
+}
+
+.carousel .control-dots .dot {
+    border-radius: 22px !important;
+    width: 21px !important;
+    height: 6px !important;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 2px !important;
+}
