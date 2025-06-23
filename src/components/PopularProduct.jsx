@@ -30,14 +30,13 @@ const PopularProduct = () => {
 
   return (
     <>
-      {/* Popup */}
       {showPopup && (
         <div className="fixed top-5 right-5 bg-[#112D49] text-white px-4 py-2 rounded-[8px] shadow-lg z-50 transition-all duration-500">
           {popupMessage}
         </div>
       )}
 
-      <div className="min-h-screen py-50">
+      <div className="py-20">
         <div className="max-w-[1140px] px-3 mx-auto">
           <Heading headClass="pb-[87px]" headText="Popular Products" />
           <div className="flex flex-wrap flex-row -mx-3 gap-[24px]">
@@ -96,9 +95,6 @@ const PopularProduct = () => {
                   </p>
                 </div>
                 <div>
-
-
-                    
                   <div className="flex justify-between items-center">
                     <p className="font-semibold text-2xl ">{item.price}</p>
                     {item.svg && <item.svg />}

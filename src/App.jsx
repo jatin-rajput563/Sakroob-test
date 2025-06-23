@@ -1,5 +1,6 @@
 import "./App.css";
 import Bestseller from "./components/Bestseller";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import PopularProduct from "./components/PopularProduct";
 import ProductDetail from "./components/ProductDetail";
@@ -15,6 +16,7 @@ function App() {
       <ProductDetail />
       <RoutingTabs />
       <PopularProduct />
+      <Footer />
     </>
   );
 }
