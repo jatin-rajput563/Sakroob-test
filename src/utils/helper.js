@@ -1,4 +1,4 @@
-import { game, Graphic, Moniters, Smartwatch, Storage, Television } from "./Icons";
+import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift } from "./Icons";
 
 export const MARQUE_DATA = [
     {
@@ -72,5 +72,33 @@ export const MARQUE_DATA = [
     {
         icon: Moniters,
         name: "Monitors",
+    }
+];
+
+export const SERVICES_DATA = [
+    {
+        icon: Express,
+        text: "Express Delivery",
+        para: "Order Now",
     },
-]
+    {
+        icon: Return,
+        text: "Easy Return ",
+        para: "30 days return",
+    },
+    {
+        icon: Support,
+        text: "24/7 Support",
+        para: "Premium Services",
+    },
+    {
+        icon: Premium,
+        text: "Premium Warranty",
+        para: "Up to 2 years",
+    },
+    {
+        icon: Gift,
+        text: "Best Special Gift",
+        para: "For Order",
+    },
+];

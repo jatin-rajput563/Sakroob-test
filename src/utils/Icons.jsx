@@ -45,6 +45,7 @@ export const game = () => (
     </defs>
   </svg>
 );
+
 export const Storage = () => (
   <svg
     width="59"
@@ -88,6 +89,7 @@ export const Storage = () => (
     </defs>
   </svg>
 );
+
 export const Graphic = () => (
   <svg
     width="59"
@@ -119,6 +121,7 @@ export const Graphic = () => (
     />
   </svg>
 );
+
 export const Television = () => (
   <svg
     width="59"
@@ -142,6 +145,7 @@ export const Television = () => (
     />
   </svg>
 );
+
 export const Smartwatch = () => (
   <svg
     width="59"
@@ -161,6 +165,7 @@ export const Smartwatch = () => (
     />
   </svg>
 );
+
 export const Moniters = () => (
   <svg
     width="59"
@@ -180,6 +185,7 @@ export const Moniters = () => (
     />
   </svg>
 );
+
 export const Express = () => (
   <svg
     width="47"
@@ -226,6 +232,7 @@ export const Express = () => (
     />
   </svg>
 );
+
 export const Return = () => (
   <svg
     width="47"
@@ -272,6 +279,7 @@ export const Return = () => (
     />
   </svg>
 );
+
 export const Support = () => (
   <svg
     width="47"
@@ -299,6 +307,7 @@ export const Support = () => (
     />
   </svg>
 );
+
 export const Premium = () => (
   <svg
     width="47"
@@ -322,6 +331,7 @@ export const Premium = () => (
     />
   </svg>
 );
+
 export const Gift = () => (
   <svg
     width="47"
