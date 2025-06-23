@@ -121,6 +121,7 @@ const Bestseller = () => {
                         btnClass="bg-white !text-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
                       />
                       <item.shop />
+                      
                     </div>
                   </div>
                 </div>
