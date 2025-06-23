@@ -513,3 +513,111 @@ export const HeartSvg = () => (
     />
   </svg>
 );
+
+export const FiveStarSvg = () => (
+  <svg
+    width="197"
+    height="37"
+    viewBox="0 0 197 37"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#clip0_897_11607)">
+      <path
+        d="M18.4309 26.1142L9.40149 31.6289L11.8562 21.3369L3.82227 14.455L14.3678 13.6101L18.4309 3.84033L22.4939 13.6101L33.041 14.455L25.0055 21.3369L27.4603 31.6289L18.4309 26.1142Z"
+        fill="#FFD900"
+      />
+    </g>
+    <g clip-path="url(#clip1_897_11607)">
+      <path
+        d="M58.3703 26.1142L49.3409 31.6289L51.7957 21.3369L43.7617 14.455L54.3073 13.6101L58.3703 3.84033L62.4334 13.6101L72.9805 14.455L64.945 21.3369L67.3997 31.6289L58.3703 26.1142Z"
+        fill="#FFD900"
+      />
+    </g>
+    <g clip-path="url(#clip2_897_11607)">
+      <path
+        d="M98.3098 26.1142L89.2804 31.6289L91.7351 21.3369L83.7012 14.455L94.2467 13.6101L98.3098 3.84033L102.373 13.6101L112.92 14.455L104.884 21.3369L107.339 31.6289L98.3098 26.1142Z"
+        fill="#FFD900"
+      />
+    </g>
+    <g clip-path="url(#clip3_897_11607)">
+      <path
+        d="M138.249 26.1142L129.22 31.6289L131.675 21.3369L123.641 14.455L134.186 13.6101L138.249 3.84033L142.312 13.6101L152.859 14.455L144.824 21.3369L147.279 31.6289L138.249 26.1142Z"
+        fill="#FFD900"
+      />
+    </g>
+    <g clip-path="url(#clip4_897_11607)">
+      <path
+        d="M178.193 26.1142L169.163 31.6289L171.618 21.3369L163.584 14.455L174.13 13.6101L178.193 3.84033L182.256 13.6101L192.803 14.455L184.767 21.3369L187.222 31.6289L178.193 26.1142Z"
+        fill="#FFD900"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_897_11607">
+        <rect width="36.8671" height="36.8671" fill="white" />
+      </clipPath>
+      <clipPath id="clip1_897_11607">
+        <rect
+          width="36.8671"
+          height="36.8671"
+          fill="white"
+          transform="translate(39.9395)"
+        />
+      </clipPath>
+      <clipPath id="clip2_897_11607">
+        <rect
+          width="36.8671"
+          height="36.8671"
+          fill="white"
+          transform="translate(79.8789)"
+        />
+      </clipPath>
+      <clipPath id="clip3_897_11607">
+        <rect
+          width="36.8671"
+          height="36.8671"
+          fill="white"
+          transform="translate(119.818)"
+        />
+      </clipPath>
+      <clipPath id="clip4_897_11607">
+        <rect
+          width="36.8671"
+          height="36.8671"
+          fill="white"
+          transform="translate(159.758)"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const MinusSvg = () => (
+  <svg
+    width="22"
+    height="4"
+    viewBox="0 0 22 4"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0.693359 3.28057V0.412354H21.3056V3.28057H0.693359Z"
+      fill="white"
+    />
+  </svg>
+);
+
+export const PlusSvg = () => (
+  <svg
+    width="18"
+    height="19"
+    viewBox="0 0 18 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.70674 18.7785V0.914551H10.2939V18.7785H7.70674ZM0.0683594 11.1105V8.6247H17.9323V11.1105H0.0683594Z"
+      fill="white"
+    />
+  </svg>
+);
