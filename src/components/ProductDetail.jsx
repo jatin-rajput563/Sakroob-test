@@ -6,8 +6,8 @@ import Buttons from "./common/Buttons";
 import { FiveStarSvg, MinusSvg, PlusSvg } from "../utils/Icons";
 
 const ProductDetail = () => {
-  const colors = ["#000000", "#112D49", "#00E676", "#FFFFFF", "#72A4E8"];
-  const [selectedColor, setSelectedColor] = useState(colors[0]);
+  const colors = ["#010101", "#112D49", "#20E572", "#FFFFFF", "#73A4E0"];
+  const [selectedColor, setSelectedColor] = useState("#EEF4FB");
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => {
@@ -25,15 +25,18 @@ const ProductDetail = () => {
       <div className="min-h-screen">
         <div className="max-w-[1140px] mx-auto px-3">
           <div className="flex flex-wrap flex-row -mx-3">
-            <div className="w-6/12">
-              <div className="py-[44px] px-[42px] bg-[#EEF4FB] max-w-[517px] rounded-[8px]">
+            <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">
+              <div
+                className="py-[44px] px-[42px] max-w-[517px] rounded-[8px] mx-auto"
+                style={{ backgroundColor: selectedColor }}
+              >
                 <img
-                  className="max-w-[432.07px] w-full min-h-[475px]"
+                  className="max-w-[432.07px] w-full min-h-[475px] mx-auto"
                   src={RouterImg}
                   alt="Router-Img"
                 />
               </div>
-              <div className="flex flex-wrap max-w-[517px] gap-[22px] mt-4">
+              <div className="flex flex-wrap max-w-[517px] gap-[22px] mt-4 justify-center lg:justify-start mx-auto">
                 <div className="bg-[#EEF4FB] max-w-[156px] rounded-[4px] px-[30px] py-[9px]">
                   <img
                     className="max-w-[96px] min-h-[107px]"
@@ -57,29 +60,29 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="w-6/12">
+            <div className="w-full lg:w-6/12 px-3">
               <Heading
-                headClass="!text-[34px] text-left !leading-[100%] max-w-[568px]"
+                headClass="!text-[34px] text-left !leading-[100%] max-w-[568px] mx-auto lg:mx-0"
                 headText="D-Link ADSL Wireless Router DSL2790U"
               />
               <Para
-                paraClass="pt-4 max-w-[568px]"
+                paraClass="pt-4 max-w-[568px] mx-auto lg:mx-0"
                 paraText="The D-Link DSL-2790U is a high-speed ADSL2+ wireless router with speeds up to 300 Mbps—ideal for browsing, streaming, and gaming.
 It features four Ethernet ports, strong security, and guest network support. Perfect for reliable internet in homes and small offices"
               />
               <Heading
-                headClass="!text-[34px] text-left pt-4"
+                headClass="!text-[34px] text-left pt-4 max-w-[568px] mx-auto lg:mx-0"
                 headText="$14.95"
               />
-              <div className="pt-4">
+              <div className="pt-4 max-w-[568px] mx-auto lg:mx-0">
                 <FiveStarSvg />
               </div>
-              <div className="flex flex-col items-start gap-4">
+              <div className="flex flex-col items-start gap-4 max-w-[568px] mx-auto lg:mx-0">
                 <Para
                   paraText="Select Color"
                   paraClass="!font-semibold pt-[24px]"
                 />
-                <div className="flex items-center gap-[6.52px]">
+                <div className="flex items-center gap-[6.52px] flex-wrap">
                   {colors.map((color, index) => (
                     <div
                       key={index}
@@ -113,7 +116,7 @@ It features four Ethernet ports, strong security, and guest network support. Per
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col items-start gap-4">
+              <div className="flex flex-col items-start gap-4 max-w-[568px] mx-auto lg:mx-0">
                 <Para
                   paraText="Select Quantity"
                   paraClass="!font-semibold pt-[35px]"
@@ -135,7 +138,7 @@ It features four Ethernet ports, strong security, and guest network support. Per
                     <PlusSvg />
                   </button>
                 </div>
-                <div className="pt-[78px]">
+                <div className="pt-[78px] w-full">
                   <Buttons
                     btnClass="!w-full !py-[17px] !px-[246.9px]"
                     btnText="Buy Now"
