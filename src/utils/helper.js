@@ -1,7 +1,10 @@
 import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg } from "./Icons";
 import pcImg from "../assets/images/png/pc-img.png"
-import routerImg from "../assets/images/png/router-Img.png"
+import routerImg from "../assets/images/png/router-img.png"
 import chairImg from "../assets/images/png/chair-img.png"
+import popularPc from "../assets/images/png/popular-pc-img.png"
+import popularGraphic from "../assets/images/png/popular-graphic-img.png"
+import popularChair from "../assets/images/png/popular-chair-img.png"
 
 
 export const MARQUE_DATA = [
@@ -144,4 +147,34 @@ export const BESTSELLER_DATA = [
         Heart: HeartSvg,
         shop: ShopSvg,
     },
-]
+];
+
+export const POPULAR_DATA = [
+    {
+        img: popularPc,
+        title: "NZXT H510 Elite PC Case",
+        description: "Tempered glass case with clean cable management and optimized airflow.",
+        price: "$249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        img: popularGraphic,
+        title: "MSI GeForce RTX 4070 GPU",
+        description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
+        price: "$349.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        img: popularChair,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+];
