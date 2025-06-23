@@ -1,4 +1,8 @@
-import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift } from "./Icons";
+import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg } from "./Icons";
+import pcImg from "../assets/images/png/pc-img.png"
+import routerImg from "../assets/images/png/router-Img.png"
+import chairImg from "../assets/images/png/chair-img.png"
+
 
 export const MARQUE_DATA = [
     {
@@ -102,3 +106,30 @@ export const SERVICES_DATA = [
         para: "For Order",
     },
 ];
+
+export const BESTSELLER_DATA = [
+    {
+        img: pcImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+    },
+    {
+        img: routerImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+    },
+    {
+        img: chairImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+    }
+]

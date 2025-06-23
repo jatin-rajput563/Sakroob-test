@@ -1,14 +1,16 @@
 import "./App.css";
-import Header from "./components/Header";
+import Bestseller from "./components/Bestseller";
+import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Services from "./components/Services";
 
 function App() {
   return (
     <>
-      <Header />
+      <Hero />
       <Services />
       <Products />
+      <Bestseller />
     </>
   );
 }
