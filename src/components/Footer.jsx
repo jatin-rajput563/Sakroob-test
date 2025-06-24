@@ -1,12 +1,7 @@
 import React from "react";
 import footerLogo from "../assets/images/svg/footer-logo.svg";
 import Para from "./common/Para";
-import {
-  FacebookSvg,
-  InstagramSvg,
-  TwiterSvg,
-  YoutubeSvg,
-} from "../utils/Icons";
+import { FacebookSvg, InstagramSvg, TwiterSvg, YoutubeSvg } from "../utils/Icons";
 import SakroobCircle from "./SakroobCircle";
 
 const Footer = () => {
@@ -15,75 +10,56 @@ const Footer = () => {
       <div className="bg-[#112D49]">
         <SakroobCircle />
         <div className="max-w-[1440px] mx-auto px-3">
-          <div className="">
-            <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />
+          <div className="py-10">
+            {/* Footer Logo */}
+            <img className="mx-auto" src={footerLogo} alt="footer-logo" />
+            
+            {/* Description */}
             <Para
               paraClass="max-w-[338px] !text-[#CFD5DB] text-center mx-auto pt-4 !leading-[150%]"
               paraText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida."
             />
-            <ul className="flex flex-wrap gap-2.5 justify-center pt-[27px]">
-              <li>
-                <a className="text-white" href="#">
-                  Shipping
-                </a>
-              </li>
-              <li>
-                <a className="text-white" href="#">
-                  Warranty
-                </a>
-              </li>
-              <li>
-                <a className="text-white" href="#">
-                  FAQs
-                </a>
-              </li>
-              <li>
-                <a className="text-white" href="#">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a className="text-white" href="#">
-                  Contact
-                </a>
-              </li>
+
+            {/* Navigation Links */}
+            <ul className="flex flex-wrap gap-3 justify-center pt-[27px] text-sm sm:text-base">
+              {["Shipping", "Warranty", "FAQs", "Blog", "Contact"].map((item, index) => (
+                <li key={index}>
+                  <a className="text-white hover:underline transition" href="#">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
-            <div className="flex flex-wrap gap-[10px] justify-center pt-[27px]">
-              <a
-                className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
-                href="https://www.facebook.com/"
-                target="_blank"
-              >
-                <FacebookSvg />
-              </a>
-              <a
-                href="https://www.instagram.com/"
-                className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:-rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
-                target="_blank"
-              >
-                <InstagramSvg />
-              </a>
-              <a
-                href="https://x.com/"
-                className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
-                target="_blank"
-              >
-                <TwiterSvg />
-              </a>
-              <a
-                href="https://www.youtube.com/"
-                className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:-rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
-                target="_blank"
-              >
-                <YoutubeSvg />
-              </a>
+
+            {/* Social Icons */}
+            <div className="flex flex-wrap gap-4 justify-center pt-[27px]">
+              {[
+                { href: "https://www.facebook.com/", icon: <FacebookSvg />, rotate: "rotate-12" },
+                { href: "https://www.instagram.com/", icon: <InstagramSvg />, rotate: "-rotate-12" },
+                { href: "https://x.com/", icon: <TwiterSvg />, rotate: "rotate-12" },
+                { href: "https://www.youtube.com/", icon: <YoutubeSvg />, rotate: "-rotate-12" },
+              ].map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`h-[40px] w-[40px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:${item.rotate} transition-transform duration-300 ease-in-out active:scale-90`}
+                >
+                  {item.icon}
+                </a>
+              ))}
             </div>
-            <div className="w-full bg-white h-1 mt-[82px]"></div>
-            <div className="flex flex-wrap justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 sm:gap-0 sm:flex-nowrap sm:justify-between">
-              <p className="text-sm text-white text-center sm:text-left w-full sm:w-auto">
-                term of service | Privacy Policy
+
+            {/* Divider */}
+            <div className="w-full bg-white h-1 mt-[42px] max-md:mt-[82px]"></div>
+
+            {/* Bottom Info */}
+            <div className="flex flex-col sm:flex-row justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 text-center text-sm text-white">
+              <p className="sm:text-left w-full sm:w-auto">
+                Terms of Service | Privacy Policy
               </p>
-              <p className="text-sm text-white text-center sm:text-right w-full sm:w-auto">
+              <p className="sm:text-right w-full sm:w-auto">
                 © {new Date().getFullYear()} Skaroob. All Rights Reserved.
               </p>
             </div>
