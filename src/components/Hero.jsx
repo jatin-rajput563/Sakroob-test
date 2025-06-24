@@ -1,6 +1,4 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
-import { MARQUE_DATA } from "../utils/helper";
 import { Carousel } from "react-responsive-carousel";
 import Heading from "./common/Heading";
 import Para from "./common/Para";
@@ -9,120 +7,45 @@ import Buttons from "./common/Buttons";
 
 const Hero = () => {
   return (
-    <>
-      <div className="py-[27px]">
-        <Marquee className="max-w-[1440px] mx-auto">
-          {MARQUE_DATA.map((item, index) => (
+    <div className="sm:py-7">
+      <div className="mt-6 sm:mt-10 max-w-[1380px] px-3 mx-auto">
+        <Carousel
+          useKeyboardArrows={true}
+          showThumbs={false}
+          showStatus={false}
+          showArrows={false}
+          infiniteLoop
+          interval={3000}
+          autoPlay
+        >
+          {[...Array(4)].map((_, index) => (
             <div
               key={index}
-              className="flex gap-3.5 items-center text-[#112D49] w-[207px] h-[91px] border border-[#E7EAED] p-4 rounded-lg mx-1.5 hover:shadow-2xl transition-all duration-300 ease-in-linear cursor-pointer"
+              className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] rounded-[8px] flex flex-col items-center justify-center text-center px-4 sm:px-6"
             >
-              <item.icon />
-              <p className="text-black font-bold leading-[120%]">{item.name}</p>
+              <Heading
+                headClass="!pt-0 text-[28px] sm:text-[36px] md:text-[48px] lg:!text-[60px] max-w-full sm:max-w-[761px]"
+                headText="Where Tinkerers Bring Ideas Alive"
+              />
+              <Para
+                paraClass="max-w-full sm:max-w-[460px] pt-3 text-sm sm:text-base"
+                paraText="Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
+              />
+              <div className="flex mx-auto gap-3 sm:gap-5 justify-center mt-5 sm:mt-[34px] flex-wrap">
+                <Buttons
+                  btnClass="!py-[10px] sm:!py-[14px] md:!py-[17px] !px-[15px] sm:!px-[17px] md:!px-[19.4px]"
+                  btnText="Browse Products"
+                />
+                <Buttons
+                  btnClass="bg-transparent !text-[#112D49] !py-[10px] sm:!py-[14px] md:!py-[17px] !px-[15px] sm:!px-[17px] md:!px-[19.5px] hover:!bg-[#112D49] hover:!text-white"
+                  btnText="Starter Kits"
+                />
+              </div>
             </div>
           ))}
-        </Marquee>
-        <div className="mt-10 max-w-[1380px] px-3 mx-auto">
-          <Carousel
-            useKeyboardArrows={true}
-            showThumbs={false}
-            showStatus={false}
-            showArrows={false}
-            infiniteLoop
-            interval={3000}
-          >
-            <div className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[650px] rounded-[8px]">
-              <Heading
-                headClass="!pt-[237px] max-w-[761px] !text-[60px]"
-                headText="Where Tinkerers Bring Ideas Alive"
-              />
-              <Para
-                paraClass="max-w-[460px] text-center mx-auto pt-3"
-                paraText={
-                  "Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
-                }
-              />
-              <div className="flex mx-auto gap-5 justify-center mt-[34px]">
-                <Buttons
-                  btnClass="!py-[17px] !px-[19.4px]"
-                  btnText="Browse Products"
-                />
-                <Buttons
-                  btnClass="bg-transparent !text-[#112D49] !py-[17px] !px-[19.5px] hover:!bg-[#112D49] hover:!text-white"
-                  btnText="Starter Kits"
-                />
-              </div>
-            </div>
-            <div className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[650px] rounded-[8px]">
-              <Heading
-                headClass="!pt-[237px] max-w-[761px] !text-[60px]"
-                headText="Where Tinkerers Bring Ideas Alive"
-              />
-              <Para
-                paraClass="max-w-[460px] text-center mx-auto pt-3"
-                paraText={
-                  "Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
-                }
-              />
-              <div className="flex mx-auto gap-5 justify-center mt-[34px]">
-                <Buttons
-                  btnClass="!py-[17px] !px-[19.4px]"
-                  btnText="Browse Products"
-                />
-                <Buttons
-                  btnClass="bg-transparent !text-[#112D49] !py-[17px] !px-[19.5px] hover:!bg-[#112D49] hover:!text-white"
-                  btnText="Starter Kits"
-                />
-              </div>
-            </div>
-            <div className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[650px] rounded-[8px]">
-              <Heading
-                headClass="!pt-[237px] max-w-[761px] !text-[60px]"
-                headText="Where Tinkerers Bring Ideas Alive"
-              />
-              <Para
-                paraClass="max-w-[460px] text-center mx-auto pt-3"
-                paraText={
-                  "Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
-                }
-              />
-              <div className="flex mx-auto gap-5 justify-center mt-[34px]">
-                <Buttons
-                  btnClass="!py-[17px] !px-[19.4px]"
-                  btnText="Browse Products"
-                />
-                <Buttons
-                  btnClass="bg-transparent !text-[#112D49] !py-[17px] !px-[19.5px] hover:!bg-[#112D49] hover:!text-white"
-                  btnText="Starter Kits"
-                />
-              </div>
-            </div>
-            <div className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[650px] rounded-[8px]">
-              <Heading
-                headClass="!pt-[237px] max-w-[761px] !text-[60px]"
-                headText="Where Tinkerers Bring Ideas Alive"
-              />
-              <Para
-                paraClass="max-w-[460px] text-center mx-auto pt-3"
-                paraText={
-                  "Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
-                }
-              />
-              <div className="flex mx-auto gap-5 justify-center mt-[34px]">
-                <Buttons
-                  btnClass="!py-[17px] !px-[19.4px]"
-                  btnText="Browse Products"
-                />
-                <Buttons
-                  btnClass="bg-transparent !text-[#112D49] !py-[17px] !px-[19.5px] hover:!bg-[#112D49] hover:!text-white"
-                  btnText="Starter Kits"
-                />
-              </div>
-            </div>
-          </Carousel>
-        </div>
+        </Carousel>
       </div>
-    </>
+    </div>
   );
 };
 

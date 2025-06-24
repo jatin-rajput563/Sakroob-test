@@ -1,8 +1,6 @@
 import React from "react";
-import { BLOG_PAGE_DATA } from "../utils/hepler";
-// import HeadingAndPara from "./common/HeadingAndPara";
-import { Arrow } from "../utils/icons";
-
+import { BLOG_PAGE_DATA } from "../utils/helper";
+import { ArrowSvg } from "../utils/icons";
 const Blog = () => {
   const styles = [
     "sm:row-start-1 sm:row-end-2 sm:col-start-1 sm:col-end-2 bg-[#E5E4E2]",
@@ -25,7 +23,7 @@ const Blog = () => {
   const wrapperStyles = ["", "sm:!my-[75px]", "sm:!mx-auto sm:!my-[114px]"];
   return (
     <>
-      <div className="grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 gap-x-5 gap-y-5 max-w-[1384px] w-full mx-auto px-6 my-[100px]">
+      <div className="grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 gap-x-5 gap-y-5 max-w-[1384px] w-full mx-auto px-6 pb-[300px] pt-[100px]">
         {BLOG_PAGE_DATA.map((item, i) => (
           <div
             key={i}
@@ -41,15 +39,19 @@ const Blog = () => {
             <div
               className={`flex flex-col gap-7 max-w-[410px] w-full sm:ml-8 sm:mt-8 p-3.5 ${wrapperStyles[i]}`}
             >
-              {/* <HeadingAndPara
-                heading={item.heading}
-                para={item.para}
-                headingClass={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3 ${headingStyles[i]}`}
-                paraClass={`sm:text-[16px] text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
-              /> */}
+              <p
+                className={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3 ${headingStyles[i]}`}
+              >
+                {item.heading}
+              </p>
+              <p
+                className={`sm:text-[16px] text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
+              >
+                {item.para}
+              </p>
               <div className={`w-full flex ${buttonContainerStyles[i]}`}>
                 <button className="flex gap-2 items-center">
-                  {item.button} <Arrow />
+                  {item.button} <ArrowSvg />
                 </button>
               </div>
             </div>

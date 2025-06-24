@@ -30,7 +30,7 @@ const Bestseller = () => {
 
   return (
     <>
-      <div className="pb-[332px] relative">
+      <div className="relative">
         <div className="max-w-[1272px] mx-auto px-3">
           <Heading headText="Bestsellers" />
           <div
@@ -111,7 +111,7 @@ const Bestseller = () => {
             }}
           >
             {BESTSELLER_DATA.map((item, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide className="pt-[100px]" key={index}>
                 <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
                   <div>
                     <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
