@@ -1,4 +1,4 @@
-import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg } from "./Icons";
+import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg } from "./icons";
 import pcImg from "../assets/images/png/pc-img.png"
 import routerImg from "../assets/images/png/router-img.png"
 import chairImg from "../assets/images/png/chair-img.png"
@@ -11,6 +11,10 @@ import categorieImg3 from '../assets/images/png/categorieImg-3.png'
 import categorieImg4 from '../assets/images/png/categorieImg-4.png'
 import categorieImg5 from '../assets/images/png/categorieImg-5.png'
 import categorieImg6 from '../assets/images/png/categorieImg-6.png'
+import blogPageImg1 from '../assets/images/png/blog-page-img-1.png'
+import blogPageImg2 from '../assets/images/png/blog-page-img-2.png'
+import blogPageImg3 from '../assets/images/png/blog-page-img-3.png'
+import blogPageImg4 from '../assets/images/png/blog-page-img-4.png'
 
 
 export const MARQUE_DATA = [
@@ -236,4 +240,26 @@ export const HEADINGSTYLE_DATA = [
     "max-w-[196px] w-full sm:absolute sm:mt-[26px] sm:mr-4 top-6 left-6 ml-auto",
     "w-full text-center sm:mt-2.5 mb-[44px] sm:mb-0",
     "text-center sm:mt-12 mb-[50px] sm:mb-0",
+];
+
+export const BLOG_PAGE_DATA = [
+    {
+        heading: 'How to Build a Mini NAS',
+        para: 'Learn to build your own network storage system with simple components.',
+        button: 'Read Guide',
+        blogPgaeImg: blogPageImg1,
+    },
+    {
+        heading: '5 Tools Every Maker Should Own',
+        para: 'The essential toolkit for every DIY electronics enthusiast.',
+        button: 'Read Guide',
+        blogPgaeImg: blogPageImg2,
+    },
+    {
+        heading: ' Inside a Raspberry Pi Retro Console',
+        para: 'Step-by-step log of building a retro game machine.',
+        button: 'Read Guide',
+        blogPgaeImg: blogPageImg3,
+        blogPgaeImg_1: blogPageImg4,
+    },
 ];
