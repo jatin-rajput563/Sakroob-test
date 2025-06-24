@@ -10,19 +10,13 @@ const PopularProduct = () => {
 
   const handleFavoriteClick = (index) => {
     if (favoriteItems.includes(index)) {
-      // If already favorite, remove it
       setFavoriteItems(favoriteItems.filter((item) => item !== index));
       setPopupMessage("Removed from Favorite 💔");
     } else {
-      // Add to favorites
       setFavoriteItems([...favoriteItems, index]);
       setPopupMessage("Added to Favorite ❤️");
     }
-
-    // Show popup
     setShowPopup(true);
-
-    // Auto-hide popup after 2 seconds
     setTimeout(() => {
       setShowPopup(false);
     }, 2000);
