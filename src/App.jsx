@@ -28,9 +28,9 @@ function App() {
       <Bestseller />
       <Blog />
       <Footer />
-      {/* <ProductDetail /> */}
-      {/* <RoutingTabs /> */}
-      {/* <PopularProduct /> */}
+      {/* <ProductDetail />
+      <RoutingTabs />
+      <PopularProduct /> */}
     </>
   );
 }
