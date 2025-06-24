@@ -6,7 +6,7 @@ import Buttons from "./common/Buttons";
 const SakroobCircle = () => {
   return (
     <>
-      <div className="bg-[url(../src/assets/images/png/SakroobCircle-bg.png)] bg-cover bg-no-repeat bg-center h-[386px] max-w-[1140px] mx-auto rounded-[24px] pt-[68px] relative overflow-hidden">
+      <div className="-mb-[170px]  bg-[url(../src/assets/images/png/SakroobCircle-bg.png)] bg-cover bg-no-repeat bg-center h-[386px] max-w-[1140px] mx-auto rounded-[24px] pt-[68px] relative overflow-hidden transform translate-y-[-60%]">
       <div className="w-full h-full bg-[#73A4E0] opacity-75 absolute top-0"></div>
         <Heading headClass="!text-white z-10 relative" headText="Join the Sakroob Circle" />
         <Para

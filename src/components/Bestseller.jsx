@@ -30,7 +30,7 @@ const Bestseller = () => {
 
   return (
     <>
-      <div className="py-[132px] relative">
+      <div className="pb-[332px] relative">
         <div className="max-w-[1272px] mx-auto px-3">
           <Heading headText="Bestsellers" />
           <div

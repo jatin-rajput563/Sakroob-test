@@ -7,11 +7,13 @@ import {
   TwiterSvg,
   YoutubeSvg,
 } from "../utils/Icons";
+import SakroobCircle from "./SakroobCircle";
 
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#112D49] pt-[75px]">
+      <div className="bg-[#112D49]">
+        <SakroobCircle />
         <div className="max-w-[1440px] mx-auto px-3">
           <div className="">
             <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />

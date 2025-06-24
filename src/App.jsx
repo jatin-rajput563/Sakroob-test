@@ -3,12 +3,11 @@ import Lenis from "lenis";
 import Bestseller from "./components/Bestseller";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Products from "./components/Products";
+import Services from "./components/Services";
 // import PopularProduct from "./components/PopularProduct";
 // import ProductDetail from "./components/ProductDetail";
-import Products from "./components/Products";
-import RoutingTabs from "./components/RoutingTabs";
-import Services from "./components/Services";
-import SakroobCircle from "./components/SakroobCircle";
+// import RoutingTabs from "./components/RoutingTabs";
 
 const lenis = new Lenis({
   autoRaf: true,
@@ -24,11 +23,10 @@ function App() {
       <Services />
       <Products />
       <Bestseller />
+      <Footer />
       {/* <ProductDetail /> */}
       {/* <RoutingTabs /> */}
       {/* <PopularProduct /> */}
-      <SakroobCircle />
-      <Footer />
     </>
   );
 }
