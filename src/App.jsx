@@ -1,8 +1,9 @@
 import "./App.css";
 import Lenis from "lenis";
-import SignUp from "./components/SignUp";
-import LoginUp from "./components/LoginUp";
-import CheckOut from "./pages/CheckOut"
+import Header from "./components/Header";
+// import SignUp from "./components/SignUp";
+// import LoginUp from "./components/LoginUp";
+// import CheckOut from "./pages/CheckOut"
 // import Login from "./components/pages/Login";
 // import Bestseller from "./components/Bestseller";
 // import Footer from "./components/Footer";
@@ -27,11 +28,12 @@ lenis.on("scroll", (e) => {
 function App() {
   return (
     <>
-      <SignUp />
+      <Header />
+      {/* <SignUp />
       <LoginUp />
       <CheckOut />
-      {/* <Login /> */}
-      {/* <Marque />
+      <Login />
+      <Marque />
       <Hero />
       <Services />
       <Products />
@@ -40,9 +42,9 @@ function App() {
       <OurClients />
       <ProductDetail />
       <RoutingTabs />
-      <PopularProduct /> */}
-      {/* <SakroobCircle /> */}
-      {/* <Footer /> */}
+      <PopularProduct />
+      <SakroobCircle />
+      <Footer /> */}
     </>
   );
 }

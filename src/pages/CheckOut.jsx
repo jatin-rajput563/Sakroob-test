@@ -348,7 +348,6 @@ const CheckOut = () => {
                 )}
               </div>
             </div>
-            {/* Sidebar */}
             <div className="w-4/12 relative overflow-visible">
               <div
                 className={`absolute top-[-50px] right-0 bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-md shadow-md text-sm z-10 transition-transform duration-500 ease-out ${
