@@ -16,6 +16,7 @@ const Product = () => {
           <p className="text-center italic text-lg sm:text-xl leading-[120%] text-[#112D49]">
             Featured Categories
           </p>
+          <Heading />
           <Heading
             headingClass="max-w-[700px] pt-2 mx-auto text-center"
             headingText="Shop Our Most Popular Products"

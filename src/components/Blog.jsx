@@ -1,62 +1,111 @@
 import React from "react";
-import { BLOG_PAGE_DATA } from "../utils/helper";
-import { ArrowSvg } from "../utils/icons";
+import Heading from "../components/common/Heading";
+import Description from "../components/common/Description";
+import { BlogArrow } from "../utils/Icons";
+import blogPageImg1 from "../assets/images/png/blog-page-img-1.png";
+import blogPageImg2 from "../assets/images/png/blog-page-img-2.png";
+import blogPageImg3 from "../assets/images/png/blog-page-img-3.png";
+import blogPageImg4 from "../assets/images/png/blog-page-img-4.png";
+import blogPageImg5 from "../assets/images/png/blog-Page-Img-5.png";
 const Blog = () => {
-  const styles = [
-    "sm:row-start-1 sm:row-end-2 sm:col-start-1 sm:col-end-2 bg-[#E5E4E2]",
-    "sm:row-start-1 sm:row-end-2 sm:col-start-2 sm:col-end-3 bg-[#EEF4FB]",
-    "sm:row-start-2 sm:row-end-3 sm:col-start-1 sm:col-end-3 bg-[#D5E8FF]",
-  ];
-
-  const imgStyles = [
-    "sm:!max-w-[281px] max-w-[190px] lg:right-0 lg:bottom-0 w-full !top-2.5 ml-auto sm:min-h-[235px]",
-    "sm:!max-w-[197px] max-w-[157px] lg:right-0 lg:-bottom-6 !-top-20 w-full sm:min-h-[358px] max-sm:-rotate-90",
-    "sm:!max-w-[375px] max-w-[162px] lg:left-[18px] lg:bottom-[34px] top-0 left-0 w-full sm:min-h-[303px]",
-  ];
-
-  const headingStyles = ["", "max-w-[360px]", "text-center"];
-
-  const paraStyles = ["", "max-w-[360px]", "text-center"];
-
-  const buttonContainerStyles = ["", "", "items-center justify-center"];
-
-  const wrapperStyles = ["", "sm:!my-[75px]", "sm:!mx-auto sm:!my-[114px]"];
   return (
     <>
-      <div className="grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 gap-x-5 gap-y-5 max-w-[1384px] w-full mx-auto px-6 pb-[300px] pt-[100px]">
-        {BLOG_PAGE_DATA.map((item, i) => (
-          <div
-            key={i}
-            className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 justify-end sm:min-h-[500px] min-h-[364px] lg:block flex flex-col items-center gap-4  ${styles[i]}`}
-          >
-            <div className={`absolute  ${imgStyles[i]}`}>
+      <div className="flex justify-center items-center px-6 sm:px-7 mt-[132px] mb-[300px]">
+        <div className="max-w-[1386px] mx-auto w-full">
+          <Heading
+            headClass="max-w-[700px] mx-auto"
+            headText="Blog, Guides, Build Logs & More"
+          />
+          <div className="xl:flex xl:mb-6 mt-8 sm:mt-12 md:mt-16 gap-6.5">
+            <div className="xl:max-w-[680px] max-xl:mb-6 w-full p-3.5 sm:pt-8 sm:pl-8 bg-[#E5E4E2] rounded-[8px] relative min-h-[335px]">
               <img
-                className="object-cover mt-auto w-full md:rounded-[30px] sm:rounded-[20px] rounded-[10px]"
-                src={item.blogPgaeImg}
-                alt={item.heading || "Blog image"}
+                className="max-w-[202px] sm:hidden mx-auto pb-5.5"
+                src={blogPageImg1}
+                alt="storage img"
+              />
+              <Heading
+                headClass="!text-[32px] text-left"
+                headText="How to Build a Mini NAS"
+              />
+              <p className="opacity-80 max-sm:text-sm text-[#112D49] leading-[150%] max-w-[407px] pt-2 sm:pt-3">
+                Learn to build your own network storage system with simple
+                components.
+              </p>
+              <a
+                className="flex items-center leading-[100%] font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
+                href=""
+              >
+                Read Guide{" "}
+                <span>
+                  <BlogArrow />
+                </span>{" "}
+              </a>
+              <img
+                className="hidden sm:block max-w-[250px] md:max-w-[281px] sm:absolute right-0 bottom-0"
+                src={blogPageImg1}
+                alt="storage img"
               />
             </div>
-            <div
-              className={`flex flex-col gap-7 max-w-[410px] w-full sm:ml-8 sm:mt-8 p-3.5  ${wrapperStyles[i]}`}
-            >
-              <p
-                className={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3  ${headingStyles[i]}`}
-              >
-                {item.heading}
+            <div className="xl:max-w-[680px] pb-3.5 pl-3.5 pr-3.5 max-xl:mb-6 w-full sm:pt-[75px] sm:pl-8 bg-[#EEF4FB] rounded-[8px] relative min-h-[335px]">
+              <img
+                className="sm:hidden max-w-[288px] mx-auto mb-10.5"
+                src={blogPageImg5}
+                alt="five tools img"
+              />
+              <Heading
+                headClass="!text-[32px] !text-left "
+                headText="5 Tools Every Maker Should Own"
+              />
+              <p className="opacity-80 max-sm:text-sm text-[#112D49] leading-[150%] max-w-[407px] pt-2 sm:pt-3">
+                The essential toolkit for every DIY electronics enthusiast.
               </p>
-              <p
-                className={`sm:text-[16px] text-[14px] font-normal text-[#112D49]  ${paraStyles[i]}`}
+              <a
+                className="flex items-center leading-[100%] font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
+                href=""
               >
-                {item.para}
-              </p>
-              <div className={`w-full flex  ${buttonContainerStyles[i]}`}>
-                <button className="flex gap-2 items-center">
-                  {item.button} <ArrowSvg />
-                </button>
-              </div>
+                Read Article{" "}
+                <span>
+                  <BlogArrow />
+                </span>{" "}
+              </a>
+              <img
+                className="absolute max-sm:hidden max-w-[199px] right-0 bottom-0 "
+                src={blogPageImg2}
+                alt="five tools img"
+              />
             </div>
           </div>
-        ))}
+          <div className="w-full xl:pt-[50px] xl:pl-4.5 xl:pb-[34px] xl:pr-[27px] bg-[#D5E8FF] rounded-[8px] min-h-[388px] xl:flex gap-[50px] xl:gap-[95.92px] items-center">
+            <img
+              className="max-w-[212px] max-xl:mb-[17px] sm:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[367px]"
+              src={blogPageImg3}
+              alt="five tools img"
+            />
+            <div className="px-3.5">
+              <Heading
+                headClass="!text-[32px]"
+                headText="Inside a Raspberry Pi Retro Console"
+              />
+              <p className="opacity-80 text-[#112D49] max-sm:max-w-[260px] max-sm:text-sm leading-[150%] max-w-[410px] mx-auto pt-2 sm:pt-3 text-center">
+                Step-by-step log of building a retro game machine.
+              </p>
+              <a
+                className="flex items-center leading-[100%] mx-auto font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max text-center"
+                href=""
+              >
+                View Build Log{" "}
+                <span>
+                  <BlogArrow />
+                </span>{" "}
+              </a>
+            </div>
+            <img
+              className="max-w-[182px] max-xl:mt-9.5 sm:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[367px] ml-auto"
+              src={blogPageImg4}
+              alt="five tools img"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
