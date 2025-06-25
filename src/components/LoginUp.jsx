@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import Heading from "../common/Heading";
-import Para from "../common/Para";
-import Buttons from "../common/Buttons";
-import { CloseEye, OpenEye } from "../../utils/Icons";
-
-const Login = () => {
+import Heading from "../components/common/Heading";
+import Para from "../components/common/Para";
+import Buttons from "../components/common/Buttons";
+import { CloseEye, OpenEye } from "../utils/Icons";
+const LoginUp = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const toggleVisibility = () => setShowPassword(!showPassword);
-
   return (
     <>
       <div className="bg-[url(../src/assets/images/png/Login-bg.png)] bg-no-repeat bg-cover bg-center min-h-screen justify-center flex items-center">
@@ -70,4 +68,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginUp;

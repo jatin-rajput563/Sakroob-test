@@ -6,8 +6,8 @@ import Buttons from "./common/Buttons";
 const SakroobCircle = () => {
   return (
     <>
-      <div className="p-6">
-        <div className="-mb-[170px] bg-[url(../src/assets/images/png/SakroobCircle-bg.png)] bg-cover bg-no-repeat bg-center h-[386px] max-w-[1140px] mx-auto rounded-[24px] pt-[68px] max-sm:py-[68px]  relative overflow-hidden transform translate-y-[-60%]">
+      <div className="p-6 relative min-h-[386px]">
+        <div className="-mb-[170px] w-full bg-[url(../src/assets/images/png/SakroobCircle-bg.png)] bg-cover bg-no-repeat bg-center h-[386px] max-w-[1140px] mx-auto rounded-[24px] pt-[68px] max-sm:py-[68px] overflow-hidden absolute -bottom-1/3 left-1/2 -translate-x-1/2">/
           <div className="p-6">
             <div className="w-full h-full bg-[#73A4E0] opacity-75 absolute top-0 left-0"></div>
             <Heading

@@ -2,13 +2,11 @@ import React from "react";
 import footerLogo from "../assets/images/svg/footer-logo.svg";
 import Para from "./common/Para";
 import { FacebookSvg, InstagramSvg, TwiterSvg, YoutubeSvg } from "../utils/Icons";
-import SakroobCircle from "./SakroobCircle";
 
 const Footer = () => {
   return (
     <>
       <div className="bg-[#112D49]">
-        {/* <SakroobCircle /> */}
         <div className="max-w-[1440px] mx-auto px-3">
           <div className="py-10">
             <img className="mx-auto" src={footerLogo} alt="footer-logo" />

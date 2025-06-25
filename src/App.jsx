@@ -1,6 +1,9 @@
 import "./App.css";
 import Lenis from "lenis";
-import Login from "./components/pages/Login";
+import SignUp from "./components/SignUp";
+import LoginUp from "./components/LoginUp";
+// import CheckOut from "./components/pages/CheckOut";
+// import Login from "./components/pages/Login";
 // import Bestseller from "./components/Bestseller";
 // import Footer from "./components/Footer";
 // import Hero from "./components/Hero";
@@ -12,6 +15,7 @@ import Login from "./components/pages/Login";
 // import PopularProduct from "./components/PopularProduct";
 // import ProductDetail from "./components/ProductDetail";
 // import RoutingTabs from "./components/RoutingTabs";
+// import SakroobCircle from "./components/SakroobCircle";
 
 const lenis = new Lenis({
   autoRaf: true,
@@ -23,7 +27,9 @@ lenis.on("scroll", (e) => {
 function App() {
   return (
     <>
-      <Login />
+      <SignUp />
+      <LoginUp />
+      {/* <Login /> */}
       {/* <Marque />
       <Hero />
       <Services />
@@ -31,10 +37,12 @@ function App() {
       <Bestseller />
       <Blog />
       <OurClients />
-       <ProductDetail />
+      <ProductDetail />
       <RoutingTabs />
-      <PopularProduct />
-      <Footer /> */}
+      <PopularProduct /> */}
+      {/* <CheckOut /> */}
+      {/* <SakroobCircle /> */}
+      {/* <Footer /> */}
     </>
   );
 }
