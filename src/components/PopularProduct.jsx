@@ -43,7 +43,7 @@ const PopularProduct = () => {
                   <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
                     <img
                       src={item.img}
-                      className={`absolute ${
+                      className={`absolute  ${
                         index === 1 ? "-top-[30px]" : "-top-[50px]"
                       } left-1/2 -translate-x-1/2`}
                       alt="img"

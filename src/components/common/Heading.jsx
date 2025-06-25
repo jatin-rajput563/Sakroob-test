@@ -4,7 +4,7 @@ const Heading = ({ headText, headClass }) => {
   return (
     <div>
       <h1
-        className={`font-bold leading-[120%] text-[#112D49] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mx-auto ${headClass}`}
+        className={`font-bold leading-[120%] text-[#112D49] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mx-auto  ${headClass}`}
       >
         {headText}
       </h1>

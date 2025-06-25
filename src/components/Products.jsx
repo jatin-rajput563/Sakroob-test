@@ -24,9 +24,9 @@ const Products = () => {
           {FEATURED_CATEGORIES_PRODUCTS.map((item, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 min-h-[220px] [min-width:500px]:min-h-[260px] [min-width:850px]:min-h-[335px] flex flex-col-reverse lg:block items-center gap-4 ${GRIDSTYLE_CLASS[index]}`}
+              className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 min-h-[220px] [min-width:500px]:min-h-[260px] [min-width:850px]:min-h-[335px] flex flex-col-reverse lg:block items-center gap-4  ${GRIDSTYLE_CLASS[index]}`}
             >
-              <div className={`lg:absolute ${IMAGESTYLE_CLASS[index]}`}>
+              <div className={`lg:absolute  ${IMAGESTYLE_CLASS[index]}`}>
                 <img
                   src={item.categorieImg}
                   alt={item.categorieName || "Category"}
@@ -34,7 +34,7 @@ const Products = () => {
                 />
               </div>
               <h4
-                className={`text-[18px] [min-width:500px]:text-[22px] [min-width:850px]:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#112D49] relative z-10 text-center sm:text-start ${HEADINGSTYLE_DATA[index]}`}
+                className={`text-[18px] [min-width:500px]:text-[22px] [min-width:850px]:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#112D49] relative z-10 text-center sm:text-start  ${HEADINGSTYLE_DATA[index]}`}
               >
                 {item.categorieName}
               </h4>

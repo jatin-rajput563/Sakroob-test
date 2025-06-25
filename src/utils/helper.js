@@ -5,6 +5,7 @@ import chairImg from "../assets/images/png/chair-img.png"
 import popularPc from "../assets/images/png/popular-pc-img.png"
 import popularGraphic from "../assets/images/png/popular-graphic-img.png"
 import popularChair from "../assets/images/png/popular-chair-img.png"
+import moniterPC from "../assets/images/png/monter-img.png"
 import categorieImg1 from '../assets/images/png/categorieImg-1.png'
 import categorieImg2 from '../assets/images/png/categorieImg-2.png'
 import categorieImg3 from '../assets/images/png/categorieImg-3.png'
@@ -125,7 +126,7 @@ export const BESTSELLER_DATA = [
         img: pcImg,
         title: "Vortex Gaming PC",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "$249.99",
+        price: "  ₹249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
         shop: ShopSvg,
@@ -134,7 +135,7 @@ export const BESTSELLER_DATA = [
         img: routerImg,
         title: "D-Link ADSL Wireless Router DSL2790U",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "$249.99",
+        price: "  ₹249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
         shop: ShopSvg,
@@ -143,20 +144,20 @@ export const BESTSELLER_DATA = [
         img: chairImg,
         title: "Gaming Chair",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "$249.99",
+        price: "  ₹249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
         shop: ShopSvg,
     },
     {
-        img: routerImg,
-        title: "D-Link ADSL Wireless Router DSL2790U",
-        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "$249.99",
+        img: moniterPC,
+        title: "Acer Nitro 27\" Gaming Monitor",
+        description: "Ultra-smooth visuals with a 165Hz refresh rate and 1ms response time for a competitive edge.",
+        price: "  ₹349.99",
         svg: Ratingstar,
         Heart: HeartSvg,
         shop: ShopSvg,
-    },
+    }
 ];
 
 export const POPULAR_DATA = [
@@ -164,7 +165,7 @@ export const POPULAR_DATA = [
         img: popularPc,
         title: "NZXT H510 Elite PC Case",
         description: "Tempered glass case with clean cable management and optimized airflow.",
-        price: "$249.99",
+        price: "  ₹249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
         shop: ShopSvg,
@@ -173,7 +174,7 @@ export const POPULAR_DATA = [
         img: popularGraphic,
         title: "MSI GeForce RTX 4070 GPU",
         description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
-        price: "$349.99",
+        price: "  ₹349.99",
         svg: Ratingstar,
         Heart: HeartSvg,
         shop: ShopSvg,
@@ -182,7 +183,7 @@ export const POPULAR_DATA = [
         img: popularChair,
         title: "Gaming Chair",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "$249.99",
+        price: "  ₹249.99",
         svg: Ratingstar,
         Heart: HeartSvg,
         shop: ShopSvg,

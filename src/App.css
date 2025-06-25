@@ -33,3 +33,7 @@ body {
             rgba(255, 255, 255, 0) 100%);
     border-image-slice: 1;
 }
+
+.slider-wrapper {
+    padding-bottom: 40px !important;
+}

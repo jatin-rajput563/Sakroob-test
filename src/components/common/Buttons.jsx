@@ -15,7 +15,7 @@ const Buttons = ({ btnClass, btnText }) => {
           text-white font-medium leading-[100%] border border-[#112D49] 
           hover:bg-white hover:text-[#112D49] 
           transition-all duration-300 ease-linear cursor-pointer 
-          ${btnClass}`}
+           ${btnClass}`}
       >
         {btnText}
       </button>

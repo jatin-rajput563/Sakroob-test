@@ -12,11 +12,11 @@ const Services = () => {
                 key={index}
                 className={`flex items-center gap-[8px] max-md:py-[50px] px-[36px] h-[61px] 
                 w-full sm:w-1/2 md:w-1/3 xl:w-1/5 max-w-[320px]
-                ${
-                  index !== SERVICES_DATA.length - 1
-                    ? "sm:border-r border-[#112D49] h-[61px] max-sm:border-b"
-                    : ""
-                }
+                 ${
+                   index !== SERVICES_DATA.length - 1
+                     ? "sm:border-r border-[#112D49] h-[61px] max-sm:border-b"
+                     : ""
+                 }
                 `}
               >
                 <item.icon />

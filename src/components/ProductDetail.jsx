@@ -72,7 +72,7 @@ It features four Ethernet ports, strong security, and guest network support. Per
               />
               <Heading
                 headClass="!text-[34px] text-left pt-4 max-w-[568px] mx-auto lg:mx-0"
-                headText="$14.95"
+                headText=" $14.95"
               />
               <div className="pt-4 max-w-[568px] mx-auto lg:mx-0">
                 <FiveStarSvg />
@@ -87,9 +87,9 @@ It features four Ethernet ports, strong security, and guest network support. Per
                     <div
                       key={index}
                       onClick={() => setSelectedColor(color)}
-                      className={`w-[29px] h-[29px] rounded-full flex items-center justify-center cursor-pointer border ${
+                      className={`w-[29px] h-[29px] rounded-full flex items-center justify-center cursor-pointer border  ${
                         color === "#FFFFFF" ? "shadow" : ""
-                      } ${
+                      }  ${
                         selectedColor === color
                           ? "border-gray-400"
                           : "border-transparent"

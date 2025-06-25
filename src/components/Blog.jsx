@@ -27,9 +27,9 @@ const Blog = () => {
         {BLOG_PAGE_DATA.map((item, i) => (
           <div
             key={i}
-            className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 justify-end sm:min-h-[500px] min-h-[364px] lg:block flex flex-col items-center gap-4 ${styles[i]}`}
+            className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 justify-end sm:min-h-[500px] min-h-[364px] lg:block flex flex-col items-center gap-4  ${styles[i]}`}
           >
-            <div className={`absolute ${imgStyles[i]}`}>
+            <div className={`absolute  ${imgStyles[i]}`}>
               <img
                 className="object-cover mt-auto w-full md:rounded-[30px] sm:rounded-[20px] rounded-[10px]"
                 src={item.blogPgaeImg}
@@ -37,19 +37,19 @@ const Blog = () => {
               />
             </div>
             <div
-              className={`flex flex-col gap-7 max-w-[410px] w-full sm:ml-8 sm:mt-8 p-3.5 ${wrapperStyles[i]}`}
+              className={`flex flex-col gap-7 max-w-[410px] w-full sm:ml-8 sm:mt-8 p-3.5  ${wrapperStyles[i]}`}
             >
               <p
-                className={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3 ${headingStyles[i]}`}
+                className={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3  ${headingStyles[i]}`}
               >
                 {item.heading}
               </p>
               <p
-                className={`sm:text-[16px] text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
+                className={`sm:text-[16px] text-[14px] font-normal text-[#112D49]  ${paraStyles[i]}`}
               >
                 {item.para}
               </p>
-              <div className={`w-full flex ${buttonContainerStyles[i]}`}>
+              <div className={`w-full flex  ${buttonContainerStyles[i]}`}>
                 <button className="flex gap-2 items-center">
                   {item.button} <ArrowSvg />
                 </button>

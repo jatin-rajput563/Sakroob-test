@@ -27,7 +27,12 @@ const Bestseller = () => {
       setShowPopup(false);
     }, 2000);
   };
-  const topPositions = ["-top-[45px]", "-top-[80px]", "-top-[105px]"];
+  const topPositions = [
+    "-top-[45px]",
+    "-top-[80px]",
+    "-top-[105px]",
+    "-top-[70px]",
+  ];
   return (
     <>
       <div className="relative">
@@ -35,7 +40,7 @@ const Bestseller = () => {
           <Heading headText="Bestsellers" />
           <div
             ref={prevRef}
-            className="w-[38px] h-[38px] absolute top-[50%] left-[6%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            className="w-[38px] h-[38px] absolute top-[58%] left-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
           >
             <svg
               width="8"
@@ -55,7 +60,7 @@ const Bestseller = () => {
           </div>
           <div
             ref={nextRef}
-            className="w-[38px] h-[38px] absolute top-[50%] right-[6%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            className="w-[38px] h-[38px] absolute top-[58%] right-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
           >
             <svg
               width="8"
@@ -117,14 +122,13 @@ const Bestseller = () => {
                     <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
                       <img
                         src={item.img}
-                        className={`absolute ${topPositions[index]} left-1/2 -translate-x-1/2`}
+                        className={`absolute  ${topPositions[index]} left-1/2 -translate-x-1/2`}
                         alt="img"
                       />
                       <div
                         className="absolute top-[10px] right-[10px] cursor-pointer"
                         onClick={() => handleFavoriteClick(index)}
-                      >
-                      </div>
+                      ></div>
                     </div>
                     <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">
                       {item.title}
