@@ -6,12 +6,6 @@ import popularPc from "../assets/images/png/popular-pc-img.png"
 import popularGraphic from "../assets/images/png/popular-graphic-img.png"
 import popularChair from "../assets/images/png/popular-chair-img.png"
 import moniterPC from "../assets/images/png/monter-img.png"
-import categorieImg1 from '../assets/images/png/categorieImg-1.png'
-import categorieImg2 from '../assets/images/png/categorieImg-2.png'
-import categorieImg3 from '../assets/images/png/categorieImg-3.png'
-import categorieImg4 from '../assets/images/png/categorieImg-4.png'
-import categorieImg5 from '../assets/images/png/categorieImg-5.png'
-import categorieImg6 from '../assets/images/png/categorieImg-6.png'
 import blogPageImg1 from '../assets/images/png/blog-page-img-1.png'
 import blogPageImg2 from '../assets/images/png/blog-page-img-2.png'
 import blogPageImg3 from '../assets/images/png/blog-page-img-3.png'
@@ -190,32 +184,6 @@ export const POPULAR_DATA = [
     },
 ];
 
-export const FEATURED_CATEGORIES_PRODUCTS = [
-    {
-        categorieName: 'Sensors & Modules',
-        categorieImg: categorieImg1,
-    },
-    {
-        categorieName: 'Custom PC Parts',
-        categorieImg: categorieImg2
-    },
-    {
-        categorieName: 'DIY Tools',
-        categorieImg: categorieImg3
-    },
-    {
-        categorieName: 'Cables & Connectors',
-        categorieImg: categorieImg4
-    },
-    {
-        categorieName: 'Gaming Peripherals',
-        categorieImg: categorieImg5
-    },
-    {
-        categorieName: 'Raspberry Pi Kits',
-        categorieImg: categorieImg6
-    },
-];
 export const GRIDSTYLE_CLASS = [
     "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 bg-[#D5E8FF]",
     "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 bg-[#EEF4FB]",
