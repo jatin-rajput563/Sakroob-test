@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Services from "./components/Services";
 import Blog from "./components/Blog";
+import OurClients from "./components/OurClients";
 import Marque from "./components/Marque";
 // import PopularProduct from "./components/PopularProduct";
 // import ProductDetail from "./components/ProductDetail";
@@ -27,6 +28,7 @@ function App() {
       <Products />
       <Bestseller />
       <Blog />
+      <OurClients />
       <Footer />
       {/* <ProductDetail />
       <RoutingTabs />

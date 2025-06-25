@@ -6,7 +6,8 @@ import popularPc from "../assets/images/png/popular-pc-img.png"
 import popularGraphic from "../assets/images/png/popular-graphic-img.png"
 import popularChair from "../assets/images/png/popular-chair-img.png"
 import moniterPC from "../assets/images/png/monter-img.png"
-
+import william from '../assets/images/png/william-img.png'
+import darrell from '../assets/images/png/Darrell-img.png'
 
 
 export const MARQUE_DATA = [
@@ -181,29 +182,25 @@ export const POPULAR_DATA = [
     },
 ];
 
-export const GRIDSTYLE_CLASS = [
-    "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 bg-[#D5E8FF]",
-    "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 bg-[#EEF4FB]",
-    "lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2 sm:col-span-2 sm:row-start-2 sm:row-end-3 bg-[#E5E4E2]",
-    "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 sm:col-start-1 sm:col-end-2 sm:row-start-3 sm:row-end-4 bg-[#EEF4FB]",
-    "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3 sm:col-start-2 sm:col-end-3 sm:row-start-3 sm:row-end-4 bg-[#E5E4E2]",
-    "lg:col-span-2 lg:col-start-3 lg:col-end-5 lg:row-start-2 lg:row-end-3 sm:col-span-2 sm:row-start-4 sm:row-end-5 bg-[#D5E8FF]",
-];
-
-export const IMAGESTYLE_CLASS = [
-    "sm:max-w-[372px] max-w-[246px] right-0 bottom-0 ml-auto w-full sm:min-h-[261px]",
-    "sm:max-w-[250px] max-w-[157px] right-1/2 lg:translate-x-1/2 -bottom-6 w-full sm:min-h-[213px]",
-    "sm:max-w-[184px] max-w-[162px] right-1/2 lg:translate-x-1/2 bottom-3 w-full sm:min-h-[208px]",
-    "sm:max-w-[306px] max-w-[294px] sm:left-0 sm:bottom-0 w-full sm:min-h-[261px] max-sm:-rotate-90 -right-4 bottom-4",
-    "sm:max-w-[266px] max-w-[198px] right-1/2 lg:translate-x-1/2 bottom-[18px] w-full sm:min-h-[187px]",
-    "right-0 top-0 bottom-0 left-0 w-full z-0",
-];
-
-export const HEADINGSTYLE_DATA = [
-    "max-w-[172px] w-full xl:ml-[62px] sm:ml-[30px] xl:mt-[117px] mr-auto ml-6 mt-6",
-    "max-w-[213px] w-full text-center mx-auto sm:mt-8 mb-[46px] sm:mb-0",
-    "w-full text-center mt-[34px] mb-[39px] sm:mb-0",
-    "max-w-[196px] w-full sm:absolute sm:mt-[26px] sm:mr-4 top-6 left-6 ml-auto",
-    "w-full text-center sm:mt-2.5 mb-[44px] sm:mb-0",
-    "text-center sm:mt-12 mb-[50px] sm:mb-0",
+export const CLIENTS_DATA = [
+    {
+        img: william,
+        title: "William gate",
+        job: "CEO"
+    },
+    {
+        img: darrell,
+        title: "Darrell Steward",
+        job: "Manager"
+    },
+    {
+        img: william,
+        title: "William gate",
+        job: "CEO"
+    },
+    {
+        img: darrell,
+        title: "Darrell Steward",
+        job: "Manager"
+    }
 ];

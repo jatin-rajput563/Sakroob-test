@@ -35,7 +35,7 @@ const Bestseller = () => {
   ];
   return (
     <>
-      <div className="relative py-[132px]">
+      <div className="relative pt-[132px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
           <div

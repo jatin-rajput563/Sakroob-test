@@ -1,16 +1,15 @@
 import React from "react";
 import Heading from "../components/common/Heading";
-import Description from "../components/common/Description";
-import { BlogArrow } from "../utils/Icons";
 import blogPageImg1 from "../assets/images/png/blog-page-img-1.png";
 import blogPageImg2 from "../assets/images/png/blog-page-img-2.png";
 import blogPageImg3 from "../assets/images/png/blog-page-img-3.png";
 import blogPageImg4 from "../assets/images/png/blog-page-img-4.png";
 import blogPageImg5 from "../assets/images/png/blog-Page-Img-5.png";
+import { BlogArrow } from "../utils/icons";
 const Blog = () => {
   return (
     <>
-      <div className="flex justify-center items-center px-6 sm:px-7 mt-[132px] mb-[300px]">
+      <div className="flex justify-center items-center px-6 sm:px-7 mt-[132px]">
         <div className="max-w-[1386px] mx-auto w-full">
           <Heading
             headClass="max-w-[700px] mx-auto"
