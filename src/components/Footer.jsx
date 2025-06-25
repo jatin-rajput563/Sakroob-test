@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-[#112D49]">
-        <SakroobCircle />
+        {/* <SakroobCircle /> */}
         <div className="max-w-[1440px] mx-auto px-3">
           <div className="py-10">
             <img className="mx-auto" src={footerLogo} alt="footer-logo" />

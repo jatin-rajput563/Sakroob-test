@@ -22,7 +22,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <div className="">
+      <div className="pt-[91px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <div className="flex flex-wrap flex-row -mx-3">
             <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">

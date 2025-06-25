@@ -30,10 +30,10 @@ const PopularProduct = () => {
         </div>
       )}
 
-      <div className="pt-[132px]">
+      <div className="py-[132px]">
         <div className="max-w-[1140px] px-3 mx-auto">
           <Heading headClass="pb-[87px]" headText="Popular Products" />
-          <div className="flex flex-wrap flex-row -mx-3 gap-[24px]">
+          <div className="flex flex-wrap flex-row -mx-3 gap-[24px] max-md:gap-[48px]">
             {POPULAR_DATA.map((item, index) => (
               <div
                 key={index}
