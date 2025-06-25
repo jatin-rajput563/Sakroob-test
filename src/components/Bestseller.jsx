@@ -35,8 +35,8 @@ const Bestseller = () => {
   ];
   return (
     <>
-      <div className="relative">
-        <div className="max-w-[1272px] mx-auto px-3">
+      <div className="relative py-[132px]">
+        <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
           <div
             ref={prevRef}

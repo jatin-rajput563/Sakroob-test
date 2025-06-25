@@ -91,7 +91,7 @@ const Blog = () => {
               </p>
               <a
                 className="flex items-center leading-[100%] mx-auto font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max text-center"
-                href=""
+                href="#"
               >
                 View Build Log
                 <div>
