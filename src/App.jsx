@@ -2,7 +2,7 @@ import "./App.css";
 import Lenis from "lenis";
 import SignUp from "./components/SignUp";
 import LoginUp from "./components/LoginUp";
-// import CheckOut from "./components/pages/CheckOut";
+import CheckOut from "./pages/CheckOut"
 // import Login from "./components/pages/Login";
 // import Bestseller from "./components/Bestseller";
 // import Footer from "./components/Footer";
@@ -29,6 +29,7 @@ function App() {
     <>
       <SignUp />
       <LoginUp />
+      <CheckOut />
       {/* <Login /> */}
       {/* <Marque />
       <Hero />
@@ -40,7 +41,6 @@ function App() {
       <ProductDetail />
       <RoutingTabs />
       <PopularProduct /> */}
-      {/* <CheckOut /> */}
       {/* <SakroobCircle /> */}
       {/* <Footer /> */}
     </>

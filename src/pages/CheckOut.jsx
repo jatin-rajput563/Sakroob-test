@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Buttons from "../common/Buttons";
+import Buttons from "../components/common/Buttons";
 import {
   CreditCards,
   InformationSvg,
   PaypalSvg,
   UnderSvg,
-} from "../../utils/Icons";
+} from "../utils/Icons";
 
 const CheckOut = () => {
   const [checked, setChecked] = useState(false);
