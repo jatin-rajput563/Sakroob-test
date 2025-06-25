@@ -35,10 +35,10 @@ const Blog = () => {
                 className="flex items-center leading-[100%] font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
                 href=""
               >
-                Read Guide{" "}
-                <span>
+                Read Guide
+                <div>
                   <BlogArrow />
-                </span>{" "}
+                </div>
               </a>
               <img
                 className="hidden sm:block max-w-[250px] md:max-w-[281px] sm:absolute right-0 bottom-0"
@@ -63,10 +63,10 @@ const Blog = () => {
                 className="flex items-center leading-[100%] font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
                 href=""
               >
-                Read Article{" "}
-                <span>
+                Read Article
+                <div>
                   <BlogArrow />
-                </span>{" "}
+                </div>
               </a>
               <img
                 className="absolute max-sm:hidden max-w-[199px] right-0 bottom-0 "
@@ -93,10 +93,10 @@ const Blog = () => {
                 className="flex items-center leading-[100%] mx-auto font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max text-center"
                 href=""
               >
-                View Build Log{" "}
-                <span>
+                View Build Log
+                <div>
                   <BlogArrow />
-                </span>{" "}
+                </div>
               </a>
             </div>
             <img
