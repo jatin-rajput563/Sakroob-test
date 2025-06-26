@@ -1,9 +1,10 @@
 import React from "react";
 
-const Buttons = ({ btnClass, btnText,type }) => {
+const Buttons = ({ btnClass, btnText,type ,onClick}) => {
   return (
     <div className="flex justify-center">
       <button
+      onClick={onClick}
         type={type}
         className={`bg-[#112D49] 
           py-[12px] px-[24px] 

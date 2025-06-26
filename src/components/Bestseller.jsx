@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Heading from "./common/Heading";
@@ -6,6 +7,7 @@ import Buttons from "./common/Buttons";
 import "swiper/css";
 import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
+import { useCart } from "../context/CartContext";
 
 const Bestseller = () => {
   const prevRef = useRef(null);
@@ -13,42 +15,40 @@ const Bestseller = () => {
   const [favoriteItems, setFavoriteItems] = useState([]);
   const [popupMessage, setPopupMessage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const handleFavoriteClick = (index) => {
     if (favoriteItems.includes(index)) {
       setFavoriteItems(favoriteItems.filter((item) => item !== index));
-      setPopupMessage("Removed from Favorite 💔");
+      setPopupMessage("Removed from Favorite ❤︍");
     } else {
       setFavoriteItems([...favoriteItems, index]);
-      setPopupMessage("Added to Favorite ❤️");
+      setPopupMessage("Added to Favorite ❤︍");
     }
     setShowPopup(true);
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 2000);
+    setTimeout(() => setShowPopup(false), 2000);
   };
+
   const topPositions = [
     "-top-[45px]",
     "-top-[80px]",
     "-top-[105px]",
     "-top-[70px]",
   ];
+
   return (
     <>
       <div className="relative pt-[132px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
+
+          {/* Prev Button */}
           <div
             ref={prevRef}
             className="w-[38px] h-[38px] absolute top-[58%] left-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
           >
-            <svg
-              width="8"
-              height="14"
-              viewBox="0 0 8 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
               <path
                 d="M7 13L1 7L6.79609 1"
                 className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
@@ -58,17 +58,13 @@ const Bestseller = () => {
               />
             </svg>
           </div>
+
+          {/* Next Button */}
           <div
             ref={nextRef}
             className="w-[38px] h-[38px] absolute top-[58%] right-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
           >
-            <svg
-              width="8"
-              height="14"
-              viewBox="0 0 8 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
               <path
                 d="M1 13L7 7L1.20391 1"
                 className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
@@ -78,14 +74,13 @@ const Bestseller = () => {
               />
             </svg>
           </div>
+
+          {/* Swiper Slider */}
           <Swiper
             modules={[Navigation]}
             slidesPerView={3}
-            spaceBetween={0}
             loop={true}
             centeredSlides={true}
-            slidesOffsetBefore={24}
-            slidesOffsetAfter={24}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
@@ -97,22 +92,10 @@ const Bestseller = () => {
               swiper.navigation.update();
             }}
             breakpoints={{
-              320: {
-                slidesPerView: 1.1,
-                spaceBetween: 10,
-              },
-              640: {
-                slidesPerView: 1.5,
-                spaceBetween: 15,
-              },
-              768: {
-                slidesPerView: 2.5,
-                spaceBetween: 15,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 15,
-              },
+              320: { slidesPerView: 1.1, spaceBetween: 10 },
+              640: { slidesPerView: 1.5, spaceBetween: 15 },
+              768: { slidesPerView: 2.5, spaceBetween: 15 },
+              1024: { slidesPerView: 3, spaceBetween: 15 },
             }}
           >
             {BESTSELLER_DATA.map((item, index) => (
@@ -122,8 +105,8 @@ const Bestseller = () => {
                     <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
                       <img
                         src={item.img}
-                        className={`absolute  ${topPositions[index]} left-1/2 -translate-x-1/2`}
-                        alt="img"
+                        className={`absolute ${topPositions[index]} left-1/2 -translate-x-1/2`}
+                        alt="product"
                       />
                       <div
                         className="absolute top-[10px] right-[10px] cursor-pointer"
@@ -143,11 +126,36 @@ const Bestseller = () => {
                       {item.svg && <item.svg />}
                     </div>
                     <div className="pt-[25px] flex justify-between items-center">
+                      {/* ✅ Shop Now (go to product detail) */}
                       <Buttons
                         btnText="Shop Now"
                         btnClass="bg-white !text-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
+                        onClick={() => {
+                          navigate(`/product/${item.id || index}`, {
+                            state: { product: item },
+                          });
+                          localStorage.setItem("selectedProduct", JSON.stringify(item));
+                        }}
                       />
-                      {item.shop && <item.shop />}
+
+                      {/* ✅ Add to Cart */}
+                      {item.shop && (
+                        <div
+                          className="cursor-pointer"
+                          onClick={() =>
+                            addToCart({
+                              id: item.id || index,
+                              name: item.title,
+                              image: item.img,
+                              price: parseFloat(
+                                item.price.replace("₹", "").replace(",", "")
+                              ),
+                            })
+                          }
+                        >
+                          <item.shop />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -156,6 +164,13 @@ const Bestseller = () => {
           </Swiper>
         </div>
       </div>
+
+      {/* Popup Message */}
+      {showPopup && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition">
+          {popupMessage}
+        </div>
+      )}
     </>
   );
 };

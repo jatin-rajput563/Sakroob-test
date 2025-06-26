@@ -114,43 +114,49 @@ export const SERVICES_DATA = [
 ];
 
 export const BESTSELLER_DATA = [
-    {
-        img: pcImg,
-        title: "Vortex Gaming PC",
-        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "  ₹249.99",
-        svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
-    },
-    {
-        img: routerImg,
-        title: "D-Link ADSL Wireless Router DSL2790U",
-        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "  ₹249.99",
-        svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
-    },
-    {
-        img: chairImg,
-        title: "Gaming Chair",
-        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "  ₹249.99",
-        svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
-    },
-    {
-        img: moniterPC,
-        title: "Acer Nitro 27\" Gaming Monitor",
-        description: "Ultra-smooth visuals with a 165Hz refresh rate and 1ms response time for a competitive edge.",
-        price: "  ₹349.99",
-        svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
-    }
+  {
+    id: "vortex-gaming-pc", // ✅ REQUIRED
+    img: pcImg,
+    title: "Vortex Gaming PC",
+    description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+    price: "₹249.99",
+    svg: Ratingstar,
+    Heart: HeartSvg,
+    shop: ShopSvg,
+  },
+  {
+    id: "dlink-router",
+    img: routerImg,
+    title: "D-Link ADSL Wireless Router DSL2790U",
+    description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+    price: "₹249.99",
+    svg: Ratingstar,
+    Heart: HeartSvg,
+    shop: ShopSvg,
+  },
+  {
+    id: "gaming-chair",
+    img: chairImg,
+    title: "Gaming Chair",
+    description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+    price: "₹249.99",
+    svg: Ratingstar,
+    Heart: HeartSvg,
+    shop: ShopSvg,
+  },
+  {
+    id: "acer-nitro-monitor",
+    img: moniterPC,
+    title: "Acer Nitro 27\" Gaming Monitor",
+    description: "Ultra-smooth visuals with a 165Hz refresh rate and 1ms response time.",
+    price: "₹349.99",
+    svg: Ratingstar,
+    Heart: HeartSvg,
+    shop: ShopSvg,
+  },
 ];
+
+
 
 export const POPULAR_DATA = [
     {

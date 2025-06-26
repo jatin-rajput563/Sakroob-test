@@ -7,7 +7,7 @@ import Blog from "../components/Blog";
 import OurClients from "../components/OurClients";
 import SakroobCircle from "../components/SakroobCircle";
 import Products from "../components/Products";
-import Header from "../components/Header";
+import Addtocart from "../components/Addtocart";
 
 const HomePage = () => {
   const [loginTime, setLoginTime] = useState("");
@@ -21,10 +21,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className="text-center text-sm bg-[#e6f2f1] py-2 text-[#112D49] font-medium">
-        {loginTime && `🕒 Logged in at: ${loginTime}`}
-      </div>
-      <Header />
       <Marque />
       <Hero />
       <Services />
