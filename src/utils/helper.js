@@ -88,7 +88,7 @@ export const MARQUE_DATA = [
 export const SERVICES_DATA = [
     {
         icon: Express,
-        text: "Express Delivery",
+        text: "EXPRESS Delivery",
         para: "Order Now",
     },
     {
@@ -155,8 +155,6 @@ export const BESTSELLER_DATA = [
     shop: ShopSvg,
   },
 ];
-
-
 
 export const POPULAR_DATA = [
     {

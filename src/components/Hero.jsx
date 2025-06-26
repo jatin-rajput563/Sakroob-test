@@ -7,16 +7,16 @@ import Buttons from "./common/Buttons";
 
 const Hero = () => {
   return (
-    <div className="sm:py-7">
-      <div className="mt-6 sm:mt-10 max-w-[1380px] px-3 mx-auto">
+    <div className="pt-[24px]">
+      <div className="max-w-[1380px] px-3 mx-auto">
         <Carousel
           useKeyboardArrows={true}
           showThumbs={false}
           showStatus={false}
           showArrows={false}
-          infiniteLoop
+          // infiniteLoop
           interval={3000}
-          autoPlay
+          // autoPlay
         >
           {[...Array(4)].map((_, index) => (
             <div
@@ -28,12 +28,12 @@ const Hero = () => {
                 headText="Where Tinkerers Bring Ideas Alive"
               />
               <Para
-                paraClass="max-w-full sm:max-w-[460px] pt-3 text-sm sm:text-base"
+                paraClass="max-w-full sm:max-w-[460px] pt-3 text-sm sm:text-base !text-[#3D5369]"
                 paraText="Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
               />
               <div className="flex mx-auto gap-3 sm:gap-5 justify-center mt-5 sm:mt-[34px] flex-wrap">
                 <Buttons
-                  btnClass="!py-[10px] sm:!py-[14px] md:!py-[17px] !px-[15px] sm:!px-[17px] md:!px-[19.4px]"
+                  btnClass="!py-[10px] sm:!py-[14px] md:!py-[17px] !px-[15px] sm:!px-[17px] md:!px-[19.4px] !bg-[#112D49] text-white hover:!bg-white hover:!text-[#112D49]"
                   btnText="Browse Products"
                 />
                 <Buttons
