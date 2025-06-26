@@ -1,4 +1,4 @@
-import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg } from "./Icons";
+import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg, FacebookSvg, InstagramSvg, TwiterSvg, YoutubeSvg } from "./Icons";
 import pcImg from "../assets/images/png/pc-img.png"
 import routerImg from "../assets/images/png/router-img.png"
 import chairImg from "../assets/images/png/chair-img.png"
@@ -114,46 +114,46 @@ export const SERVICES_DATA = [
 ];
 
 export const BESTSELLER_DATA = [
-  {
-    id: "vortex-gaming-pc", // ✅ REQUIRED
-    img: pcImg,
-    title: "Vortex Gaming PC",
-    description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-    price: "₹249.99",
-    svg: Ratingstar,
-    Heart: HeartSvg,
-    shop: ShopSvg,
-  },
-  {
-    id: "dlink-router",
-    img: routerImg,
-    title: "D-Link ADSL Wireless Router DSL2790U",
-    description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-    price: "₹249.99",
-    svg: Ratingstar,
-    Heart: HeartSvg,
-    shop: ShopSvg,
-  },
-  {
-    id: "gaming-chair",
-    img: chairImg,
-    title: "Gaming Chair",
-    description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-    price: "₹249.99",
-    svg: Ratingstar,
-    Heart: HeartSvg,
-    shop: ShopSvg,
-  },
-  {
-    id: "acer-nitro-monitor",
-    img: moniterPC,
-    title: "Acer Nitro 27\" Gaming Monitor",
-    description: "Ultra-smooth visuals with a 165Hz refresh rate and 1ms response time.",
-    price: "₹349.99",
-    svg: Ratingstar,
-    Heart: HeartSvg,
-    shop: ShopSvg,
-  },
+    {
+        id: "vortex-gaming-pc", // ✅ REQUIRED
+        img: pcImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "₹249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        id: "dlink-router",
+        img: routerImg,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "₹249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        id: "gaming-chair",
+        img: chairImg,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "₹249.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        id: "acer-nitro-monitor",
+        img: moniterPC,
+        title: "Acer Nitro 27\" Gaming Monitor",
+        description: "Ultra-smooth visuals with a 165Hz refresh rate and 1ms response time.",
+        price: "₹349.99",
+        svg: Ratingstar,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
 ];
 
 export const POPULAR_DATA = [
@@ -207,4 +207,27 @@ export const CLIENTS_DATA = [
         title: "Darrell Steward",
         job: "Manager"
     }
+];
+
+export const FOOTER_ICONS = [
+    {
+        href: "https://www.facebook.com/",
+        icon: FacebookSvg,
+        rotate: "rotate-12",
+    },
+    {
+        href: "https://www.instagram.com/",
+        icon: InstagramSvg,
+        rotate: "-rotate-12",
+    },
+    {
+        href: "https://x.com/",
+        icon: TwiterSvg,
+        rotate: "rotate-12",
+    },
+    {
+        href: "https://www.youtube.com/",
+        icon: YoutubeSvg,
+        rotate: "-rotate-12",
+    },
 ];

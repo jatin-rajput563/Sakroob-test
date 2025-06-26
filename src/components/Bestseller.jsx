@@ -45,7 +45,7 @@ const Bestseller = () => {
           <Heading headText="Bestsellers" />
           <div
             ref={prevRef}
-            className="w-[38px] h-[38px] absolute top-[58%] left-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] left-[14%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
           >
             <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
               <path
@@ -59,7 +59,7 @@ const Bestseller = () => {
           </div>
           <div
             ref={nextRef}
-            className="w-[38px] h-[38px] absolute top-[58%] right-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] right-[14%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
           >
             <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
               <path
@@ -71,6 +71,7 @@ const Bestseller = () => {
               />
             </svg>
           </div>
+
           <Swiper
             modules={[Navigation]}
             slidesPerView={3}
@@ -161,8 +162,42 @@ const Bestseller = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          {/* Bottom buttons for smaller screens (below xl) */}
+          <div className="xl:hidden flex justify-center gap-4 mt-8">
+            <button
+              onClick={() => prevRef.current?.click()}
+              className="w-[38px] h-[38px] border flex items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300"
+            >
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                <path
+                  d="M7 13L1 7L6.79609 1"
+                  className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => nextRef.current?.click()}
+              className="w-[38px] h-[38px] border flex items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300"
+            >
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                <path
+                  d="M1 13L7 7L1.20391 1"
+                  className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Popup for favorites */}
       {showPopup && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition">
           {popupMessage}

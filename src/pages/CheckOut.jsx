@@ -33,10 +33,10 @@ const CheckOut = () => {
 
   return (
     <>
-      <div className="min-h-screen py-[120px]">
+      <div className="min-h-screen py-[120px] overflow-hidden">
         <div className="max-w-[1140px] mx-auto px-3">
-          <div className="flex  -mx-3 gap-6">
-            <div className="w-8/12">
+          <div className="flex max-lg:flex-wrap -mx-3 gap-6">
+            <div className="w-full md:w-8/12 ">
               <div className="flex flex-wrap justify-between">
                 <p className="font-bold text-2xl leading-[120%] text-[#112D49]">
                   Contact
@@ -265,7 +265,7 @@ const CheckOut = () => {
                 )}
               </div>
             </div>
-            <div className="w-4/12 relative overflow-visible">
+            <div className="w-full md:w-4/12  relative overflow-visible">
               <div
                 className={`absolute top-[-50px] right-0 bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-md shadow-md text-sm z-10 transition-transform duration-500 ease-out ${
                   couponApplied
@@ -321,18 +321,20 @@ const CheckOut = () => {
                     Apply Now
                   </button>
                 </div>
+                <div className="py-[26px]">
+                  <div className="flex justify-between flex-wrap">
+                    <p className="text-[#5F6C72] leading-[150%]">Subtotal</p>
+                    <p className="text-[#5F6C72] leading-[150%]">AED 357.99</p>
+                  </div>
+                  <div className="flex justify-between flex-wrap pt-3">
+                    <p className="text-[#5F6C72] leading-[150%]">Shipping</p>
+                    <p className="text-[#5F6C72] leading-[150%]">AED 20.00</p>
+                  </div>
+                </div>
                 <Buttons
-                  btnClass="text-white !w-full !max-w-[330px] mt-[20px]"
-                  btnText="Buy Now"
+                  btnClass="text-white !w-full !max-w-[330px] mt-[20px] !bg-[#112D49] hover:!bg-white hover:!text-[#112D49]"
+                  btnText="Convert"
                 />
-              </div>
-              <div className="flex justify-between flex-wrap">
-                <p className="text-[#5F6C72] leading-[150%]">Subtotal</p>
-                <p className="text-[#5F6C72] leading-[150%]">AED 357.99</p>
-              </div>
-              <div className="flex justify-between flex-wrap pt-3">
-                <p className="text-[#5F6C72] leading-[150%]">Shipping</p>
-                <p className="text-[#5F6C72] leading-[150%]">AED 20.00</p>
               </div>
             </div>
           </div>
