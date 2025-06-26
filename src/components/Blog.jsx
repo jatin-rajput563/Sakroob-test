@@ -9,7 +9,7 @@ import { BlogArrow } from "../utils/Icons";
 const Blog = () => {
   return (
     <>
-      <div className="flex justify-center items-center px-6 sm:px-7 mt-[132px]">
+      <div className="flex justify-center items-center pt-[132px]">
         <div className="max-w-[1386px] mx-auto w-full">
           <Heading
             headClass="max-w-[700px] mx-auto"
@@ -51,10 +51,9 @@ const Blog = () => {
                 src={blogPageImg5}
                 alt="five tools img"
               />
-              <Heading
-                headClass="!text-[32px] !text-left "
-                headText="5 Tools Every Maker Should Own"
-              />
+              <p className="text-[32px] leading-[120%] !text-left max-w-[360px] font-bold text-[#112D49]">
+                5 Tools Every Maker Should Own
+              </p>
               <p className="opacity-80 max-sm:text-sm text-[#112D49] leading-[150%] max-w-[407px] pt-2 sm:pt-3">
                 The essential toolkit for every DIY electronics enthusiast.
               </p>
@@ -82,7 +81,7 @@ const Blog = () => {
             />
             <div className="px-3.5">
               <Heading
-                headClass="!text-[32px]"
+                headClass="!text-[32px] max-w-[407px]"
                 headText="Inside a Raspberry Pi Retro Console"
               />
               <p className="opacity-80 text-[#112D49] max-sm:max-w-[260px] max-sm:text-sm leading-[150%] max-w-[410px] mx-auto pt-2 sm:pt-3 text-center">
