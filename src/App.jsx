@@ -1,50 +1,40 @@
 import "./App.css";
+import { useEffect, useState } from "react";
 import Lenis from "lenis";
-import Header from "./components/Header";
-// import SignUp from "./components/SignUp";
-// import LoginUp from "./components/LoginUp";
-// import CheckOut from "./pages/CheckOut"
-// import Login from "./components/pages/Login";
-// import Bestseller from "./components/Bestseller";
-// import Footer from "./components/Footer";
-// import Hero from "./components/Hero";
-// import Products from "./components/Products";
-// import Services from "./components/Services";
-// import Blog from "./components/Blog";
-// import OurClients from "./components/OurClients";
-// import Marque from "./components/Marque";
-// import PopularProduct from "./components/PopularProduct";
-// import ProductDetail from "./components/ProductDetail";
-// import RoutingTabs from "./components/RoutingTabs";
-// import SakroobCircle from "./components/SakroobCircle";
+import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import HomePage from "./pages/HomePage";
 
-const lenis = new Lenis({
-  autoRaf: true,
-});
+const lenis = new Lenis({ autoRaf: true });
 lenis.on("scroll", (e) => {
   console.log(e);
 });
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Check login status from localStorage
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+    setIsLoggedIn(loggedIn);
+  }, []);
+
+  // Function to be passed to Login component
+  const handleLoginSuccess = () => {
+    localStorage.setItem("isLoggedIn", "true");
+    setIsLoggedIn(true);
+  };
+
   return (
     <>
-      <Header />
-      {/* <SignUp />
-      <LoginUp />
-      <CheckOut />
-      <Login />
-      <Marque />
-      <Hero />
-      <Services />
-      <Products />
-      <Bestseller />
-      <Blog />
-      <OurClients />
-      <ProductDetail />
-      <RoutingTabs />
-      <PopularProduct />
-      <SakroobCircle />
-      <Footer /> */}
+      {!isLoggedIn ? (
+        <Login onLogin={handleLoginSuccess} />
+      ) : (
+        <>
+          <HomePage />
+          <Footer />
+        </>
+      )}
     </>
   );
 }
