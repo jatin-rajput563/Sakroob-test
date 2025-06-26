@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
 import { useCart } from "../context/CartContext";
+import { HeartSvg } from "../utils/Icons";
 
 const Bestseller = () => {
   const prevRef = useRef(null);
@@ -39,7 +40,7 @@ const Bestseller = () => {
 
   return (
     <>
-      <div className="relative pt-[132px]">
+      <div className="relative sm:pt-[132px] pt-[112px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
           <div
@@ -87,9 +88,11 @@ const Bestseller = () => {
             }}
             breakpoints={{
               320: { slidesPerView: 1.1, spaceBetween: 10 },
-              640: { slidesPerView: 1.5, spaceBetween: 15 },
-              768: { slidesPerView: 2.5, spaceBetween: 15 },
-              1024: { slidesPerView: 3, spaceBetween: 15 },
+              480: { slidesPerView: 1.3, spaceBetween: 12 },
+              640: { slidesPerView: 2, spaceBetween: 15 },
+              768: { slidesPerView: 2.5, spaceBetween: 0 },
+              1024: { slidesPerView: 2.8, spaceBetween: 0 },
+              1280: { slidesPerView: 3, spaceBetween: 0 },
             }}
           >
             {BESTSELLER_DATA.map((item, index) => (
@@ -105,7 +108,9 @@ const Bestseller = () => {
                       <div
                         className="absolute top-[10px] right-[10px] cursor-pointer"
                         onClick={() => handleFavoriteClick(index)}
-                      ></div>
+                      >
+                        <HeartSvg />
+                      </div>
                     </div>
                     <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">
                       {item.title}
@@ -127,7 +132,10 @@ const Bestseller = () => {
                           navigate(`/product/${item.id || index}`, {
                             state: { product: item },
                           });
-                          localStorage.setItem("selectedProduct", JSON.stringify(item));
+                          localStorage.setItem(
+                            "selectedProduct",
+                            JSON.stringify(item)
+                          );
                         }}
                       />
                       {item.shop && (
