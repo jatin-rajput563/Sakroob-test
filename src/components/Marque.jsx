@@ -4,7 +4,7 @@ import { MARQUE_DATA } from "../utils/helper";
 const Marque = () => {
   return (
     <>
-      <Marquee className="max-w-[1440px] mx-auto">
+      <Marquee className="max-w-[1440px] mx-auto pt-[27px]">
         {MARQUE_DATA.map((item, index) => (
           <div
             key={index}

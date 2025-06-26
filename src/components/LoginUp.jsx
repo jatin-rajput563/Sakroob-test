@@ -4,11 +4,12 @@ import Heading from "../components/common/Heading";
 import Para from "../components/common/Para";
 import Buttons from "../components/common/Buttons";
 import { CloseEye, OpenEye } from "../utils/Icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const LoginUp = ({ onLogin }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState("");
+  const navigate = useNavigate();
 
   const {
     register,
@@ -30,9 +31,12 @@ const LoginUp = ({ onLogin }) => {
       data.email === storedUser.email &&
       data.password === storedUser.password
     ) {
+      const loginTime = new Date().toLocaleString();
       localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("loginTime", loginTime);
       setLoginError("");
-      onLogin(); // ✅ Call to switch to HomePage
+      onLogin();
+      navigate("/home"); // ✅ Redirect after login
     } else {
       setLoginError("Invalid email or password.");
     }

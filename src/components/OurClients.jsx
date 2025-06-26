@@ -15,7 +15,7 @@ import {
 const OurClients = () => {
   return (
     <>
-      <div className="px-4 md:px-6 lg:px-8 pt-[132px] mb-[300px]">
+      <div className="px-4 md:px-6 lg:px-8 pt-[132px] mb-[200px]">
         <div className="max-w-[1140px] mx-auto">
           <p className="text-center italic text-lg sm:text-xl md:text-xl text-[#112D49] mb-2">
             Testimonials
