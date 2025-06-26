@@ -22,7 +22,7 @@ const Header = () => {
   const handleDropdownLinkClick = () => setOpenDropdown(null);
 
   const toggleNavbar = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prev) => !prev);
     document.body.classList.toggle("overflow-hidden", !menuOpen);
   };
 
@@ -50,9 +50,12 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const underlineClass =
+    "relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full";
+
   return (
     <div className="w-full mx-auto max-w-[1920px]">
-      <div className="bg-[#112D49] ">
+      <div className="bg-[#112D49]">
         <div className="relative z-20 max-w-[1440px] mx-auto">
           <div className="mx-auto py-[13px] lg:py-5 lg:hidden px-6 max-w-[1246px] flex items-center justify-between">
             <NavLink to="/" className="header-logo">
@@ -60,21 +63,21 @@ const Header = () => {
             </NavLink>
             <div
               onClick={toggleNavbar}
-              className="z-50 lg:hidden flex flex-col justify-between w-6 h-5 cursor-pointer"
+              className="z-50 lg:hidden flex flex-col justify-between w-6 h-5 cursor-pointer transition-all duration-300 ease-in-out"
             >
               <span
-                className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${
-                  menuOpen ? "rotate-45 translate-y-2" : ""
+                className={`block h-1 rounded-3xl bg-white transition-all duration-300 ease-in-out ${
+                  menuOpen ? "rotate-45 translate-y-[8px]" : ""
                 }`}
               ></span>
               <span
-                className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${
+                className={`block h-1 rounded-3xl bg-white transition-all duration-300 ease-in-out ${
                   menuOpen ? "opacity-0" : ""
                 }`}
               ></span>
               <span
-                className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${
-                  menuOpen ? "-rotate-45 -translate-y-2" : ""
+                className={`block h-1 rounded-3xl bg-white transition-all duration-300 ease-in-out ${
+                  menuOpen ? "-rotate-45 -translate-y-[8px]" : ""
                 }`}
               ></span>
             </div>
@@ -83,21 +86,20 @@ const Header = () => {
             to="/"
             className="absolute ml-auto left-[10px] xl:left-[94px] max-lg:hidden max-w-[40px] top-[31px]"
           >
-            {" "}
-            <HeaderLogo />{" "}
+            <HeaderLogo />
           </NavLink>
           <ul
             id="nav-name"
-            className={`list-none flex justify-center items-center lg:max-w-[974px] ml-auto xl:mr-[100px] nav-link ${
+            className={`transition-all duration-300 ease-in-out list-none flex justify-center items-center lg:max-w-[974px] ml-auto xl:mr-[100px] nav-link ${
               menuOpen ? "show-navbar" : "hidden lg:flex"
             }`}
           >
             <li>
-              <ul className="list-unstyled flex items-center max-lg:flex-col max-lg:text-center gap-4 xl::gap-8 relative py-5">
+              <ul className="list-unstyled flex items-center max-lg:flex-col max-lg:text-center gap-4 xl:gap-8 relative py-5">
                 <li>
                   <a
                     onClick={linkClick}
-                    className="leading-[150%] text-white"
+                    className={`leading-[150%] text-white ${underlineClass}`}
                     href="#"
                   >
                     Categories
@@ -106,7 +108,7 @@ const Header = () => {
                 <li className="relative">
                   <button
                     type="button"
-                    className="leading-[150%] text-white flex items-center gap-2 dropdown-toggle"
+                    className={`leading-[150%] text-white flex items-center gap-2 dropdown-toggle ${underlineClass}`}
                     onClick={() => toggleDropdown("pcProducts")}
                   >
                     PC Products <DropdownArrow />
@@ -118,7 +120,7 @@ const Header = () => {
                           <a
                             onClick={handleDropdownLinkClick}
                             href="#"
-                            className="text-[#112D49] leading-[150%] opacity-80 block py-1"
+                            className="text-[#112D49] opacity-80 block py-1"
                           >
                             Reference Earlier Examples
                           </a>
@@ -128,7 +130,7 @@ const Header = () => {
                           <a
                             onClick={handleDropdownLinkClick}
                             href="#"
-                            className="text-[#112D49] leading-[150%] opacity-80 block py-1"
+                            className="text-[#112D49] opacity-80 block py-1"
                           >
                             Standard PC Components
                           </a>
@@ -140,7 +142,7 @@ const Header = () => {
                 <li className="relative">
                   <button
                     type="button"
-                    className="leading-[150%] text-white flex items-center gap-2 dropdown-toggle"
+                    className={`leading-[150%] text-white flex items-center gap-2 dropdown-toggle ${underlineClass}`}
                     onClick={() => toggleDropdown("services")}
                   >
                     Services <DropdownArrow />
@@ -152,7 +154,7 @@ const Header = () => {
                           <a
                             onClick={handleDropdownLinkClick}
                             href="#"
-                            className="text-[#112D49] leading-[150%] opacity-80 block py-1"
+                            className="text-[#112D49] opacity-80 block py-1"
                           >
                             DIY Services
                           </a>
@@ -164,19 +166,19 @@ const Header = () => {
                 <li className="relative">
                   <button
                     type="button"
-                    className="leading-[150%] text-white flex items-center gap-2 dropdown-toggle"
+                    className={`leading-[150%] text-white flex items-center gap-2 dropdown-toggle ${underlineClass}`}
                     onClick={() => toggleDropdown("support")}
                   >
                     Support <DropdownArrow />
                   </button>
                   {openDropdown === "support" && (
-                    <div className="dropdown-menu absolute top-full -left-[60px] mt-2 bg-white shadow-[0px_0px_11.4px_0px_#73A4E033] rounded-[8px] p-4 w-[251px] z-10">
+                    <div className="dropdown-menu absolute top-full -left-[60px] mt-2 bg-white shadow rounded-[8px] p-4 w-[251px] z-10">
                       <ul>
                         <li>
                           <a
                             onClick={handleDropdownLinkClick}
                             href="#"
-                            className="text-[#112D49] leading-[150%] opacity-80 block py-1"
+                            className="text-[#112D49] opacity-80 block py-1"
                           >
                             FAQ’s
                           </a>
@@ -186,7 +188,7 @@ const Header = () => {
                           <a
                             onClick={handleDropdownLinkClick}
                             href="#"
-                            className="text-[#112D49] leading-[150%] opacity-80 block py-1"
+                            className="text-[#112D49] opacity-80 block py-1"
                           >
                             Returns
                           </a>
@@ -196,7 +198,7 @@ const Header = () => {
                           <a
                             onClick={handleDropdownLinkClick}
                             href="#"
-                            className="text-[#112D49] leading-[150%] opacity-80 block py-1"
+                            className="text-[#112D49] opacity-80 block py-1"
                           >
                             Contact
                           </a>
@@ -208,7 +210,7 @@ const Header = () => {
                 <li>
                   <a
                     onClick={linkClick}
-                    className="leading-[150%] text-white"
+                    className={`leading-[150%] text-white ${underlineClass}`}
                     href="#"
                   >
                     About
@@ -217,16 +219,16 @@ const Header = () => {
                 <li>
                   <a
                     onClick={linkClick}
-                    className="leading-[150%] text-white"
+                    className={`leading-[150%] text-white ${underlineClass}`}
                     href="#"
                   >
                     Blog
                   </a>
                 </li>
-                <li>
+                <li className="min-[1100px]:mr-[52px]">
                   <a
                     onClick={linkClick}
-                    className="leading-[150%] text-white"
+                    className={`leading-[150%] text-white ${underlineClass}`}
                     href="#"
                   >
                     Contact
@@ -238,11 +240,11 @@ const Header = () => {
                       <a onClick={linkClick} href="">
                         <UserIcon />
                       </a>
-                      <div className="h-10 border border-[#D9D9D9] w-0"></div>
+                      <div className="h-10 border border-[#D9D9D9] w-0" />
                       <a onClick={linkClick} href="">
                         <LikeIcon />
                       </a>
-                      <div className="h-10 border border-[#D9D9D9] w-0"></div>
+                      <div className="h-10 border border-[#D9D9D9] w-0" />
                       <NavLink onClick={linkClick} to="/addToCart">
                         <CartIcon />
                       </NavLink>
