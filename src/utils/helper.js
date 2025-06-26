@@ -1,4 +1,4 @@
-import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg } from "./icons";
+import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg } from "./Icons";
 import pcImg from "../assets/images/png/pc-img.png"
 import routerImg from "../assets/images/png/router-img.png"
 import chairImg from "../assets/images/png/chair-img.png"
@@ -7,7 +7,7 @@ import popularGraphic from "../assets/images/png/popular-graphic-img.png"
 import popularChair from "../assets/images/png/popular-chair-img.png"
 import moniterPC from "../assets/images/png/monter-img.png"
 import william from '../assets/images/png/william-img.png'
-import darrell from '../assets/images/png/Darrell-img.png'
+import darrell from '../assets/images/png/darrell-img.png'
 
 
 export const MARQUE_DATA = [

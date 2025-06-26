@@ -10,7 +10,7 @@ import {
   Ratingstar,
   RightArrow,
   RightQuotationIcon,
-} from "../utils/icons";
+} from "../utils/Icons";
 
 const OurClients = () => {
   return (

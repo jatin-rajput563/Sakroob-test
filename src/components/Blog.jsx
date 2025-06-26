@@ -4,8 +4,8 @@ import blogPageImg1 from "../assets/images/png/blog-page-img-1.png";
 import blogPageImg2 from "../assets/images/png/blog-page-img-2.png";
 import blogPageImg3 from "../assets/images/png/blog-page-img-3.png";
 import blogPageImg4 from "../assets/images/png/blog-page-img-4.png";
-import blogPageImg5 from "../assets/images/png/blog-Page-Img-5.png";
-import { BlogArrow } from "../utils/icons";
+import blogPageImg5 from "../assets/images/png/blog-page-img-5.png";
+import { BlogArrow } from "../utils/Icons";
 const Blog = () => {
   return (
     <>

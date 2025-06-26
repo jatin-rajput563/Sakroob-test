@@ -1,10 +1,10 @@
 import React from "react";
 import Heading from "../components/common/Heading";
 import Description from "../components/common/Description";
-import Module from "../assets/images/png/Module-img.png";
+import Module from "../assets/images/png/module-img.png";
 import Parts from "../assets/images/png/parts.png";
-import DiyTools from "../assets/images/png/Diy-Tools.png";
-import Cables from "../assets/images/png/Cables.png";
+import DiyTools from "../assets/images/png/diy-tools.png";
+import Cables from "../assets/images/png/cables.png";
 import GamingController from "../assets/images/png/gaming-controler.png";
 import PiKits from "../assets/images/png/piKits.png";
 

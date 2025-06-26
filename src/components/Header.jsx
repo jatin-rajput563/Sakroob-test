@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavLinks from './common/NavLinks';
-import { Cart, DropDownSvg, Profile, Search, User, WishList } from '../utils/icons';
+import { Cart, DropDownSvg, Profile, Search, User, WishList } from '../utils/Icons';
 import headerLogo from '../assets/img/svg/logo.svg';
 import headerLogo2 from '../assets/img/svg/logo2.svg';
 import { NavLink, useNavigate } from 'react-router-dom';
