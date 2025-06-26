@@ -11,13 +11,13 @@ import PiKits from "../assets/images/png/piKits.png";
 const Product = () => {
   return (
     <>
-      <div className="flex justify-center items-center mt-[132px]">
+      <div className="flex justify-center items-center sm:pt-[132px] pt-[112px]">
         <div className="max-w-[1384px] w-full px-4 mx-auto">
           <p className="text-center italic text-lg sm:text-xl leading-[120%] text-[#112D49]">
             Featured Categories
           </p>
           <Heading
-            headClass="max-w-[700px] pt-2 mx-auto text-center"
+            headClass="sm:max-w-[602px] max-w-[264px] pt-2 mx-auto text-center"
             headText="Shop Our Most Popular Products"
           />
           <div className="flex flex-wrap gap-6 mt-8 sm:mt-12 md:mt-[57px]">
@@ -29,7 +29,7 @@ const Product = () => {
                     headText="Sensors & Modules"
                   />
                   <img
-                    className="max-w-[372px] w-full mt-7 ml-auto"
+                    className="sm:max-w-[372px] max-w-[246px] w-full mt-7 ml-auto"
                     src={Module}
                     alt="Module-img"
                   />
@@ -41,7 +41,7 @@ const Product = () => {
                   headText="Custom PC Parts"
                 />
                 <img
-                  className="max-w-[174px] w-full mx-auto"
+                  className="sm:max-w-[174px] max-w-[157px] w-full mx-auto"
                   src={Parts}
                   alt="part"
                 />
@@ -52,7 +52,7 @@ const Product = () => {
                   headText="DIY Tools"
                 />
                 <img
-                  className="max-w-[184px] mx-auto"
+                  className="sm:max-w-[184px] max-w-[174px] mx-auto"
                   src={DiyTools}
                   alt="tools"
                 />
@@ -61,18 +61,18 @@ const Product = () => {
             <div className="flex w-full max-xl:flex-wrap gap-6">
               <div className="min-h-[291px] sm:min-h-[335px] max-h-[335px] bg-[#EEF4FB] rounded-[8px] flex flex-col justify-between w-full md:w-[48%] xl:max-w-[313px] relative">
                 <Heading
-                  headClass="pt-[26px] !text-[32px] max-w-[213px] sm:text-center sm:ml-auto !text-left"
+                  headClass="pt-[26px] !text-[32px] max-w-[213px] sm:text-center sm:ml-auto  !text-left"
                   headText="Cables & Connectors"
                 />
                 <img
-                  className="max-w-[306px] absolute -right-4 max-sm:-rotate-90 sm:left-0 bottom-4.5 sm:bottom-0"
+                  className="sm:max-w-[306px] max-w-[294px] absolute -right-4 max-sm:-rotate-90 sm:left-0 bottom-4.5 sm:bottom-0"
                   src={Cables}
                   alt="cable"
                 />
               </div>
               <div className="min-h-[291px] sm:min-h-[335px] max-h-[335px] bg-[#E5E4E2] rounded-[8px] flex flex-col justify-between pb-4.5 w-full md:w-[48%] xl:max-w-[313px]">
                 <Heading
-                  headClass="pt-[22px] !text-[32px] text-center mx-auto max-sm:max-w-[156px]"
+                  headClass="pt-[22px] !text-[32px] text-center mx-auto max-w-[241px] max-sm:max-w-[156px]"
                   headText="Gaming Peripherals"
                 />
                 <img
