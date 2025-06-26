@@ -11,10 +11,10 @@ import { BlogArrow } from "../utils/Icons";
 const Blog = () => {
   return (
     <>
-      <div className="flex justify-center items-center pt-[132px]">
+      <div className="flex justify-center items-center sm:pt-[132px] pt-[110px]">
         <div className="max-w-[1386px] mx-auto w-full">
           <Heading
-            headClass="max-w-[700px] mx-auto"
+            headClass="sm:max-w-[700px] max-w-[283px] mx-auto"
             headText="Blog, Guides, Build Logs & More"
           />
           <div className="xl:flex xl:mb-6 mt-8 sm:mt-12 md:mt-16 gap-6.5">
@@ -24,10 +24,9 @@ const Blog = () => {
                 src={blogPageImg1}
                 alt="storage img"
               />
-              <Heading
-                headClass="!text-[32px] text-left"
-                headText="How to Build a Mini NAS"
-              />
+              <p className="text-[32px] leading-[120%] !text-left max-w-[233px] sm:max-w-[407px] font-bold text-[#112D49] ">
+                How to Build a Mini NAS
+              </p>
               <p className="opacity-80 max-sm:text-sm text-[#112D49] leading-[150%] max-w-[407px] pt-2 sm:pt-3">
                 Learn to build your own network storage system with simple
                 components.
@@ -82,10 +81,9 @@ const Blog = () => {
               alt="five tools img"
             />
             <div className="px-3.5">
-              <Heading
-                headClass="!text-[32px] max-w-[407px]"
-                headText="Inside a Raspberry Pi Retro Console"
-              />
+              <p className="text-[32px] leading-[120%] text-center max-w-[307px] sm:max-w-[407px] font-bold text-[#112D49]">
+                Inside a Raspberry Pi Retro Console
+              </p>
               <p className="opacity-80 text-[#112D49] max-sm:max-w-[260px] max-sm:text-sm leading-[150%] max-w-[410px] mx-auto pt-2 sm:pt-3 text-center">
                 Step-by-step log of building a retro game machine.
               </p>
