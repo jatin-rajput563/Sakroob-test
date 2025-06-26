@@ -1,12 +1,20 @@
 import React from "react";
 import footerLogo from "../assets/images/svg/footer-logo.svg";
 import Para from "./common/Para";
-import { FacebookSvg, InstagramSvg, TwiterSvg, YoutubeSvg } from "../utils/Icons";
+import {
+  FacebookSvg,
+  InstagramSvg,
+  TwiterSvg,
+  YoutubeSvg,
+} from "../utils/icons";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/home";
   return (
     <>
-      <div className="bg-[#112D49]">
+      <div className={`bg-[#112D49] ${isHomePage ? "pt-[215px]" : "pt-[70px]"}`}>
         <div className="max-w-[1440px] mx-auto px-3">
           <div className="py-10">
             <img className="mx-auto" src={footerLogo} alt="footer-logo" />
@@ -15,20 +23,41 @@ const Footer = () => {
               paraText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida."
             />
             <ul className="flex flex-wrap gap-3 justify-center pt-[27px] text-sm sm:text-base">
-              {["Shipping", "Warranty", "FAQs", "Blog", "Contact"].map((item, index) => (
-                <li key={index}>
-                  <a className="text-white hover:underline transition" href="#">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["Shipping", "Warranty", "FAQs", "Blog", "Contact"].map(
+                (item, index) => (
+                  <li key={index}>
+                    <a
+                      className="text-white hover:underline transition"
+                      href="#"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
             <div className="flex flex-wrap gap-4 justify-center pt-[27px]">
               {[
-                { href: "https://www.facebook.com/", icon: <FacebookSvg />, rotate: "rotate-12" },
-                { href: "https://www.instagram.com/", icon: <InstagramSvg />, rotate: "-rotate-12" },
-                { href: "https://x.com/", icon: <TwiterSvg />, rotate: "rotate-12" },
-                { href: "https://www.youtube.com/", icon: <YoutubeSvg />, rotate: "-rotate-12" },
+                {
+                  href: "https://www.facebook.com/",
+                  icon: <FacebookSvg />,
+                  rotate: "rotate-12",
+                },
+                {
+                  href: "https://www.instagram.com/",
+                  icon: <InstagramSvg />,
+                  rotate: "-rotate-12",
+                },
+                {
+                  href: "https://x.com/",
+                  icon: <TwiterSvg />,
+                  rotate: "rotate-12",
+                },
+                {
+                  href: "https://www.youtube.com/",
+                  icon: <YoutubeSvg />,
+                  rotate: "-rotate-12",
+                },
               ].map((item, index) => (
                 <a
                   key={index}

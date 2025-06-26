@@ -7,7 +7,7 @@ import Blog from "../components/Blog";
 import OurClients from "../components/OurClients";
 import SakroobCircle from "../components/SakroobCircle";
 import Products from "../components/Products";
-import Addtocart from "../components/Addtocart";
+import BackToTop from "../components/common/BackToTop";
 
 const HomePage = () => {
   const [loginTime, setLoginTime] = useState("");
@@ -29,6 +29,7 @@ const HomePage = () => {
       <Blog />
       <OurClients />
       <SakroobCircle />
+      <BackToTop />
     </div>
   );
 };

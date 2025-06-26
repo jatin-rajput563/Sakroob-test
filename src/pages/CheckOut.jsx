@@ -326,6 +326,14 @@ const CheckOut = () => {
                   btnText="Buy Now"
                 />
               </div>
+              <div className="flex justify-between flex-wrap">
+                <p className="text-[#5F6C72] leading-[150%]">Subtotal</p>
+                <p className="text-[#5F6C72] leading-[150%]">AED 357.99</p>
+              </div>
+              <div className="flex justify-between flex-wrap pt-3">
+                <p className="text-[#5F6C72] leading-[150%]">Shipping</p>
+                <p className="text-[#5F6C72] leading-[150%]">AED 20.00</p>
+              </div>
             </div>
           </div>
         </div>
