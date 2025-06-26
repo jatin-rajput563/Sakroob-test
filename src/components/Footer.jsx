@@ -6,7 +6,7 @@ import {
   InstagramSvg,
   TwiterSvg,
   YoutubeSvg,
-} from "../utils/icons";
+} from "../utils/Icons";
 import { useLocation } from "react-router-dom";
 
 const Footer = () => {
