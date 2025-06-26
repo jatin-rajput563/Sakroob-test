@@ -1,5 +1,7 @@
 import React from "react";
 import Heading from "../components/common/Heading";
+
+import Buttons from "../components/common/Buttons";
 import blogPageImg1 from "../assets/images/png/blog-page-img-1.png";
 import blogPageImg2 from "../assets/images/png/blog-page-img-2.png";
 import blogPageImg3 from "../assets/images/png/blog-page-img-3.png";
@@ -103,6 +105,10 @@ const Blog = () => {
               alt="five tools img"
             />
           </div>
+          <Buttons
+            btnText="View All Blog Posts"
+            btnClass="mt-[56px] mx-auto flex !bg-[#112D49] text-white hover:!bg-white hover:!text-[#112D49]"
+          />
         </div>
       </div>
     </>
