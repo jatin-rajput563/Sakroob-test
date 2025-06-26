@@ -42,8 +42,6 @@ const Bestseller = () => {
       <div className="relative pt-[132px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
-
-          {/* Prev Button */}
           <div
             ref={prevRef}
             className="w-[38px] h-[38px] absolute top-[58%] left-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
@@ -58,8 +56,6 @@ const Bestseller = () => {
               />
             </svg>
           </div>
-
-          {/* Next Button */}
           <div
             ref={nextRef}
             className="w-[38px] h-[38px] absolute top-[58%] right-[3%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
@@ -74,8 +70,6 @@ const Bestseller = () => {
               />
             </svg>
           </div>
-
-          {/* Swiper Slider */}
           <Swiper
             modules={[Navigation]}
             slidesPerView={3}
@@ -126,7 +120,6 @@ const Bestseller = () => {
                       {item.svg && <item.svg />}
                     </div>
                     <div className="pt-[25px] flex justify-between items-center">
-                      {/* ✅ Shop Now (go to product detail) */}
                       <Buttons
                         btnText="Shop Now"
                         btnClass="bg-white !text-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
@@ -137,8 +130,6 @@ const Bestseller = () => {
                           localStorage.setItem("selectedProduct", JSON.stringify(item));
                         }}
                       />
-
-                      {/* ✅ Add to Cart */}
                       {item.shop && (
                         <div
                           className="cursor-pointer"
@@ -164,8 +155,6 @@ const Bestseller = () => {
           </Swiper>
         </div>
       </div>
-
-      {/* Popup Message */}
       {showPopup && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition">
           {popupMessage}
