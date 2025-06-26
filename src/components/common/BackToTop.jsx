@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BackTopSvg } from "../../utils/icons";
+import { BackTopSvg } from "../../utils/Icons";
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
