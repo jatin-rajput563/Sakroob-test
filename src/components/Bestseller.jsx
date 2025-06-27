@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
 import { useCart } from "../context/CartContext";
-import { HeartSvg } from "../utils/Icons";
+import { Heart } from "../utils/Icons";
 
 const Bestseller = () => {
   const prevRef = useRef(null);
@@ -112,7 +112,7 @@ const Bestseller = () => {
                         className="absolute top-[10px] right-[10px] cursor-pointer"
                         onClick={() => handleFavoriteClick(index)}
                       >
-                        <HeartSvg />
+                        <Heart />
                       </div>
                     </div>
                     <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">

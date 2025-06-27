@@ -2,10 +2,10 @@ import React from "react";
 import footerLogo from "../assets/images/svg/footer-logo.svg";
 import Para from "./common/Para";
 import {
-  FacebookSvg,
-  InstagramSvg,
-  TwiterSvg,
-  YoutubeSvg,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
 } from "../utils/Icons";
 import { useLocation } from "react-router-dom";
 
@@ -42,22 +42,22 @@ const Footer = () => {
               {[
                 {
                   href: "https://www.facebook.com/",
-                  icon: <FacebookSvg />,
+                  icon: <Facebook />,
                   rotate: "rotate-12",
                 },
                 {
                   href: "https://www.instagram.com/",
-                  icon: <InstagramSvg />,
+                  icon: <Instagram />,
                   rotate: "-rotate-12",
                 },
                 {
                   href: "https://x.com/",
-                  icon: <TwiterSvg />,
+                  icon: <Twitter />,
                   rotate: "rotate-12",
                 },
                 {
                   href: "https://www.youtube.com/",
-                  icon: <YoutubeSvg />,
+                  icon: <Youtube />,
                   rotate: "-rotate-12",
                 },
               ].map((item, index) => (

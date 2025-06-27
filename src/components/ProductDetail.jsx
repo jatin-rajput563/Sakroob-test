@@ -3,7 +3,7 @@ import { useLocation, useParams } from "react-router-dom";
 import Heading from "./common/Heading";
 import Para from "./common/Para";
 import Buttons from "./common/Buttons";
-import { FiveStarSvg, MinusSvg, PlusSvg } from "../utils/Icons";
+import { FiveStar, Minus, Plus } from "../utils/Icons";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -51,7 +51,7 @@ const ProductDetail = () => {
             <Para paraClass="pt-4" paraText={product.description} />
             <Heading headClass="!text-[34px] text-left pt-4" headText={product.price} />
             <div className="pt-4">
-              <FiveStarSvg />
+              <FiveStar />
             </div>
 
             <div className="flex flex-col items-start gap-4">
@@ -84,7 +84,7 @@ const ProductDetail = () => {
                   onClick={decreaseQuantity}
                   className="w-[48px] h-[44px] bg-[#73A4E0] text-white text-xl flex items-center justify-center rounded-l-[8px]"
                 >
-                  <MinusSvg />
+                  <Minus />
                 </button>
                 <div className="w-[85px] h-[44px] border border-[#C2C2C2] text-[#586C80] justify-center flex items-center">
                   {quantity.toString().padStart(2, "0")}
@@ -93,7 +93,7 @@ const ProductDetail = () => {
                   onClick={increaseQuantity}
                   className="w-[48px] h-[44px] bg-[#112D49] text-white text-xl flex items-center justify-center rounded-r-[8px]"
                 >
-                  <PlusSvg />
+                  <Plus />
                 </button>
               </div>
 

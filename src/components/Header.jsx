@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import {
-  CartIcon,
+  Cart,
   DropdownArrow,
   HeaderLogo,
-  LikeIcon,
-  ProfileIcon,
-  SearchIcon,
+  Like,
+  Profile,
+  Search,
   SmallLogo,
-  UserIcon,
+  User,
 } from "../utils/Icons";
 import Input from "../components/common/Input";
 import { NavLink } from "react-router-dom";
@@ -245,15 +245,15 @@ const Header = () => {
                   <div className="flex items-center gap-9 w-full max-w-[285px]">
                     <div className="flex gap-3.5 items-center">
                       <a onClick={linkClick} href="">
-                        <UserIcon />
+                        <User />
                       </a>
                       <div className="h-10 border border-[#D9D9D9] w-0" />
                       <a onClick={linkClick} href="">
-                        <LikeIcon />
+                        <Like />
                       </a>
                       <div className="h-10 border border-[#D9D9D9] w-0" />
                       <NavLink onClick={linkClick} to="/addToCart">
-                        <CartIcon />
+                        <Cart />
                       </NavLink>
                     </div>
                     <a
@@ -261,7 +261,7 @@ const Header = () => {
                       onClick={linkClick}
                       href=""
                     >
-                      <ProfileIcon />
+                      <Profile />
                     </a>
                   </div>
                 </li>
@@ -279,7 +279,7 @@ const Header = () => {
               inputClass="!py-1.5 !px-3.5 sm:!py-[15px] w-full shadow sm:px-6"
             />
             <div className="absolute top-1/2 right-4 -translate-y-1/2 text-gray-500 cursor-pointer">
-              <SearchIcon />
+              <Search />
             </div>
           </div>
         </div>

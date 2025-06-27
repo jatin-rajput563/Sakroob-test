@@ -1,7 +1,7 @@
 import React from "react";
 import Heading from "./common/Heading";
 import Buttons from "./common/Buttons";
-import { DeleteIcon, IncreaseIcon, ReduceIcon } from "../utils/Icons";
+import { Delete, Increase, Reduce } from "../utils/Icons";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 
@@ -77,7 +77,7 @@ const Addtocart = () => {
                               onClick={() => decrement(item.id)}
                               className="w-[44px] h-[40px] cursor-pointer flex items-center justify-center bg-[#73A4E0] hover:bg-[#73A4E0]/60 text-white rounded-l"
                             >
-                              <ReduceIcon />
+                              <Reduce />
                             </button>
                             <div className="w-[60px] h-[40px] border-y flex items-center justify-center text-[#112D49] opacity-70 text-xl">
                               {item.quantity}
@@ -86,14 +86,14 @@ const Addtocart = () => {
                               onClick={() => increment(item.id)}
                               className="w-[44px] h-[40px] cursor-pointer flex items-center justify-center bg-[#112D49] hover:bg-[#112D49]/60 text-white rounded-r"
                             >
-                              <IncreaseIcon />
+                              <Increase />
                             </button>
                           </div>
                           <div
                             onClick={() => removeFromCart(item.id)}
                             className="cursor-pointer delete-svg inline-flex items-center justify-center transition-all duration-200 ease-linear"
                           >
-                            <DeleteIcon />
+                            <Delete />
                           </div>
                         </div>
                       </td>

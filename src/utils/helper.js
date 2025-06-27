@@ -1,4 +1,4 @@
-import { game, Graphic, Moniters, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, HeartSvg, ShopSvg, FacebookSvg, InstagramSvg, TwiterSvg, YoutubeSvg } from "./Icons";
+import { Game, Graphic, Monitor, Smartwatch, Storage, Television, Express, Return, Support, Premium, Gift, Ratingstar, Heart, Shop, Facebook, Instagram, Twitter, Youtube } from "./Icons";
 import pcImg from "../assets/images/png/pc-img.png"
 import routerImg from "../assets/images/png/router-img.png"
 import chairImg from "../assets/images/png/chair-img.png"
@@ -12,7 +12,7 @@ import darrell from '../assets/images/png/darrell-img.png'
 
 export const MARQUE_DATA = [
     {
-        icon: game,
+        icon: Game,
         name: "Game",
     },
     {
@@ -32,11 +32,11 @@ export const MARQUE_DATA = [
         name: "Smartwatch",
     },
     {
-        icon: Moniters,
+        icon: Monitor,
         name: "Monitors",
     },
     {
-        icon: game,
+        icon: Game,
         name: "Game",
     },
     {
@@ -56,11 +56,11 @@ export const MARQUE_DATA = [
         name: "Smartwatch",
     },
     {
-        icon: Moniters,
+        icon: Monitor,
         name: "Monitors",
     },
     {
-        icon: game,
+        icon: Game,
         name: "Game",
     },
     {
@@ -80,7 +80,7 @@ export const MARQUE_DATA = [
         name: "Smartwatch",
     },
     {
-        icon: Moniters,
+        icon: Monitor,
         name: "Monitors",
     }
 ];
@@ -115,14 +115,14 @@ export const SERVICES_DATA = [
 
 export const BESTSELLER_DATA = [
     {
-        id: "vortex-gaming-pc", // ✅ REQUIRED
+        id: "vortex-gaming-pc",
         img: pcImg,
         title: "Vortex Gaming PC",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "₹249.99",
         svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
+        heart: Heart,
+        shop: Shop,
     },
     {
         id: "dlink-router",
@@ -131,8 +131,8 @@ export const BESTSELLER_DATA = [
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "₹249.99",
         svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
+        heart: Heart,
+        shop: Shop,
     },
     {
         id: "gaming-chair",
@@ -141,8 +141,8 @@ export const BESTSELLER_DATA = [
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "₹249.99",
         svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
+        heart: Heart,
+        shop: Shop,
     },
     {
         id: "acer-nitro-monitor",
@@ -151,8 +151,8 @@ export const BESTSELLER_DATA = [
         description: "Ultra-smooth visuals with a 165Hz refresh rate and 1ms response time.",
         price: "₹349.99",
         svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
+        heart: Heart,
+        shop: Shop,
     },
 ];
 
@@ -163,8 +163,8 @@ export const POPULAR_DATA = [
         description: "Tempered glass case with clean cable management and optimized airflow.",
         price: "  ₹249.99",
         svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
+        heart: Heart,
+        shop: Shop,
     },
     {
         img: popularGraphic,
@@ -172,8 +172,8 @@ export const POPULAR_DATA = [
         description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
         price: "  ₹349.99",
         svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
+        heart: Heart,
+        shop: Shop,
     },
     {
         img: popularChair,
@@ -181,8 +181,8 @@ export const POPULAR_DATA = [
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "  ₹249.99",
         svg: Ratingstar,
-        Heart: HeartSvg,
-        shop: ShopSvg,
+        heart: Heart,
+        shop: Shop,
     },
 ];
 
@@ -190,44 +190,44 @@ export const CLIENTS_DATA = [
     {
         img: william,
         title: "William gate",
-        job: "CEO"
+        profession: "CEO"
     },
     {
         img: darrell,
         title: "Darrell Steward",
-        job: "Manager"
+        profession: "Manager"
     },
     {
         img: william,
         title: "William gate",
-        job: "CEO"
+        profession: "CEO"
     },
     {
         img: darrell,
         title: "Darrell Steward",
-        job: "Manager"
+        profession: "Manager"
     }
 ];
 
 export const FOOTER_ICONS = [
     {
         href: "https://www.facebook.com/",
-        icon: FacebookSvg,
+        icon: Facebook,
         rotate: "rotate-12",
     },
     {
         href: "https://www.instagram.com/",
-        icon: InstagramSvg,
+        icon: Instagram,
         rotate: "-rotate-12",
     },
     {
         href: "https://x.com/",
-        icon: TwiterSvg,
+        icon: Twitter,
         rotate: "rotate-12",
     },
     {
         href: "https://www.youtube.com/",
-        icon: YoutubeSvg,
+        icon: Youtube,
         rotate: "-rotate-12",
     },
 ];

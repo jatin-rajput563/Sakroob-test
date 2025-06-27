@@ -1,12 +1,11 @@
-// ✅ CheckOut.jsx - Correct UI, data from CartContext
 import React, { useState } from "react";
 import Buttons from "../components/common/Buttons";
 import CheckImg from "../assets/images/png/checkout-img.png";
 import {
   CreditCards,
-  InformationSvg,
-  PaypalSvg,
-  UnderSvg,
+  Information,
+  Paypal,
+  Under,
 } from "../utils/Icons";
 import { useCart } from "../context/CartContext";
 
@@ -56,7 +55,7 @@ const CheckOut = () => {
                       className="outline-0 text-[#112D49]"
                     />
                   </div>
-                  <UnderSvg />
+                  <Under />
                 </div>
               </div>
               <p className="font-bold text-2xl leading-[120%] text-[#112D49] pt-[35px]">
@@ -100,7 +99,7 @@ const CheckOut = () => {
                 />
               </div>
               <div className="flex gap-[8px] pt-[16px] items-center">
-                <InformationSvg />
+                <Information />
                 <p className="text-[#41576D] leading-[150%]">
                   Add a house number if you have one
                 </p>
@@ -185,7 +184,7 @@ const CheckOut = () => {
                         )}
                       </div>
                     </label>
-                    <PaypalSvg />
+                    <Paypal />
                   </div>
                   <CreditCards />
                 </div>

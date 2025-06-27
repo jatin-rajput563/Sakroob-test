@@ -5,10 +5,10 @@ import { Navigation } from "swiper/modules";
 import { CLIENTS_DATA } from "../utils/helper";
 import {
   LeftArrow,
-  LeftQuotationIcon,
+  LeftQuotation,
   Ratingstar,
   RightArrow,
-  RightQuotationIcon,
+  RightQuotation,
 } from "../utils/Icons";
 
 const OurClients = () => {
@@ -60,7 +60,7 @@ const OurClients = () => {
                     />
                     <div className="pt-4 leading-[150%] relative text-[#112D49] opacity-80">
                       <div className="absolute top-0 left-0">
-                        <LeftQuotationIcon />
+                        <LeftQuotation />
                       </div>
                       <p className="flex-1 ">
                         But I must explain to you how all this mistaken idea of
@@ -70,14 +70,16 @@ const OurClients = () => {
                         the truth,
                       </p>
                       <div className="absolute bottom-0 right-0">
-                        <RightQuotationIcon />
+                        <RightQuotation />
                       </div>
                     </div>
-                    <Ratingstar />
-                    <p className="font-semibold text-xl md:text-2xl text-[#112D49] mt-2 md:mt-3">
-                      {data.heading}
+                    <div className="flex mx-auto justify-center items-center pt-3">
+                      <Ratingstar />
+                    </div>
+                    <p className="font-semibold text-xl md:text-2xl text-[#112D49] mt-2 md:mt-[10px]">
+                      {data.title}
                     </p>
-                    <p className="text-[#112D49]">{data.work}</p>
+                    <p className="text-[#112D49]">{data.profession}</p>
                   </div>
                 </SwiperSlide>
               ))}
