@@ -48,7 +48,6 @@ const PopularProduct = () => {
                       } left-1/2 -translate-x-1/2`}
                       alt="img"
                     />
-                    {/* Heart Icon */}
                     <div
                       className="absolute top-[10px] right-[10px] cursor-pointer"
                       onClick={() => handleFavoriteClick(index)}

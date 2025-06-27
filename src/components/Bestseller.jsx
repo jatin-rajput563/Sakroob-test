@@ -16,6 +16,8 @@ const Bestseller = () => {
   const [favoriteItems, setFavoriteItems] = useState([]);
   const [popupMessage, setPopupMessage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [cartMessage, setCartMessage] = useState("");
+  const [cartPopup, setCartPopup] = useState(false);
   const { addToCart } = useCart();
   const navigate = useNavigate();
 
@@ -103,7 +105,7 @@ const Bestseller = () => {
                     <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
                       <img
                         src={item.img}
-                        className={`absolute ${topPositions[index]} left-1/2 -translate-x-1/2`}
+                        className={`absolute ${topPositions[index]} left-1/2 -translate-x-1/2 pointer-events-none`}
                         alt="product"
                       />
                       <div
@@ -142,7 +144,7 @@ const Bestseller = () => {
                       {item.shop && (
                         <div
                           className="cursor-pointer"
-                          onClick={() =>
+                          onClick={() => {
                             addToCart({
                               id: item.id || index,
                               name: item.title,
@@ -150,8 +152,11 @@ const Bestseller = () => {
                               price: parseFloat(
                                 item.price.replace("₹", "").replace(",", "")
                               ),
-                            })
-                          }
+                            });
+                            setCartMessage("Item added to cart 🛒");
+                            setCartPopup(true);
+                            setTimeout(() => setCartPopup(false), 2000);
+                          }}
                         >
                           <item.shop />
                         </div>
@@ -162,8 +167,6 @@ const Bestseller = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Bottom buttons for smaller screens (below xl) */}
           <div className="xl:hidden flex justify-center gap-4 mt-8">
             <button
               onClick={() => prevRef.current?.click()}
@@ -196,11 +199,14 @@ const Bestseller = () => {
           </div>
         </div>
       </div>
-
-      {/* Popup for favorites */}
       {showPopup && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition">
           {popupMessage}
+        </div>
+      )}
+      {cartPopup && (
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50 transition">
+          {cartMessage}
         </div>
       )}
     </>

@@ -11,7 +11,7 @@ import { BlogArrow } from "../utils/Icons";
 const Blog = () => {
   return (
     <>
-      <div className="flex justify-center items-center sm:pt-[132px] pt-[110px]">
+      <div id="blog" className="flex justify-center items-center sm:pt-[132px] pt-[110px]">
         <div className="max-w-[1386px] mx-auto w-full">
           <Heading
             headClass="sm:max-w-[700px] max-w-[283px] mx-auto"
@@ -20,7 +20,7 @@ const Blog = () => {
           <div className="xl:flex xl:mb-6 mt-8 sm:mt-12 md:mt-16 gap-6.5">
             <div className="xl:max-w-[680px] max-xl:mb-6 w-full p-3.5 sm:pt-8 sm:pl-8 bg-[#E5E4E2] rounded-[8px] relative min-h-[335px]">
               <img
-                className="max-w-[202px] sm:hidden mx-auto pb-5.5"
+                className="max-w-[202px] sm:hidden mx-auto pb-5.5 pointer-events-none"
                 src={blogPageImg1}
                 alt="storage img"
               />
@@ -41,14 +41,14 @@ const Blog = () => {
                 </div>
               </a>
               <img
-                className="hidden sm:block max-w-[250px] md:max-w-[281px] sm:absolute right-0 bottom-0"
+                className="hidden sm:block max-w-[250px] md:max-w-[281px] sm:absolute right-0 bottom-0 pointer-events-none"
                 src={blogPageImg1}
                 alt="storage img"
               />
             </div>
             <div className="xl:max-w-[680px] pb-3.5 pl-3.5 pr-3.5 max-xl:mb-6 w-full sm:pt-[75px] sm:pl-8 bg-[#EEF4FB] rounded-[8px] relative min-h-[335px]">
               <img
-                className="sm:hidden max-w-[288px] mx-auto mb-10.5"
+                className="sm:hidden max-w-[288px] mx-auto mb-10.5 pointer-events-none"
                 src={blogPageImg5}
                 alt="five tools img"
               />
@@ -68,7 +68,7 @@ const Blog = () => {
                 </div>
               </a>
               <img
-                className="absolute max-sm:hidden max-w-[199px] right-0 bottom-0 "
+                className="absolute max-sm:hidden max-w-[199px] right-0 bottom-0 pointer-events-none"
                 src={blogPageImg2}
                 alt="five tools img"
               />
@@ -76,7 +76,7 @@ const Blog = () => {
           </div>
           <div className="w-full xl:pt-[50px] xl:pl-4.5 xl:pb-[34px] xl:pr-[27px] bg-[#D5E8FF] rounded-[8px] min-h-[388px] xl:flex gap-[50px] xl:gap-[95.92px] items-center">
             <img
-              className="max-w-[212px] max-xl:mb-[17px] sm:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[367px]"
+              className="max-w-[212px] max-xl:mb-[17px] sm:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[367px] pointer-events-none"
               src={blogPageImg3}
               alt="five tools img"
             />
@@ -98,7 +98,7 @@ const Blog = () => {
               </a>
             </div>
             <img
-              className="max-w-[182px] max-xl:mt-9.5 sm:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[367px] ml-auto"
+              className="max-w-[182px] max-xl:mt-9.5 sm:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[367px] ml-auto pointer-events-none"
               src={blogPageImg4}
               alt="five tools img"
             />

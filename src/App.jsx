@@ -8,6 +8,14 @@ import Header from "./components/Header";
 import Addtocart from "./components/Addtocart";
 import ProductDetail from "./components/ProductDetail";
 import CheckOut from "./pages/CheckOut";
+import Lenis from "lenis";
+
+const lenis = new Lenis({
+  autoRaf: true,
+});
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,10 +33,19 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
+      <Route
+        path="/"
+        element={<Navigate to={isLoggedIn ? "/home" : "/login"} />}
+      />
       <Route
         path="/login"
-        element={isLoggedIn ? <Navigate to="/home" /> : <LoginUp onLogin={handleLogin} />}
+        element={
+          isLoggedIn ? (
+            <Navigate to="/home" />
+          ) : (
+            <LoginUp onLogin={handleLogin} />
+          )
+        }
       />
       <Route
         path="/signup"

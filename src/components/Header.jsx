@@ -6,6 +6,7 @@ import {
   LikeIcon,
   ProfileIcon,
   SearchIcon,
+  SmallLogo,
   UserIcon,
 } from "../utils/Icons";
 import Input from "../components/common/Input";
@@ -59,27 +60,33 @@ const Header = () => {
         <div className="relative z-20 max-w-[1440px] mx-auto">
           <div className="mx-auto py-[13px] lg:py-5 lg:hidden px-6 max-w-[1246px] flex items-center justify-between">
             <NavLink to="/" className="header-logo">
-              <HeaderLogo />
+              <SmallLogo />
             </NavLink>
-            <div
-              onClick={toggleNavbar}
-              className="z-50 lg:hidden flex flex-col justify-between w-6 h-5 cursor-pointer transition-all duration-300 ease-in-out"
-            >
-              <span
-                className={`block h-1 rounded-3xl bg-white transition-all duration-300 ease-in-out ${
-                  menuOpen ? "rotate-45 translate-y-[8px]" : ""
-                }`}
-              ></span>
-              <span
-                className={`block h-1 rounded-3xl bg-white transition-all duration-300 ease-in-out ${
-                  menuOpen ? "opacity-0" : ""
-                }`}
-              ></span>
-              <span
-                className={`block h-1 rounded-3xl bg-white transition-all duration-300 ease-in-out ${
-                  menuOpen ? "-rotate-45 -translate-y-[8px]" : ""
-                }`}
-              ></span>
+            <div className="size-[30px] pt-[10px]">
+              <div
+                onClick={toggleNavbar}
+                className="max-w-[18px] z-50 relative cursor-pointer lg:hidden flex flex-col justify-center gap-[5px]"
+              >
+                <span
+                  className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${
+                    menuOpen
+                      ? "rotate-45 translate-y-2 h-1"
+                      : "w-[9.77px] h-[1px] ml-auto"
+                  }`}
+                ></span>
+                <span
+                  className={`rounded-3xl mx-auto bg-white transition-transform duration-300 ease-in-out ${
+                    menuOpen ? "opacity-0 h-1" : "w-[18px] h-[1px] "
+                  }`}
+                ></span>
+                <span
+                  className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${
+                    menuOpen
+                      ? "-rotate-45 -translate-y-2.5 h-1"
+                      : " w-[9.77px] h-[1px] "
+                  }`}
+                ></span>
+              </div>
             </div>
           </div>
           <NavLink
@@ -211,7 +218,7 @@ const Header = () => {
                   <a
                     onClick={linkClick}
                     className={`leading-[150%] text-white ${underlineClass}`}
-                    href="#"
+                    href="#about"
                   >
                     About
                   </a>
@@ -220,7 +227,7 @@ const Header = () => {
                   <a
                     onClick={linkClick}
                     className={`leading-[150%] text-white ${underlineClass}`}
-                    href="#"
+                    href="#blog"
                   >
                     Blog
                   </a>

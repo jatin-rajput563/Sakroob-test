@@ -11,7 +11,7 @@ import PiKits from "../assets/images/png/piKits.png";
 const Product = () => {
   return (
     <>
-      <div className="flex justify-center items-center sm:pt-[132px] pt-[112px]">
+      <div id="about" className="flex justify-center items-center sm:pt-[132px] pt-[112px]">
         <div className="max-w-[1384px] w-full px-4 mx-auto">
           <p className="text-center italic text-lg sm:text-xl leading-[120%] text-[#112D49]">
             Featured Categories
@@ -29,7 +29,7 @@ const Product = () => {
                     headText="Sensors & Modules"
                   />
                   <img
-                    className="sm:max-w-[372px] max-w-[246px] w-full mt-7 ml-auto"
+                    className="sm:max-w-[372px] max-w-[246px] w-full mt-7 ml-auto pointer-events-none"
                     src={Module}
                     alt="Module-img"
                   />
@@ -41,7 +41,7 @@ const Product = () => {
                   headText="Custom PC Parts"
                 />
                 <img
-                  className="sm:max-w-[174px] max-w-[157px] w-full mx-auto"
+                  className="sm:max-w-[174px] max-w-[157px] w-full mx-auto pointer-events-none"
                   src={Parts}
                   alt="part"
                 />
@@ -52,7 +52,7 @@ const Product = () => {
                   headText="DIY Tools"
                 />
                 <img
-                  className="sm:max-w-[184px] max-w-[174px] mx-auto"
+                  className="sm:max-w-[184px] max-w-[174px] mx-auto pointer-events-none"
                   src={DiyTools}
                   alt="tools"
                 />
@@ -65,7 +65,7 @@ const Product = () => {
                   headText="Cables & Connectors"
                 />
                 <img
-                  className="sm:max-w-[306px] max-w-[294px] absolute -right-4 max-sm:-rotate-90 sm:left-0 bottom-4.5 sm:bottom-0"
+                  className="sm:max-w-[306px] max-w-[294px] pointer-events-none absolute -right-4 max-sm:-rotate-90 sm:left-0 bottom-4.5 sm:bottom-0"
                   src={Cables}
                   alt="cable"
                 />
@@ -76,7 +76,7 @@ const Product = () => {
                   headText="Gaming Peripherals"
                 />
                 <img
-                  className="max-w-[198px] sm:max-w-[266px] mx-auto"
+                  className="max-w-[198px] pointer-events-none sm:max-w-[266px] mx-auto"
                   src={GamingController}
                   alt="peripherals"
                 />
@@ -87,7 +87,7 @@ const Product = () => {
                   headClass="!text-[32px]  pt-[59px] z-10 relative"
                   headText="Raspberry Pi Kits"
                 />
-                <img className="absolute bottom-0" src={PiKits} alt="sensor" />
+                <img className="absolute bottom-0 pointer-events-none" src={PiKits} alt="sensor" />
               </div>
             </div>
           </div>

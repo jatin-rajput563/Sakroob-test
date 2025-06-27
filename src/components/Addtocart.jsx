@@ -51,11 +51,11 @@ const Addtocart = () => {
                   {cartItems.map((item) => (
                     <tr key={item.id}>
                       <td className="flex items-center gap-4 px-5 w-[451px] pt-[47px]">
-                        <div className="min-w-[85px] min-h-[85px] border-[#00000033] rounded-[7px] relative flex items-center justify-center border">
+                        <div className="min-w-[85px] min-h-[85px] max-w-[85px] max-h-[85px] border-[#00000033] rounded-[7px] relative flex items-center justify-center border">
                           <img
                             src={item.image}
                             alt="product"
-                            className="object-fit rounded"
+                            className="object-fit rounded pointer-events-none max-w-[60px] max-h-[43px]"
                           />
                           <div className="size-[34.24px] left-[68.47px] -top-4 bg-[#C7C7C7] rounded-[39.94px] flex items-center justify-center text-[#112D49] absolute">
                             {item.quantity}
@@ -110,7 +110,9 @@ const Addtocart = () => {
             <div className="flex justify-end">
               <div className="mt-5 max-w-[328px] pr-5">
                 <div className="flex justify-between items-center">
-                  <p className="text-[#112D49] leading-[150%]">Estimated total</p>
+                  <p className="text-[#112D49] leading-[150%]">
+                    Estimated total
+                  </p>
                   <p className="text-[#112D49] font-semibold leading-[100%]">
                     ₹ {totalAmount.toFixed(2)}
                   </p>
