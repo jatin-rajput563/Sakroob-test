@@ -1,10 +1,11 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { MARQUE_DATA } from "../utils/helper";
-const Marque = () => {
+
+const HeroTopSlider = () => {
   return (
     <>
-      <Marquee className="max-w-[1440px] mx-auto pt-[27px]">
+      <Marquee className="max-w-[1920px] mx-auto pt-[27px]">
         {MARQUE_DATA.map((item, index) => (
           <div
             key={index}
@@ -21,4 +22,4 @@ const Marque = () => {
   );
 };
 
-export default Marque;
+export default HeroTopSlider;

@@ -8,6 +8,7 @@ import OurClients from "../components/OurClients";
 import SakroobCircle from "../components/SakroobCircle";
 import Products from "../components/Products";
 import Addtocart from "../components/Addtocart";
+import HeroTopSlider from "../components/HeroTopSlider";
 
 const HomePage = () => {
   const [loginTime, setLoginTime] = useState("");
@@ -21,7 +22,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Marque />
+      <HeroTopSlider />
       <Hero />
       <Services />
       <Products />

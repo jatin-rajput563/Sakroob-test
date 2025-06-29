@@ -102,7 +102,7 @@ const Header = () => {
             }`}
           >
             <li>
-              <ul className="list-unstyled flex items-center max-lg:flex-col max-lg:text-center gap-4 xl:gap-8 relative py-5">
+              <ul className="list-unstyled flex items-center max-lg:flex-col max-lg:text-center gap-4 lg:gap-8 relative py-5">
                 <li>
                   <a
                     onClick={linkClick}
