@@ -45,6 +45,8 @@ const Bestseller = () => {
       <div className="relative sm:pt-[132px] pt-[112px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
+
+          {/* Custom Arrows */}
           <div
             ref={prevRef}
             className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] left-[14%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
@@ -74,6 +76,7 @@ const Bestseller = () => {
             </svg>
           </div>
 
+          {/* Swiper */}
           <Swiper
             modules={[Navigation]}
             slidesPerView={3}
@@ -98,75 +101,95 @@ const Bestseller = () => {
               1280: { slidesPerView: 3, spaceBetween: 0 },
             }}
           >
-            {BESTSELLER_DATA.map((item, index) => (
-              <SwiperSlide className="pt-[100px]" key={index}>
-                <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
-                  <div>
-                    <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
-                      <img
-                        src={item.img}
-                        className={`absolute ${topPositions[index]} left-1/2 -translate-x-1/2 pointer-events-none`}
-                        alt="product"
-                      />
-                      <div
-                        className="absolute top-[10px] right-[10px] cursor-pointer"
-                        onClick={() => handleFavoriteClick(index)}
-                      >
-                        <Heart />
+            {BESTSELLER_DATA.map((item, index) => {
+              const numericPrice =
+                typeof item.price === "string"
+                  ? parseFloat(item.price.replace(/[₹,]/g, ""))
+                  : Number(item.price);
+
+              return (
+                <SwiperSlide className="pt-[100px]" key={index}>
+                  <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
+                    <div>
+                      {/* Image & Favorite */}
+                      <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
+                        <img
+                          src={item.img}
+                          className={`absolute ${topPositions[index]} left-1/2 -translate-x-1/2 pointer-events-none`}
+                          alt="product"
+                        />
+                        <div
+                          className="absolute top-[10px] right-[10px] cursor-pointer"
+                          onClick={() => handleFavoriteClick(index)}
+                        >
+                          <Heart />
+                        </div>
+                      </div>
+                      {/* Title, Description, Price */}
+                      <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">
+                        {item.title}
+                      </p>
+                      <p className="leading-[150%] text-[#41576D] max-w-[332px] pt-2">
+                        {item.description}
+                      </p>
+                    </div>
+
+                    <div>
+                      <div className="flex justify-between items-center">
+                        <p className="font-semibold text-2xl">
+                          ₹{numericPrice}
+                        </p>
+                        {item.svg && <item.svg />}
+                      </div>
+
+                      <div className="pt-[25px] flex justify-between items-center">
+                        <Buttons
+                          btnText="Shop Now"
+                          btnClass="bg-white !text-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
+                          onClick={() => {
+                            const productData = {
+                              id: item.id || index,
+                              title: item.title,
+                              description: item.description,
+                              price: numericPrice,
+                              img: item.img,
+                            };
+                            navigate(`/product/${item.id || index}`, {
+                              state: { product: productData },
+                            });
+                            localStorage.setItem(
+                              "selectedProduct",
+                              JSON.stringify(productData)
+                            );
+                          }}
+                        />
+                        {item.shop && (
+                          <div
+                            className="cursor-pointer"
+                            onClick={() => {
+                              addToCart({
+                                id: item.id || index,
+                                name: item.title,
+                                image: item.img,
+                                price: numericPrice,
+                              });
+                              setCartMessage("Item added to cart 🛒");
+                              setCartPopup(true);
+                              setTimeout(() => setCartPopup(false), 2000);
+                            }}
+                          >
+                            <item.shop />
+                          </div>
+                        )}
                       </div>
                     </div>
-                    <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">
-                      {item.title}
-                    </p>
-                    <p className="leading-[150%] text-[#41576D] max-w-[332px] pt-2">
-                      {item.description}
-                    </p>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center">
-                      <p className="font-semibold text-2xl ">{item.price}</p>
-                      {item.svg && <item.svg />}
-                    </div>
-                    <div className="pt-[25px] flex justify-between items-center">
-                      <Buttons
-                        btnText="Shop Now"
-                        btnClass="bg-white !text-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
-                        onClick={() => {
-                          navigate(`/product/${item.id || index}`, {
-                            state: { product: item },
-                          });
-                          localStorage.setItem(
-                            "selectedProduct",
-                            JSON.stringify(item)
-                          );
-                        }}
-                      />
-                      {item.shop && (
-                        <div
-                          className="cursor-pointer"
-                          onClick={() => {
-                            addToCart({
-                              id: item.id || index,
-                              name: item.title,
-                              image: item.img,
-                              price: parseFloat(
-                                item.price.replace("₹", "").replace(",", "")
-                              ),
-                            });
-                            setCartMessage("Item added to cart 🛒");
-                            setCartPopup(true);
-                            setTimeout(() => setCartPopup(false), 2000);
-                          }}
-                        >
-                          <item.shop />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
+
+          {/* Mobile Nav Arrows */}
           <div className="xl:hidden flex justify-center gap-4 mt-8">
             <button
               onClick={() => prevRef.current?.click()}
@@ -199,6 +222,8 @@ const Bestseller = () => {
           </div>
         </div>
       </div>
+
+      {/* Popup Messages */}
       {showPopup && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition">
           {popupMessage}
