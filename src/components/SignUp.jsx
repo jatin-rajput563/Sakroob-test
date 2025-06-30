@@ -115,13 +115,11 @@ const SignUp = () => {
                 </p>
               )}
             </div>
-
             <Buttons
               type="submit"
               btnText="Sign up"
               btnClass="mt-[40px] !max-w-[462px] !w-full !bg-[#112D49] !text-white hover:!bg-white hover!text-[#112D49]"
             />
-
             <p className="text-[#41576D] pt-[20px] text-center">
               Already a member?{" "}
               <NavLink to={"/login"}>

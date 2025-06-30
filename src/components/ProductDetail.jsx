@@ -16,13 +16,10 @@ const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState(null);
   const { addToCart } = useCart();
-
   const [popup, setPopup] = useState(false);
   const [popupMsg, setPopupMsg] = useState("");
-
   const increaseQuantity = () => setQuantity((q) => q + 1);
   const decreaseQuantity = () => setQuantity((q) => (q > 1 ? q - 1 : 1));
-
   useEffect(() => {
     if (location.state?.product) {
       setProduct(location.state.product);

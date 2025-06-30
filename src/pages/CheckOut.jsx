@@ -9,12 +9,10 @@ const CheckOut = () => {
   const location = useLocation();
   const { cartItems } = useCart();
   const checkoutItems = location.state?.checkoutItems || cartItems;
-
   const [checked, setChecked] = useState(false);
   const [selected, setSelected] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
   const [coupon, setCoupon] = useState("");
-
   const handleApplyCoupon = () => {
     if (coupon.trim() !== "") {
       setCouponApplied(true);
@@ -23,7 +21,6 @@ const CheckOut = () => {
       }, 1000);
     }
   };
-
   const totalAmount = checkoutItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
