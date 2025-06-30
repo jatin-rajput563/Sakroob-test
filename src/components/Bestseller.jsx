@@ -45,35 +45,36 @@ const Bestseller = () => {
       <div id="Categories" className="relative sm:pt-[132px] pt-[112px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
-          <div
-            ref={prevRef}
-            className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] left-[14%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
-          >
-            <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
-              <path
-                d="M7 13L1 7L6.79609 1"
-                className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          <div>
+            <div
+              ref={prevRef}
+              className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] left-[7%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            >
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                <path
+                  d="M7 13L1 7L6.79609 1"
+                  className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              ref={nextRef}
+              className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] right-[7%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
+            >
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                <path
+                  d="M1 13L7 7L1.20391 1"
+                  className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
-          <div
-            ref={nextRef}
-            className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] right-[14%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
-          >
-            <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
-              <path
-                d="M1 13L7 7L1.20391 1"
-                className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          
           <Swiper
             modules={[Navigation]}
             spaceBetween={24}

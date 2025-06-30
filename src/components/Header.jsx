@@ -56,7 +56,7 @@ const Header = () => {
 
   return (
     <div className="w-full mx-auto max-w-[1920px]">
-      <div className="bg-[#112D49] h-full">
+      <div className="bg-[#112D49]">
         <div className="relative z-20 max-w-[1440px] mx-auto">
           <div className="mx-auto py-[13px] lg:py-5 lg:hidden px-6 max-w-[1246px] flex items-center justify-between">
             <NavLink to="/" className="header-logo">
@@ -76,14 +76,14 @@ const Header = () => {
                 ></span>
                 <span
                   className={`rounded-3xl mx-auto bg-white transition-transform duration-300 ease-in-out ${
-                    menuOpen ? "opacity-0 h-1" : "w-[18px] h-[1px] "
+                    menuOpen ? "opacity-0 h-1" : "w-[18px] h-[1px]"
                   }`}
                 ></span>
                 <span
                   className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${
                     menuOpen
                       ? "-rotate-45 -translate-y-2.5 h-1"
-                      : " w-[9.77px] h-[1px] "
+                      : "w-[9.77px] h-[1px]"
                   }`}
                 ></span>
               </div>
@@ -98,7 +98,9 @@ const Header = () => {
           <ul
             id="nav-name"
             className={`transition-all duration-300 ease-in-out list-none flex justify-center items-center lg:max-w-[974px] ml-auto xl:mr-[100px] nav-link ${
-              menuOpen ? "show-navbar" : "hidden lg:flex"
+              menuOpen
+                ? "fixed inset-0 z-40 bg-[#112D49] flex flex-col min-h-screen pt-[100px]"
+                : "hidden lg:flex"
             }`}
           >
             <li>
@@ -115,7 +117,7 @@ const Header = () => {
                 <li className="relative">
                   <button
                     type="button"
-                    className={`leading-[150%] text-white flex items-center gap-2 text-nowrap  dropdown-toggle ${underlineClass}`}
+                    className={`leading-[150%] text-white flex items-center gap-2 text-nowrap dropdown-toggle ${underlineClass}`}
                     onClick={() => toggleDropdown("pcProducts")}
                   >
                     PC Products <DropdownArrow />

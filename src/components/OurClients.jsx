@@ -4,10 +4,8 @@ import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { CLIENTS_DATA } from "../utils/helper";
 import {
-  LeftArrow,
   LeftQuotation,
   Ratingstar,
-  RightArrow,
   RightQuotation,
 } from "../utils/Icons";
 
@@ -19,7 +17,7 @@ const OurClients = () => {
           <p className="text-center italic text-lg md:text-xl text-[#112D49] mb-2">
             Testimonials
           </p>
-          <h2 className="leading-[120%] text-center text-[48px] font-bold text-[#112D49]">
+          <h2 className="leading-[120%] text-center text-[48px] max-w-[434px] sm:max-w-[1256px] mx-auto  font-bold text-[#112D49]">
             What Our Client’s Says{" "}
           </h2>
           <div className="mt-10 relative">

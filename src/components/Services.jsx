@@ -9,14 +9,20 @@ const Services = () => {
           {SERVICES_DATA.map((item, index) => (
             <div
               key={index}
-              className="relative flex items-center gap-[8px] max-md:py-[50px] px-[36px] h-[61px] 
+              className="relative flex flex-col items-center text-center sm:flex-row sm:text-left sm:items-center gap-[8px] 
+                         max-md:py-[50px] px-[36px] h-auto 
                          w-full sm:w-1/2 md:w-1/3 xl:w-1/5 max-w-[320px]"
             >
-              <item.icon />
+              <div className="mb-2 sm:mb-0 sm:mr-2">
+                <item.icon />
+              </div>
               <div>
-                <p className="font-bold leading-[150%] text-nowrap">{item.text}</p>
+                <p className="font-bold leading-[150%] text-nowrap">
+                  {item.text}
+                </p>
                 <p className="text-sm leading-[120%] pt-1">{item.para}</p>
               </div>
+
               {index !== SERVICES_DATA.length - 1 && (
                 <>
                   <div

@@ -17,7 +17,7 @@ const GuidesBlog = () => {
     >
       <div className="max-w-[1386px] mx-auto w-full">
         <Heading
-          headClass="sm:max-w-[700px] max-w-[283px] mx-auto"
+          headClass="sm:max-w-[650px] max-w-[283px] mx-auto"
           headText="Blog, Guides, Build Logs & More"
         />
         <div className="xl:flex xl:mb-6 mt-8 sm:mt-12 md:mt-16 gap-6.5">
@@ -87,7 +87,7 @@ const GuidesBlog = () => {
             <p className="text-[32px] leading-[120%] text-center mx-auto max-w-[307px] sm:max-w-[407px] font-bold text-[#112D49]">
               Inside a Raspberry Pi Retro Console
             </p>
-            <p className="opacity-80 text-[#112D49] max-sm:max-w-[260px] text-nowrap max-sm:text-sm leading-[150%] max-w-[410px] mx-auto pt-2 sm:pt-3 text-center">
+            <p className="opacity-80 text-[#112D49] max-sm:max-w-[260px] sm:text-nowrap max-sm:text-sm leading-[150%] max-w-[410px] mx-auto pt-2 sm:pt-3 text-center">
               Step-by-step log of building a retro game machine.
             </p>
             <a

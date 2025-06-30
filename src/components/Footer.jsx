@@ -1,12 +1,7 @@
 import React from "react";
 import footerLogo from "../assets/images/svg/footer-logo.svg";
 import Para from "./common/Para";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-} from "../utils/Icons";
+import { Facebook, Instagram, Twitter, Youtube } from "../utils/Icons";
 import { useLocation } from "react-router-dom";
 
 const Footer = () => {
@@ -15,11 +10,13 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`bg-[#112D49] ${isHomePage ? "pt-[215px]" : "pt-[70px]"}`}
+        className={`bg-[#112D49] ${isHomePage ? "pt-[250px]" : "pt-[70px]"}`}
       >
         <div className="max-w-[1440px] mx-auto px-3">
           <div>
-            <img className="mx-auto" src={footerLogo} alt="footer-logo" />
+            <a href="#">
+              <img className="mx-auto" src={footerLogo} alt="footer-logo" />
+            </a>
             <Para
               paraClass="max-w-[338px] !text-[#CFD5DB] text-center mx-auto pt-4 !leading-[150%]"
               paraText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida."
@@ -81,12 +78,12 @@ const Footer = () => {
               }}
             ></div>
             <div className="flex flex-col sm:flex-row justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 text-center text-sm text-white">
-              <p className="sm:text-left w-full sm:w-auto ">
+              <a href="#" className="sm:text-left w-full sm:w-auto ">
                 Terms of Service | Privacy Policy
-              </p>
-              <p className="sm:text-right w-full sm:w-auto ">
+              </a>
+              <a href="" className="sm:text-right w-full sm:w-auto ">
                 © {new Date().getFullYear()} Skaroob. All Rights Reserved.
-              </p>
+              </a>
             </div>
           </div>
         </div>
