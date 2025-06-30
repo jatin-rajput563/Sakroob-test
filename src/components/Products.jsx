@@ -31,7 +31,7 @@ const Product = () => {
                   headText="Sensors & Modules"
                 />
                 <img
-                  className="min-[1050px]:max-w-[372px] max-w-[246px] w-full mt-7 ml-auto pointer-events-none"
+                  className="min-[1140px]:max-w-[372px] max-w-[246px] w-full mt-7 ml-auto pointer-events-none"
                   src={Module}
                   alt="Module-img"
                 />

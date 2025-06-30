@@ -27,16 +27,17 @@ const GuidesBlog = () => {
               src={blogPageImg1}
               alt="storage img"
             />
-            <p className="text-[32px] leading-[120%] !text-left max-w-[233px] sm:max-w-[407px] font-bold text-[#112D49] ">
+            <p className="text-[24px] sm:text-[32px] leading-[120%] !text-left max-w-[233px] sm:max-w-[407px] font-bold text-[#112D49] ">
               How to Build a Mini NAS
             </p>
-            <p className="opacity-80 max-sm:text-sm text-[#112D49] leading-[150%] max-w-[407px] pt-2 sm:pt-3">
+            <p className="opacity-80 text-sm sm:text-base text-[#112D49] leading-[150%] max-w-[299px] sm:max-w-[407px] pt-2 sm:pt-3">
               Learn to build your own network storage system with simple
               components.
             </p>
             <a
-              className="flex items-center leading-[100%] group font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
-              href=""
+              className="flex items-center leading-[100%] group font-medium text-sm sm:text-base text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
+              href="#"
+              target="_blank"
             >
               Read Guide
               <div className="hover:transform group-hover:translate-x-[10px] transition-all duration-300 ease-in-out">
@@ -55,15 +56,16 @@ const GuidesBlog = () => {
               src={blogPageImg5}
               alt="five tools img"
             />
-            <p className="text-[32px] leading-[120%] !text-left max-w-[360px] font-bold text-[#112D49]">
+            <p className="text-[24px] sm:text-[32px] leading-[120%] !text-left max-w-[360px] font-bold text-[#112D49]">
               5 Tools Every Maker Should Own
             </p>
-            <p className="opacity-80 max-sm:text-sm text-[#112D49] leading-[150%] max-w-[407px] pt-2 sm:pt-3">
+            <p className="opacity-80 text-sm sm:text-base text-[#112D49] leading-[150%] max-w-[299px] sm:max-w-[407px] pt-2 sm:pt-3">
               The essential toolkit for every DIY electronics enthusiast.
             </p>
             <a
-              className="flex items-center leading-[100%] group font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
-              href=""
+              className="flex items-center text-sm sm:text-base leading-[100%] group font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
+              href="#"
+              target="_blank"
             >
               Read Article
               <div className="hover:transform group-hover:translate-x-[10px] transition-all duration-300 ease-in-out">
@@ -84,15 +86,16 @@ const GuidesBlog = () => {
             alt="five tools img"
           />
           <div className="px-3.5">
-            <p className="text-[32px] leading-[120%] text-center mx-auto max-w-[307px] sm:max-w-[407px] font-bold text-[#112D49]">
+            <p className="text-[24px] sm:text-[32px] leading-[120%] text-center mx-auto max-w-[307px] sm:max-w-[407px] font-bold text-[#112D49]">
               Inside a Raspberry Pi Retro Console
             </p>
-            <p className="opacity-80 text-[#112D49] max-sm:max-w-[260px] sm:text-nowrap max-sm:text-sm leading-[150%] max-w-[410px] mx-auto pt-2 sm:pt-3 text-center">
+            <p className="opacity-80 text-[#112D49] max-sm:max-w-[260px] sm:text-nowrap text-sm sm:text-base leading-[150%] max-w-[260px] sm:max-w-[410px] mx-auto pt-2 sm:pt-3 text-center">
               Step-by-step log of building a retro game machine.
             </p>
             <a
-              className="flex items-center justify-center mx-auto leading-[100%] group font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
-              href=""
+              className="flex items-center text-sm sm:text-base justify-center mx-auto leading-[100%] group font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max"
+              href="#"
+              target="_blank"
             >
               View Build Log
               <div className="hover:transform group-hover:translate-x-[10px] transition-all duration-300 ease-in-out">
