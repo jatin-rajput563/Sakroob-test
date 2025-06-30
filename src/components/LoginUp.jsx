@@ -36,7 +36,7 @@ const LoginUp = ({ onLogin }) => {
       localStorage.setItem("loginTime", loginTime);
       setLoginError("");
       onLogin();
-      navigate("/home"); // ✅ Redirect after login
+      navigate("/home");
     } else {
       setLoginError("Invalid email or password.");
     }
@@ -44,12 +44,12 @@ const LoginUp = ({ onLogin }) => {
 
   return (
     <div className="bg-[url(../src/assets/images/png/Login-bg.png)] bg-no-repeat bg-cover bg-center min-h-screen justify-center flex items-center">
-      <div className="max-w-[590px] mx-auto px-3">
+      <div className="md:w-[590px] w-full mx-auto px-3">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white p-[64px] rounded-[15px] max-w-[590px] w-full"
+          className="bg-white md:p-[64px] p-6 rounded-[15px] max-w-[590px] w-full"
         >
-          <Heading headText="Welcome back!" />
+          <Heading headText="Welcome back!" headClass="!text-[32px]" />
           <Para
             paraClass="max-w-[326px] text-center mx-auto pt-2"
             paraText="Log in below to access your account and keep things running smoothly."
@@ -88,9 +88,9 @@ const LoginUp = ({ onLogin }) => {
               <button
                 type="button"
                 onClick={toggleVisibility}
-                className="text-[#2E3F51] focus:outline-none absolute right-[15px]"
+                className="text-[#2E3F51] focus:outline-none absolute right-[15px] cursor-pointer"
               >
-                {showPassword ? <CloseEye /> : <OpenEye />}
+                {showPassword ? <OpenEye /> : <CloseEye />}
               </button>
             </div>
             {errors.password && (
@@ -102,16 +102,18 @@ const LoginUp = ({ onLogin }) => {
               <p className="text-red-600 text-sm mt-3 px-2">{loginError}</p>
             )}
 
-            <a
-              href="#"
-              className="font-semibold pt-[12px] items-end flex justify-end underline text-[#112D49] hover:text-red-600 transition-all ease-linear duration-100"
-            >
-              Forgot password?
-            </a>
+            <div className="text-right">
+              <button
+                type="button"
+                className="text-sm text-dark-blue cursor-pointer mt-3 font-medium underline hover:text-red-600"
+              >
+                Forgot password?
+              </button>
+            </div>
 
             <Buttons
               btnText="Log in"
-              btnClass="mt-[40px] !max-w-[462px] !w-full"
+              btnClass="mt-6 !max-w-[462px] !w-full"
               type="submit"
             />
 

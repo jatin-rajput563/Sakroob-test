@@ -5,6 +5,7 @@ import Para from "./common/Para";
 import Buttons from "./common/Buttons";
 import { FiveStar, Minus, Plus } from "../utils/Icons";
 import { useCart } from "../context/CartContext";
+import Reviews from "./Reviews";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -78,8 +79,6 @@ const ProductDetail = () => {
       price: formattedPrice,
       quantity,
     };
-
-    // Navigate with state
     navigate("/checkout", { state: { checkoutItems: [checkoutProduct] } });
   };
 
@@ -90,7 +89,6 @@ const ProductDetail = () => {
     <div className="pt-[91px]">
       <div className="max-w-[1140px] mx-auto px-3">
         <div className="flex flex-wrap flex-row -mx-3">
-          {/* Product Image */}
           <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">
             <div
               className="py-[44px] px-[42px] max-w-[517px] rounded-[8px] mx-auto"
@@ -103,8 +101,6 @@ const ProductDetail = () => {
               />
             </div>
           </div>
-
-          {/* Product Content */}
           <div className="w-full lg:w-6/12 px-3">
             <Heading
               headClass="!text-[34px] text-left"
@@ -124,7 +120,6 @@ const ProductDetail = () => {
             </div>
 
             <div className="flex flex-col items-start gap-4">
-              {/* Color Picker */}
               <Para
                 paraText="Select Color"
                 paraClass="!font-semibold pt-[24px]"
@@ -159,8 +154,6 @@ const ProductDetail = () => {
                   </div>
                 ))}
               </div>
-
-              {/* Quantity */}
               <Para
                 paraText="Select Quantity"
                 paraClass="!font-semibold pt-[35px]"
@@ -182,8 +175,6 @@ const ProductDetail = () => {
                   <Plus />
                 </button>
               </div>
-
-              {/* Buttons */}
               <div className="pt-[78px] w-full">
                 <Buttons
                   btnClass="!w-full !py-[17px]"
@@ -200,13 +191,12 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
-
-      {/* Toast Popup */}
       {popup && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50 transition">
           {popupMsg}
         </div>
       )}
+      <Reviews />
     </div>
   );
 };

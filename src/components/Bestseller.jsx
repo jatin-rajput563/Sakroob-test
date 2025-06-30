@@ -42,7 +42,7 @@ const Bestseller = () => {
 
   return (
     <>
-      <div id="Categories" className="relative sm:pt-[132px] pt-[112px]">
+      <div id="Categories" className="relative sm:pt-[132px] pt-[112px] pb-[]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
           <div>

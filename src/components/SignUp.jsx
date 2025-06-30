@@ -28,10 +28,10 @@ const SignUp = () => {
   return (
     <>
       <div className="bg-[url(../src/assets/images/png/Login-bg.png)] bg-no-repeat bg-cover bg-center min-h-screen justify-center flex items-center">
-        <div className="max-w-[590px] w-full mx-auto">
+        <div className="max-w-[590px] mx-auto px-3">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-white p-[64px] rounded-[15px] max-w-[590px] w-full"
+            className="bg-white md:p-[64px] p-6 rounded-[15px] max-w-[590px] w-full"
           >
             <Heading headText="Sign up" headClass="!text-[32px]" />
             <Para
@@ -39,21 +39,23 @@ const SignUp = () => {
               paraText="Create your account to unlock access and stay updated with everything we offer."
             />
 
-            <div className="pt-[24px]">
+            <div className="pt-[24px] relative">
               <input
                 type="text"
                 placeholder="First name"
-                {...register("firstName", { required: "First name is required" })}
+                {...register("firstName", {
+                  required: "First name is required",
+                })}
                 className="bg-[#F4F8F7] py-[14px] px-[28px] max-w-[462px] w-full rounded-full"
               />
               {errors.firstName && (
-                <p className="text-red-600 text-sm mt-1 px-2">
+                <p className="text-red-600 text-xs absolute top-full left-4 mt-1">
                   {errors.firstName.message}
                 </p>
               )}
             </div>
 
-            <div className="pt-[12px]">
+            <div className="pt-[28px] relative">
               <input
                 type="text"
                 placeholder="Last name"
@@ -61,13 +63,13 @@ const SignUp = () => {
                 className="bg-[#F4F8F7] py-[14px] px-[28px] max-w-[462px] w-full rounded-full"
               />
               {errors.lastName && (
-                <p className="text-red-600 text-sm mt-1 px-2">
+                <p className="text-red-600 text-xs absolute top-full left-4 mt-1">
                   {errors.lastName.message}
                 </p>
               )}
             </div>
 
-            <div className="pt-[12px]">
+            <div className="pt-[28px] relative">
               <input
                 type="text"
                 placeholder="Email address"
@@ -81,13 +83,13 @@ const SignUp = () => {
                 className="bg-[#F4F8F7] py-[14px] px-[28px] max-w-[462px] w-full rounded-full"
               />
               {errors.email && (
-                <p className="text-red-600 text-sm mt-1 px-2">
+                <p className="text-red-600 text-xs absolute top-full left-4 mt-1">
                   {errors.email.message}
                 </p>
               )}
             </div>
 
-            <div className="flex items-center relative mt-3">
+            <div className="relative mt-7">
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
@@ -103,27 +105,27 @@ const SignUp = () => {
               <button
                 type="button"
                 onClick={toggleVisibility}
-                className="text-[#2E3F51] focus:outline-none absolute right-[15px]"
+                className="text-[#2E3F51] focus:outline-none absolute right-[15px] top-1/2 -translate-y-1/2"
               >
-                {showPassword ? <CloseEye /> : <OpenEye />}
+                {showPassword ? <OpenEye /> : <CloseEye />}
               </button>
+              {errors.password && (
+                <p className="text-red-600 text-xs absolute top-full left-4 mt-1">
+                  {errors.password.message}
+                </p>
+              )}
             </div>
-            {errors.password && (
-              <p className="text-red-600 text-sm mt-1 px-2">
-                {errors.password.message}
-              </p>
-            )}
 
             <Buttons
               type="submit"
               btnText="Sign up"
-              btnClass="mt-[40px] !max-w-[462px] !w-full"
+              btnClass="mt-[40px] !max-w-[462px] !w-full !bg-[#112D49] !text-white hover:!bg-white hover!text-[#112D49]"
             />
 
             <p className="text-[#41576D] pt-[20px] text-center">
               Already a member?{" "}
               <NavLink to={"/login"}>
-                <button className="font-semibold underline text-[#112D49] hover:text-red-600 transition-all ease-linear duration-100">
+                <button className="font-semibold underline text-[#112D49] hover: transition-all ease-linear duration-100">
                   Log in
                 </button>
               </NavLink>
