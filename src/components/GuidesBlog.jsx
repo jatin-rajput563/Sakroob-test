@@ -56,10 +56,10 @@ const GuidesBlog = () => {
               src={blogPageImg5}
               alt="five tools img"
             />
-            <p className="text-[24px] sm:text-[32px] leading-[120%] !text-left max-w-[360px] font-bold text-[#112D49]">
+            <p className="text-[24px] sm:text-[32px] leading-[120%] !text-left max-w-[307px] sm:max-w-[360px] font-bold text-[#112D49]">
               5 Tools Every Maker Should Own
             </p>
-            <p className="opacity-80 text-sm sm:text-base text-[#112D49] leading-[150%] max-w-[299px] sm:max-w-[407px] pt-2 sm:pt-3">
+            <p className="opacity-80 text-sm sm:text-base text-[#112D49] leading-[150%] max-w-[358.36px]  pt-2 sm:pt-3">
               The essential toolkit for every DIY electronics enthusiast.
             </p>
             <a

@@ -20,7 +20,6 @@ const SignUp = () => {
   const toggleVisibility = () => setShowPassword(!showPassword);
 
   const onSubmit = (data) => {
-    // Save signup data in localStorage (simulate registration)
     localStorage.setItem("user", JSON.stringify(data));
     alert("Signup successful!");
     navigate("/login");
@@ -29,7 +28,7 @@ const SignUp = () => {
   return (
     <>
       <div className="bg-[url(../src/assets/images/png/Login-bg.png)] bg-no-repeat bg-cover bg-center min-h-screen justify-center flex items-center">
-        <div className="max-w-[590px] mx-auto px-3">
+        <div className="max-w-[590px] w-full mx-auto">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="bg-white p-[64px] rounded-[15px] max-w-[590px] w-full"
