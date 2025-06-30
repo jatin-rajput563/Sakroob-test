@@ -82,7 +82,8 @@ export const MARQUE_DATA = [
     {
         icon: Monitor,
         name: "Monitors",
-    }
+    },
+    
 ];
 
 export const SERVICES_DATA = [
@@ -119,7 +120,7 @@ export const BESTSELLER_DATA = [
         img: pcImg,
         title: "Vortex Gaming PC",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "₹249.99",
+        price: "₹24999.99",
         svg: Ratingstar,
         heart: Heart,
         shop: Shop,
@@ -129,7 +130,7 @@ export const BESTSELLER_DATA = [
         img: routerImg,
         title: "D-Link ADSL Wireless Router DSL2790U",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "₹249.99",
+        price: "₹24999.99",
         svg: Ratingstar,
         heart: Heart,
         shop: Shop,
@@ -139,7 +140,7 @@ export const BESTSELLER_DATA = [
         img: chairImg,
         title: "Gaming Chair",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: "₹249.99",
+        price: "₹24999.99",
         svg: Ratingstar,
         heart: Heart,
         shop: Shop,
@@ -149,7 +150,7 @@ export const BESTSELLER_DATA = [
         img: moniterPC,
         title: "Acer Nitro 27\" Gaming Monitor",
         description: "Ultra-smooth visuals with a 165Hz refresh rate and 1ms response time.",
-        price: "₹349.99",
+        price: "₹34999.99",
         svg: Ratingstar,
         heart: Heart,
         shop: Shop,

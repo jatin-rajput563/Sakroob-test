@@ -14,11 +14,9 @@ const Hero = () => {
           showThumbs={false}
           showStatus={false}
           showArrows={false}
-          // infiniteLoop
           interval={3000}
-          // autoPlay
         >
-          {[...Array(4)].map((_, index) => (
+          {[...Array(5)].map((_, index) => (
             <div
               key={index}
               className="bg-[url(../src/assets/images/png/carsousel-bg.png)] bg-no-repeat bg-cover bg-center h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] rounded-[8px] flex flex-col items-center justify-center text-center px-4 sm:px-6"

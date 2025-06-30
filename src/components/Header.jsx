@@ -56,7 +56,7 @@ const Header = () => {
 
   return (
     <div className="w-full mx-auto max-w-[1920px]">
-      <div className="bg-[#112D49]">
+      <div className="bg-[#112D49] h-full">
         <div className="relative z-20 max-w-[1440px] mx-auto">
           <div className="mx-auto py-[13px] lg:py-5 lg:hidden px-6 max-w-[1246px] flex items-center justify-between">
             <NavLink to="/" className="header-logo">
@@ -107,7 +107,7 @@ const Header = () => {
                   <a
                     onClick={linkClick}
                     className={`leading-[150%] text-white ${underlineClass}`}
-                    href="#"
+                    href="#Categories"
                   >
                     Categories
                   </a>
@@ -115,7 +115,7 @@ const Header = () => {
                 <li className="relative">
                   <button
                     type="button"
-                    className={`leading-[150%] text-white flex items-center gap-2 dropdown-toggle ${underlineClass}`}
+                    className={`leading-[150%] text-white flex items-center gap-2 text-nowrap  dropdown-toggle ${underlineClass}`}
                     onClick={() => toggleDropdown("pcProducts")}
                   >
                     PC Products <DropdownArrow />
@@ -236,7 +236,7 @@ const Header = () => {
                   <a
                     onClick={linkClick}
                     className={`leading-[150%] text-white ${underlineClass}`}
-                    href="#"
+                    href="#Contact"
                   >
                     Contact
                   </a>

@@ -14,7 +14,7 @@ const Services = () => {
             >
               <item.icon />
               <div>
-                <p className="font-bold leading-[150%]">{item.text}</p>
+                <p className="font-bold leading-[150%] text-nowrap">{item.text}</p>
                 <p className="text-sm leading-[120%] pt-1">{item.para}</p>
               </div>
               {index !== SERVICES_DATA.length - 1 && (

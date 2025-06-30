@@ -42,11 +42,9 @@ const Bestseller = () => {
 
   return (
     <>
-      <div className="relative sm:pt-[132px] pt-[112px]">
+      <div id="Categories" className="relative sm:pt-[132px] pt-[112px]">
         <div className="max-w-[1140px] mx-auto px-3">
           <Heading headText="Bestsellers" />
-
-          {/* Custom Arrows */}
           <div
             ref={prevRef}
             className="w-[38px] h-[38px] hidden xl:flex absolute top-[63%] left-[14%] border items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
@@ -75,8 +73,6 @@ const Bestseller = () => {
               />
             </svg>
           </div>
-
-          {/* Swiper */}
           <Swiper
             modules={[Navigation]}
             slidesPerView={3}
@@ -111,7 +107,6 @@ const Bestseller = () => {
                 <SwiperSlide className="pt-[100px]" key={index}>
                   <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
                     <div>
-                      {/* Image & Favorite */}
                       <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
                         <img
                           src={item.img}
@@ -125,7 +120,6 @@ const Bestseller = () => {
                           <Heart />
                         </div>
                       </div>
-                      {/* Title, Description, Price */}
                       <p className="font-bold text-2xl leading-[120%] pt-[19.35px] text-[#112D49]">
                         {item.title}
                       </p>
@@ -133,7 +127,6 @@ const Bestseller = () => {
                         {item.description}
                       </p>
                     </div>
-
                     <div>
                       <div className="flex justify-between items-center">
                         <p className="font-semibold text-2xl">
@@ -141,7 +134,6 @@ const Bestseller = () => {
                         </p>
                         {item.svg && <item.svg />}
                       </div>
-
                       <div className="pt-[25px] flex justify-between items-center">
                         <Buttons
                           btnText="Shop Now"
@@ -188,8 +180,6 @@ const Bestseller = () => {
               );
             })}
           </Swiper>
-
-          {/* Mobile Nav Arrows */}
           <div className="xl:hidden flex justify-center gap-4 mt-8">
             <button
               onClick={() => prevRef.current?.click()}
@@ -222,8 +212,6 @@ const Bestseller = () => {
           </div>
         </div>
       </div>
-
-      {/* Popup Messages */}
       {showPopup && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition">
           {popupMessage}

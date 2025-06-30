@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Marque from "../components/Marque";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Bestseller from "../components/Bestseller";
@@ -7,7 +6,6 @@ import Blog from "../components/Blog";
 import OurClients from "../components/OurClients";
 import SakroobCircle from "../components/SakroobCircle";
 import Products from "../components/Products";
-import Addtocart from "../components/Addtocart";
 import HeroTopSlider from "../components/HeroTopSlider";
 
 const HomePage = () => {
