@@ -76,7 +76,7 @@ const Header = () => {
                 ></span>
                 <span
                   className={`rounded-3xl mx-auto bg-white transition-transform duration-300 ease-in-out ${
-                    menuOpen ? "opacity-0 h-1" : "w-[18px] h-[1px]"
+                    menuOpen ? "h-1" : "w-[18px] h-[1px]"
                   }`}
                 ></span>
                 <span

@@ -5,12 +5,12 @@ const Services = () => {
   return (
     <div className="pt-[52px]">
       <div className="max-w-[1380px] px-3 mx-auto">
-        <div className="flex items-center flex-wrap justify-center bg-[#F1F6FC] rounded-[8px] py-[43px]">
+        <div className="flex items-center flex-wrap justify-center bg-[#F1F6FC] rounded-[8px] md:py-[43px]">
           {SERVICES_DATA.map((item, index) => (
             <div
               key={index}
               className="relative flex flex-col items-center text-center sm:flex-row sm:text-left sm:items-center gap-[8px] 
-                         max-md:py-[50px] px-[36px] h-auto 
+                         max-md:pt-[24px] max-md:pb-[18px] px-[36px] h-auto 
                          w-full sm:w-1/2 md:w-1/3 xl:w-1/5 max-w-[320px]"
             >
               <div className="mb-2 sm:mb-0 sm:mr-2">

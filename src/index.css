@@ -13,7 +13,7 @@ body {
 .carousel .control-dots .dot {
     border-radius: 22px !important;
     width: 21px !important;
-    height: 6px !important;
+    height: 4px !important;
     cursor: pointer;
     display: inline-block;
     margin: 0 2px !important;
