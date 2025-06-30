@@ -24,10 +24,10 @@ const Bestseller = () => {
   const handleFavoriteClick = (index) => {
     if (favoriteItems.includes(index)) {
       setFavoriteItems(favoriteItems.filter((item) => item !== index));
-      setPopupMessage("Removed from Favorite ❤︍");
+      setPopupMessage("Removed from Favorite ❤️");
     } else {
       setFavoriteItems([...favoriteItems, index]);
-      setPopupMessage("Added to Favorite ❤︍");
+      setPopupMessage("Added to Favorite 💔");
     }
     setShowPopup(true);
     setTimeout(() => setShowPopup(false), 2000);
@@ -75,6 +75,7 @@ const Bestseller = () => {
           </div>
           <Swiper
             modules={[Navigation]}
+            spaceBetween={24}
             slidesPerView={3}
             loop={true}
             centeredSlides={true}
@@ -105,7 +106,7 @@ const Bestseller = () => {
 
               return (
                 <SwiperSlide className="pt-[100px]" key={index}>
-                  <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
+                  <div className="max-w-[364px] w-full border border-[#ECEEF0] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] hover:border-white duration-100 transition-all ease-linear h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
                     <div>
                       <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
                         <img
@@ -129,7 +130,7 @@ const Bestseller = () => {
                     </div>
                     <div>
                       <div className="flex justify-between items-center">
-                        <p className="font-semibold text-2xl">
+                        <p className="font-semibold text-2xl text-[#112D49]">
                           ₹{numericPrice}
                         </p>
                         {item.svg && <item.svg />}
