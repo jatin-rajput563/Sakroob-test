@@ -5,7 +5,7 @@ import { MARQUE_DATA } from "../utils/helper";
 const HeroTopSlider = () => {
   return (
     <>
-      <Marquee className="max-w-[1920px] mx-auto pt-[26px]">
+      <Marquee className="max-w-[1920px] mx-auto pt-[26px] pb-[6px]">
         {MARQUE_DATA.map((item, index) => (
           <div
             key={index}

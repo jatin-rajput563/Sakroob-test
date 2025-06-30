@@ -23,7 +23,7 @@ const Product = () => {
           <div className="flex flex-wrap gap-6 mt-8 sm:mt-12 md:mt-[57px]">
             <div className="flex w-full max-xl:flex-wrap gap-6">
               <div className="min-h-[291px] sm:min-h-[335px] bg-[#D5E8FF] rounded-[8px] w-full md:w-[48%] xl:max-w-[680px]">
-                <div className="lg:flex justify-between sm:pl-8 2xl:pl-[62px] pl-6 pt-6 sm:pt-[73px]">
+                <div className="lg:flex justify-between sm:pl-8 2xl:pl-[62px] pl-6 pt-6 sm:pt-[46.8px] ">
                   <Heading
                     headClass="lg:pt-[44px] max-w-[213px] !text-[32px] !text-left"
                     headText="Sensors & Modules"

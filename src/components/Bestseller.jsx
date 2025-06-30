@@ -73,6 +73,7 @@ const Bestseller = () => {
               />
             </svg>
           </div>
+          
           <Swiper
             modules={[Navigation]}
             spaceBetween={24}
@@ -181,11 +182,8 @@ const Bestseller = () => {
               );
             })}
           </Swiper>
-          <div className="xl:hidden flex justify-center gap-4 mt-8">
-            <button
-              onClick={() => prevRef.current?.click()}
-              className="w-[38px] h-[38px] border flex items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300"
-            >
+          <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
+            <div className="swiper-arrow prev-button group cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
               <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
                 <path
                   d="M7 13L1 7L6.79609 1"
@@ -195,11 +193,8 @@ const Bestseller = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
-            <button
-              onClick={() => nextRef.current?.click()}
-              className="w-[38px] h-[38px] border flex items-center justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300"
-            >
+            </div>
+            <div className="swiper-arrow group next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
               <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
                 <path
                   d="M1 13L7 7L1.20391 1"
@@ -209,7 +204,7 @@ const Bestseller = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </div>
           </div>
         </div>
       </div>

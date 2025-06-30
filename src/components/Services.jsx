@@ -3,7 +3,7 @@ import { SERVICES_DATA } from "../utils/helper";
 
 const Services = () => {
   return (
-    <div className="pt-3">
+    <div className="pt-[52px]">
       <div className="max-w-[1380px] px-3 mx-auto">
         <div className="flex items-center flex-wrap justify-center bg-[#F1F6FC] rounded-[8px] py-[43px]">
           {SERVICES_DATA.map((item, index) => (

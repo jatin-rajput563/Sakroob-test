@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Bestseller from "../components/Bestseller";
-import Blog from "../components/Blog";
 import OurClients from "../components/OurClients";
 import SakroobCircle from "../components/SakroobCircle";
 import Products from "../components/Products";
 import HeroTopSlider from "../components/HeroTopSlider";
+import GuidesBlog from "../components/GuidesBlog";
 
 const HomePage = () => {
   const [loginTime, setLoginTime] = useState("");
@@ -25,7 +25,7 @@ const HomePage = () => {
       <Services />
       <Products />
       <Bestseller />
-      <Blog />
+      <GuidesBlog />
       <OurClients />
       <SakroobCircle />
     </div>

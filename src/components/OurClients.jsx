@@ -14,22 +14,37 @@ import {
 const OurClients = () => {
   return (
     <>
-      <div className="px-4 md:px-6 lg:px-8 mt-20 mb-[200px]">
+      <div className="px-4 md:px-6 lg:px-8 mt-[132px] mb-[270px]">
         <div className="max-w-[1140px] mx-auto">
           <p className="text-center italic text-lg md:text-xl text-[#112D49] mb-2">
             Testimonials
           </p>
           <h2 className="leading-[120%] text-center text-[48px] font-bold text-[#112D49]">
-            What our client’s says{" "}
+            What Our Client’s Says{" "}
           </h2>
           <div className="mt-10 relative">
             <div className="max-xl:hidden flex xl:absolute top-[178px] xl:-left-14 xl:-right-14 2xl:-left-20 2xl:-right-20 justify-between items-center px-4 z-10">
-              <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
-                <LeftArrow />
+              <div className="swiper-arrow prev-button group cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                  <path
+                    d="M7 13L1 7L6.79609 1"
+                    className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
-
-              <div className="swiper-arrow next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
-                <RightArrow />
+              <div className="swiper-arrow group next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                  <path
+                    d="M1 13L7 7L1.20391 1"
+                    className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
             </div>
             <Swiper
@@ -85,12 +100,27 @@ const OurClients = () => {
               ))}
             </Swiper>
             <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
-              <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
-                <LeftArrow />
+              <div className="swiper-arrow prev-button group cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                  <path
+                    d="M7 13L1 7L6.79609 1"
+                    className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
-
-              <div className="swiper-arrow next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
-                <RightArrow />
+              <div className="swiper-arrow group next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                  <path
+                    d="M1 13L7 7L1.20391 1"
+                    className="stroke-[#112D49] group-hover:stroke-white transition-all duration-300"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
             </div>
           </div>
