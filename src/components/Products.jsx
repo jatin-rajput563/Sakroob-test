@@ -27,11 +27,11 @@ const Product = () => {
             <div className="min-h-[291px] sm:min-h-[335px] bg-[#D5E8FF] rounded-[8px] w-full">
               <div className="lg:flex justify-between sm:pl-8 2xl:pl-[62px] pl-6 pt-6 sm:pt-[46.8px]">
                 <Heading
-                  headClass="lg:pt-[44px] max-w-[213px] !text-[32px] !text-left"
+                  headClass="lg:pt-[44px] sm:!text-[32px] !text-[24px] !mx-0  max-w-[213px] !text-left"
                   headText="Sensors & Modules"
                 />
                 <img
-                  className="lg:max-w-[372px] max-w-[246px] w-full mt-7 ml-auto pointer-events-none"
+                  className="min-[1050px]:max-w-[372px] max-w-[246px] w-full mt-7 ml-auto pointer-events-none"
                   src={Module}
                   alt="Module-img"
                 />
@@ -41,7 +41,7 @@ const Product = () => {
           <div className="w-full md:w-[48%] xl:max-w-[326px]">
             <div className="min-h-[291px] sm:min-h-[335px] bg-[#EEF4FB] rounded-[8px] flex flex-col justify-between w-full h-full">
               <Heading
-                headClass="pt-[44px] max-w-[213px] !text-[32px]"
+                headClass="pt-[44px] max-w-[213px] sm:!text-[32px] !text-[24px]"
                 headText="Custom PC Parts"
               />
               <img
@@ -54,7 +54,7 @@ const Product = () => {
           <div className="w-full md:w-[48%] xl:max-w-[326px]">
             <div className="min-h-[291px] sm:min-h-[335px] bg-[#E5E4E2] rounded-[8px] flex flex-col justify-between sm:pb-3 w-full h-full">
               <Heading
-                headClass="pt-[46px] !text-[32px]"
+                headClass="pt-[46px] sm:!text-[32px] !text-[24px]"
                 headText="DIY Tools"
               />
               <img
@@ -67,7 +67,7 @@ const Product = () => {
           <div className="w-full md:w-[48%] xl:max-w-[313px]">
             <div className="min-h-[291px] sm:min-h-[335px] max-h-[335px] bg-[#EEF4FB] rounded-[8px] flex flex-col justify-between w-full relative h-full">
               <Heading
-                headClass="pt-[26px] !text-[32px] max-w-[213px] sm:text-center sm:ml-auto !text-left"
+                headClass="pt-[26px] sm:!text-[32px] !mx-0 sm:!ml-auto !text-[24px] max-w-[213px] sm:text-center !text-left pl-[24px] sm:pl-0"
                 headText="Cables & Connectors"
               />
               <img
@@ -80,7 +80,7 @@ const Product = () => {
           <div className="w-full md:w-[48%] xl:max-w-[313px]">
             <div className="min-h-[291px] sm:min-h-[335px] max-h-[335px] bg-[#E5E4E2] rounded-[8px] flex flex-col justify-between pb-4.5 w-full h-full">
               <Heading
-                headClass="pt-[22px] !text-[32px] text-center mx-auto max-w-[241px] max-sm:max-w-[156px]"
+                headClass="pt-[22px] sm:!text-[32px] !text-[24px] text-center mx-auto max-w-[241px] max-sm:max-w-[156px]"
                 headText="Gaming Peripherals"
               />
               <img
@@ -94,7 +94,7 @@ const Product = () => {
             <div className="min-h-[291px] sm:min-h-[335px] max-h-[335px] bg-[#D5E8FF] rounded-[8px] relative w-full h-full">
               <Description descriptionClass="" descriptionText="" />
               <Heading
-                headClass="!text-[32px] pt-[59px] z-10 relative"
+                headClass="sm:!text-[32px] !text-[24px] pt-[59px] z-10 relative"
                 headText="Raspberry Pi Kits"
               />
               <img
