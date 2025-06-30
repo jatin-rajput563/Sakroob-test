@@ -30,19 +30,17 @@ const CheckOut = () => {
   );
 
   return (
-    <div className="min-h-screen py-[120px] overflow-hidden">
+    <div className="sm:py-[120px] py-[60px] overflow-hidden">
       <div className="max-w-[1140px] mx-auto px-3">
         <div className="flex max-lg:flex-wrap -mx-3 gap-6">
-          {/* Left Section */}
           <div className="w-full md:w-8/12 ">
-            {/* Contact */}
             <div className="flex flex-wrap justify-between">
               <p className="font-bold text-2xl leading-[120%] text-[#112D49]">
                 Contact
               </p>
               <Buttons
                 btnText="Log in"
-                btnClass="!py-[8px] !px-[26px] font-semibold "
+                btnClass="!py-[8px] !px-[26px] font-semibold !bg-[#112D49] !text-white hover:!bg-white hover:!text-[#112D49] transition-all duration-300 ease-in-out"
               />
               <div className="flex justify-between items-center bg-[#F4F8F7] py-[13px] px-[26px] rounded-xl w-full mt-[20px]">
                 <div className="flex-col flex">
@@ -58,8 +56,6 @@ const CheckOut = () => {
                 <Under />
               </div>
             </div>
-
-            {/* Delivery */}
             <p className="font-bold text-2xl leading-[120%] text-[#112D49] pt-[35px]">
               Delivery
             </p>
@@ -143,8 +139,6 @@ const CheckOut = () => {
                 Save this information for next time
               </p>
             </div>
-
-            {/* Shipping method */}
             <p className="text-lg leading-[150%] text-[#112D49] pt-[42px]">
               Shipping method
             </p>
@@ -158,15 +152,13 @@ const CheckOut = () => {
                 AED 20.00
               </p>
             </div>
-
-            {/* Payment */}
             <p className="font-bold text-2xl leading-[120%] text-[#112D49] pt-[42px]">
               Payment
             </p>
             <p className="leading-[150%] text-[#41576D] pt-[4px]">
               All transactions are secure and encrypted.
             </p>
-            <div className="border border-[#E8EBED] py-[20px] px-[28px] mt-[20px]">
+            <div className="border border-[#E8EBED] py-[20px] px-[28px] mt-[20px] rounded-xl">
               <div className="flex justify-between flex-wrap">
                 <div className="flex gap-[8px] items-center">
                   <label className="inline-flex items-center cursor-pointer">
@@ -194,8 +186,6 @@ const CheckOut = () => {
                 </div>
                 <CreditCards />
               </div>
-
-              {/* Card Info */}
               <div className="flex gap-[8px] items-center pt-[34px]">
                 <label className="inline-flex items-center cursor-pointer">
                   <input
@@ -272,8 +262,6 @@ const CheckOut = () => {
               )}
             </div>
           </div>
-
-          {/* Right Section */}
           <div className="w-full md:w-4/12 relative overflow-visible">
             <div
               className={`absolute top-[-50px] right-0 bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-md shadow-md text-sm z-10 transition-transform duration-500 ease-out ${
@@ -288,13 +276,13 @@ const CheckOut = () => {
               {checkoutItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center justify-between pb-[26px]"
+                  className="flex items-center justify-between pb-[26px] "
                 >
                   <div className="flex gap-[9px] items-center">
                     <img
                       src={item.image}
                       alt="checkout-img"
-                      className="w-full max-w-[45px]"
+                      className="w-full max-w-[45px] h-[45px] bg-[#E9E9E9] py-[4px] px-[11px] object-contain rounded-[4px] border border-[#BABABA]" 
                     />
                     <p className="leading-[150%] text-[#112D49]">{item.name}</p>
                   </div>
@@ -340,7 +328,7 @@ const CheckOut = () => {
               </div>
               <Buttons
                 btnClass="text-white !w-full !max-w-[330px] mt-[20px] !bg-[#112D49] hover:!bg-white hover:!text-[#112D49]"
-                btnText="Convert"
+                btnText="Buy Now"
               />
             </div>
           </div>

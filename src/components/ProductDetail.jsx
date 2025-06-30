@@ -6,6 +6,7 @@ import Buttons from "./common/Buttons";
 import { FiveStar, Minus, Plus } from "../utils/Icons";
 import { useCart } from "../context/CartContext";
 import Reviews from "./Reviews";
+import PopularProduct from "./PopularProduct";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -86,16 +87,16 @@ const ProductDetail = () => {
     return <div className="text-center mt-20">Loading product...</div>;
 
   return (
-    <div className="pt-[91px]">
+    <div className="sm:pt-[91px] pt-[60px]">
       <div className="max-w-[1140px] mx-auto px-3">
         <div className="flex flex-wrap flex-row -mx-3">
           <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">
             <div
-              className="py-[44px] px-[42px] max-w-[517px] rounded-[8px] mx-auto"
+              className="sm:py-[44px] py-[12px] sm:px-[42px] px-[12px] max-w-[517px] rounded-[8px] mx-auto"
               style={{ backgroundColor: selectedColor }}
             >
               <img
-                className="max-w-[432.07px] w-full min-h-[475px] mx-auto"
+                className="max-w-[432.07px] w-full min-h-[475px] mx-auto object-contain"
                 src={product.img}
                 alt="Product"
               />
@@ -197,6 +198,7 @@ const ProductDetail = () => {
         </div>
       )}
       <Reviews />
+      <PopularProduct />
     </div>
   );
 };

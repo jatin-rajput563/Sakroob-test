@@ -30,9 +30,9 @@ const PopularProduct = () => {
         </div>
       )}
 
-      <div className="py-[132px]">
+      <div className="sm:py-[132px] py-[60px]">
         <div className="max-w-[1140px] px-3 mx-auto">
-          <Heading headClass="pb-[87px]" headText="Popular Products" />
+          <Heading headClass="sm:pb-[87px] pb-[47px]" headText="Popular Products" />
           <div className="flex flex-wrap flex-row -mx-3 gap-[24px] max-md:gap-[48px]">
             {POPULAR_DATA.map((item, index) => (
               <div
